@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://coins-plus-app.vercel.app
+
+# Sitemaps
+Sitemap: https://coins-plus-app.vercel.app/sitemap.xml

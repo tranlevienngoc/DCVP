@@ -13,8 +13,10 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
+    "useUnknownInCatchVariables": false,
+    "baseUrl":"."
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "hardhat/deploy/00_deploy_nft_contract.js", "hardhat/test/test.js", "hardhat/utils/common.js", "hardhat/utils/create2.js"],
   "exclude": ["node_modules"]
 }
