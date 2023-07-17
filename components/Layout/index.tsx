@@ -12,6 +12,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
             position="fixed"
             top="0px"
             left="0px"
+            zIndex={999}
             right="0px"
             bg="rgba(255,255,255,.85)"
           >
