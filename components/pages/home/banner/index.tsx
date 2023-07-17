@@ -245,7 +245,7 @@ export default function Banner() {
         >
           <ReactPlayer
             width="700px"
-            url="https://www.youtube.com/watch?v=FzG4uDgje3M"
+            url="https://www.youtube.com/watch?v=k85mRPqvMbE&ab_channel=CrazyFrog"
           />
         </Box>
       </Flex>
