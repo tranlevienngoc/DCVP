@@ -61,8 +61,16 @@ body {
   background: #B0B0B0;
 }
 
+.slick-slide {
+  div {
+    margin: 0 10px;
+  }
+}
 
-
+.slick-dots li button:before {
+  margin-top: 20px;
+  font-size: 15px !important;
+}
 
 .css-5gngp[aria-checked='true'],
 .css-5gngp[data-checked] {
@@ -218,12 +226,86 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.a {
+.video {
+  width: 100%;
+  padding: 0 16px;
+
   div {
+    width: 700px !important;
+
     div {
       iframe {
         border-radius: 20px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .video {
+    div {
+      width: 100% !important;
+    }
+  }
+}
+
+
+.style1 {
+  position: relative;
+  margin: 5px;
+  background-image: url(../public/svg/howtobuy/quote1.svg);
+  height: 300px;
+  width: 315px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  text-indent: 23px;
+
+  p {
+    position: absolute;
+    top: 20%;
+    font-size: 15px;
+    font-weight: 600;
+    left: 12%;
+    width: 250px;
+  }
+}
+
+.style2 {
+  position: relative;
+  margin: 5px;
+  background-image: url(../public/svg/howtobuy/quote2.svg);
+  height: 300px;
+  width: 330px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  text-indent: 23px;
+
+  p {
+    position: absolute;
+    top: 20%;
+    font-size: 15px;
+    font-weight: 600;
+    left: 12%;
+    width: 250px;
+  }
+}
+
+.style3 {
+  position: relative;
+  margin: 5px;
+  background-image: url(../public/svg/howtobuy/quote3.svg);
+  height: 300px;
+  width: 320px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  text-indent: 23px;
+
+  p {
+    position: absolute;
+    top: 20%;
+    font-size: 15px;
+    font-weight: 600;
+    left: 12%;
+    width: 250px;
   }
 }

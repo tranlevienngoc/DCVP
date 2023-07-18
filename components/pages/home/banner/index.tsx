@@ -28,7 +28,10 @@ export default function Banner() {
 
   return (
     <Box
-      backgroundImage="/svg/bg/banner.svg"
+      backgroundImage={{
+        base: "/svg/bg/bannermb.svg",
+        xl: "/svg/bg/banner.svg",
+      }}
       backgroundSize="cover"
       h="1120px"
       w="100%"
@@ -41,12 +44,16 @@ export default function Banner() {
         direction="column"
         position="relative"
       >
-        <Flex direction="column" alignItems="center">
+        <Flex
+          direction="column"
+          alignItems="center"
+          p={{ base: "0 16px", md: "unset" }}
+        >
           <Image src="/images/logo.png" w="200px" />
 
           <Box
             mt="30px"
-            w="500px"
+            w={{ base: "100%", md: "500px" }}
             bg="#fff"
             borderRadius="20px"
             border="5px solid #1E1E1E"
@@ -134,6 +141,7 @@ export default function Banner() {
                     alignItems="center"
                   >
                     <TemplateText
+                      w="max-content"
                       txt={`Amount in <b>${seclected.name}</b> you pay`}
                     />
                     <TemplateText
@@ -161,6 +169,7 @@ export default function Banner() {
                 <Box>
                   <TemplateText
                     mb="10px"
+                    w="max-content"
                     txt="Amount in <b>PPM</b> you receive"
                   />
                   <InputIcon
@@ -235,18 +244,19 @@ export default function Banner() {
             </Box>
           </Box>
         </Flex>
-
         <Box
-          className="a"
+          className="video"
           position="absolute"
-          bottom="-52%"
-          left="25%"
-          right="0px"
+          bottom={{ base: "-50%", md: "-60%", lg: "-85%", xl: "-75%" }}
+          left={{ base: "unset", lg: "50%" }}
+          transform={{
+            base: "unset",
+            lg: "translate(-34%,-50%)",
+            xl: "translate(-25%,-50%)",
+            "2xl": "translate(-21%,-50%)",
+          }}
         >
-          <ReactPlayer
-            width="700px"
-            url="https://www.youtube.com/watch?v=k85mRPqvMbE&ab_channel=CrazyFrog"
-          />
+          <ReactPlayer url="https://www.youtube.com/watch?v=k85mRPqvMbE&ab_channel=CrazyFrog" />
         </Box>
       </Flex>
     </Box>

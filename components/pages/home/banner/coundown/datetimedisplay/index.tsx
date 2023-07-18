@@ -10,7 +10,12 @@ interface props {
 
 export default function DateTimeDisplay({ value, type, isDanger }: props) {
   return (
-    <Box bg="#fff" borderRadius="10px" p="10px 30px" w="100%">
+    <Box
+      bg="#fff"
+      borderRadius="10px"
+      p={{ base: "10px", md: "10px 30px" }}
+      w="100%"
+    >
       <TemplateText fontWeight={700} fontSize="18px" txt={`${value} ${type}`} />
     </Box>
   );

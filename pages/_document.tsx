@@ -14,6 +14,7 @@ class Document extends NextDocument {
             rel="stylesheet"
           />
           <link rel="shortcut icon" type="image/png" href="/logo.png" />
+          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
