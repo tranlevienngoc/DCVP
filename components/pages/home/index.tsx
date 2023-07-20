@@ -21,9 +21,15 @@ export default function HomePage() {
       <Information />
       <HowToBuy />
       <Roadmap />
-      <Tokenomics />
-      <Ambassadors />
-      <Airdrop />
+      <Box pt="100px" id="#tokenomics">
+        <Tokenomics />
+      </Box>
+      <Box pt="100px" id="#ambassadors">
+        <Ambassadors />
+      </Box>
+      <Box pt="100px" id="#airdrop">
+        <Airdrop />
+      </Box>
       <FAQ />
     </Box>
   );

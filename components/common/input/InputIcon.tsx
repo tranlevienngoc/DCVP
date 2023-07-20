@@ -42,21 +42,13 @@ export default function InputIcon({
   type,
   ...rest
 }: SearchInputProps) {
-  const focusUsernameInputField = (input: HTMLInputElement | null) => {
-    if (input && isFocus) {
-      setTimeout(() => {
-        input.focus();
-      }, 100);
-    }
-  };
   const { isLightMode } = useModeTheme();
   return (
     <InputGroup w={w} h={h}>
-      {value === "" && (
-        <InputRightElement h={h} cursor="pointer">
-          {icon && <Image src={icon} w="25px" />}
-        </InputRightElement>
-      )}
+      <InputRightElement h={h} cursor="pointer">
+        {icon && <Image src={icon} w="25px" />}
+      </InputRightElement>
+
       {isVisible && (
         <Input
           w={w}
@@ -71,7 +63,6 @@ export default function InputIcon({
           placeholder={placeholder}
           bg={isLightMode ? "#F6F7F9" : "#171924"}
           onChange={(e) => onChange(e.target.value)}
-          ref={focusUsernameInputField}
           borderRadius={borderRadius ? borderRadius : "8px"}
           {...rest}
         />

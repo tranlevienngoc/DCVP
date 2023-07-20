@@ -7,8 +7,14 @@ import { LIST_OPTION_COIN } from "data/banner";
 import { CoinPayType } from "constants/types";
 import InputIcon from "components/common/input/InputIcon";
 import ButtonBase from "components/common/Buttons/ButtonBase";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import ReactPlayer from "react-player";
+import {
+  ConnectButton,
+  useAccountModal,
+  useConnectModal,
+} from "@rainbow-me/rainbowkit";
+
+import dynamic from "next/dynamic";
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Banner() {
   const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
@@ -18,25 +24,34 @@ export default function Banner() {
   const [seclected, setSelected] = useState<CoinPayType>(LIST_OPTION_COIN[0]);
 
   const [valueCoin, setValueCoin] = useState("");
+  const [valueMyCoin, setValueMyCoin] = useState("");
 
-  const handleChangeInput = useCallback(
+  const { openConnectModal } = useConnectModal();
+
+  const handleChangeCoin = useCallback(
     (value: string) => {
       setValueCoin(value);
     },
     [setValueCoin]
   );
 
+  const handleChangeMyCoin = useCallback(
+    (value: string) => {
+      setValueMyCoin(value);
+    },
+    [setValueMyCoin]
+  );
+
   return (
     <Box
       backgroundImage={{
-        base: "/svg/bg/bannermb.svg",
+        base: "svg/bg/bannermb.svg",
         xl: "/svg/bg/banner.svg",
       }}
       backgroundSize="cover"
       h="1120px"
       w="100%"
       pt="70px"
-      pb="70px"
     >
       <Flex
         justifyContent="center"
@@ -47,6 +62,7 @@ export default function Banner() {
         <Flex
           direction="column"
           alignItems="center"
+          id="#walletBox"
           p={{ base: "0 16px", md: "unset" }}
         >
           <Image src="/images/logo.png" w="200px" />
@@ -69,7 +85,7 @@ export default function Banner() {
               <TemplateText
                 m="15px 0"
                 color="text.500"
-                fontSize="18px"
+                fontSize="20px"
                 fontWeight={600}
                 txt="BUY IN BEFORE PRICE INCREASES!"
               />
@@ -133,8 +149,13 @@ export default function Banner() {
                 )}
               </Flex>
 
-              <Flex alignItems="center" gap="10px">
-                <Box>
+              <Flex
+                alignItems="center"
+                direction={{ base: "column", md: "row" }}
+                gap="10px"
+                mt="20px"
+              >
+                <Box w="100%">
                   <Flex
                     mb="10px"
                     justifyContent="space-between"
@@ -163,10 +184,10 @@ export default function Banner() {
                     isFocus={true}
                     w="100%"
                     backgroundColor="#F1F4f6"
-                    onChange={handleChangeInput}
+                    onChange={handleChangeCoin}
                   />
                 </Box>
-                <Box>
+                <Box w="100%">
                   <TemplateText
                     mb="10px"
                     w="max-content"
@@ -178,42 +199,28 @@ export default function Banner() {
                     paddingRight="90px"
                     placeholder="0"
                     border="none"
-                    value={valueCoin}
+                    value={valueMyCoin}
                     icon="/images/apple-touch-icon.png"
                     isVisible
                     isFocus={true}
                     w="100%"
-                    onChange={handleChangeInput}
+                    onChange={handleChangeMyCoin}
                   />
                 </Box>
               </Flex>
 
-              <ConnectButton.Custom>
-                {({
-                  account,
-                  chain,
-                  openAccountModal,
-                  openChainModal,
-                  openConnectModal,
-                }) => {
-                  const connected = account && chain;
-                  return (
-                    <>
-                      <ButtonBase
-                        onClick={openConnectModal}
-                        colorText="text.500"
-                        fsText="14px"
-                        w="100%"
-                        mt="10px"
-                        fwText={700}
-                        content="Buy now"
-                        bg="text.100"
-                        borderRadius="50px"
-                      />
-                    </>
-                  );
-                }}
-              </ConnectButton.Custom>
+              <ButtonBase
+                onClick={openConnectModal}
+                colorText="text.500"
+                fsText="14px"
+                w="100%"
+                mt="10px"
+                fwText={700}
+                content="Buy now"
+                bg="text.100"
+                borderRadius="50px"
+              />
+
               <ButtonBase
                 colorText="text.100"
                 fsText="14px"
@@ -244,20 +251,9 @@ export default function Banner() {
             </Box>
           </Box>
         </Flex>
-        <Box
-          className="video"
-          position="absolute"
-          bottom={{ base: "-50%", md: "-60%", lg: "-85%", xl: "-75%" }}
-          left={{ base: "unset", lg: "50%" }}
-          transform={{
-            base: "unset",
-            lg: "translate(-34%,-50%)",
-            xl: "translate(-25%,-50%)",
-            "2xl": "translate(-21%,-50%)",
-          }}
-        >
-          <ReactPlayer url="https://www.youtube.com/watch?v=k85mRPqvMbE&ab_channel=CrazyFrog" />
-        </Box>
+      </Flex>
+      <Flex className="video" justifyContent="center" mt="20px">
+        <ReactPlayer url="https://www.youtube.com/watch?v=k85mRPqvMbE&ab_channel=CrazyFrog" />
       </Flex>
     </Box>
   );

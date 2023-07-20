@@ -6,6 +6,7 @@ export const HOWTOBUY = [
     style: "style1",
     bottom: "-5%",
     left: "-25%",
+    leftmb: "45%",
   },
   {
     ava: "/images/slide/avatar2.png",
@@ -14,6 +15,7 @@ export const HOWTOBUY = [
     style: "style2",
     bottom: "-10%",
     right: "10%",
+    rightmb: "50%",
   },
   {
     ava: "/images/slide/avatar3.png",
@@ -22,5 +24,6 @@ export const HOWTOBUY = [
     style: "style3",
     bottom: "-8%",
     right: "-34%",
+    rightmb: "54%",
   },
 ];

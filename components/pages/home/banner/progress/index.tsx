@@ -22,7 +22,7 @@ export default function Progress({ completed, content }: props) {
           txt={content}
           color="text.100"
           fontWeight={600}
-          left="30%"
+          left={{ base: "25%", md: "30%" }}
           top="5%"
         />
       </Flex>

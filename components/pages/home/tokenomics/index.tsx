@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Tokenomics() {
   return (
-    <Box className="maxW" pb="100px">
+    <Box className="maxW">
       <TemplateText
         txt="TOKENOMICS"
         fontWeight={700}

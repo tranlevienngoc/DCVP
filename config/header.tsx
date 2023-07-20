@@ -7,19 +7,19 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: "How To Buy",
-    href: "/revoke",
+    href: "#howtobuy",
   },
   {
-    label: "Tokennomics",
-    href: "/tokennomics",
+    label: "Tokenomics",
+    href: "#tokenomics",
   },
   {
     label: "Ambassadors",
-    href: "/ambassadors",
+    href: "#ambassadors",
   },
   {
     label: "Airdrop",
-    href: "/airdrop",
+    href: "#airdrop",
   },
 ];
 export default NAV_ITEMS;

@@ -11,6 +11,7 @@ export default function HowToBuy() {
       alignItems="center"
       className="maxW"
       p="80px 16px 80px 16px"
+      id="#howtobuy"
     >
       <Image src="/images/apple-touch-icon.png" w="80px" />
       <TemplateText
@@ -45,10 +46,14 @@ export default function HowToBuy() {
             <Box
               position="absolute"
               bottom={item.bottom}
-              left={item.left}
-              right={item.right}
+              left={{ base: item.leftmb, md: item.left }}
+              right={{ base: item.rightmb, md: item.right }}
             >
-              <Image src={item.ava} w="150px" />
+              <Image
+                className="image"
+                src={item.ava}
+                w={{ base: "120px", md: "150px" }}
+              />
             </Box>
           </Box>
         ))}

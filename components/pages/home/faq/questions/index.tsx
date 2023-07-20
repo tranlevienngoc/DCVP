@@ -21,12 +21,11 @@ export default function Questions({ item, index, length }: props) {
         mb={length - 1 == index ? "unset" : "20px"}
         onClick={onToggle}
         bg="rgba(255, 255, 255, 0.8)"
-        border="3px solid #737373"
+        border={isOpen ? "3px solid #1e1e1e" : "3px solid #737373"}
         borderRadius="12px"
       >
         <Flex
-          py={4}
-          px={5}
+          p="16px"
           justify={"space-between"}
           align={"center"}
           borderBottomWidth={1}
@@ -39,7 +38,7 @@ export default function Questions({ item, index, length }: props) {
           <TemplateText
             txt={item.question}
             color={isOpen ? "text.100" : "text.600"}
-            fontSize="26px"
+            fontSize={{ base: "18px", md: "26px" }}
             fontWeight={700}
           />
 
@@ -56,7 +55,11 @@ export default function Questions({ item, index, length }: props) {
           animateOpacity
           style={{ marginTop: "0!important" }}
         >
-          <TemplateText p="24px" fontSize="18px" txt={item.answer} />
+          <TemplateText
+            p="16px"
+            fontSize={{ base: "16px", md: "24px" }}
+            txt={item.answer}
+          />
         </Collapse>
       </Stack>
     </Box>

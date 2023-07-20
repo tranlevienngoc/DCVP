@@ -41,7 +41,7 @@ body {
 .maxW {
   width: full;
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 1200px;
 }
 
 ::-webkit-scrollbar {
@@ -250,6 +250,8 @@ body {
 }
 
 
+
+
 .style1 {
   position: relative;
   margin: 5px;
@@ -307,5 +309,69 @@ body {
     font-weight: 600;
     left: 12%;
     width: 250px;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .image {
+    transform: scaleX(-1)
+  }
+
+  .style1 {
+    position: relative;
+    margin: 5px;
+    background-image: url(../public/svg/howtobuy/quote2.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    text-indent: 23px;
+
+    p {
+      position: absolute;
+      top: 20%;
+      font-size: 15px;
+      font-weight: 600;
+      left: 12%;
+      width: 250px;
+    }
+  }
+
+  .style2 {
+    position: relative;
+    margin: 5px;
+    background-image: url(../public/svg/howtobuy/quote4.svg);
+    height: 300px;
+    width: 330px;
+    background-repeat: no-repeat;
+    background-position: top left;
+    text-indent: 23px;
+
+    p {
+      position: absolute;
+      top: 20%;
+      font-size: 15px;
+      font-weight: 600;
+      left: 12%;
+      width: 250px;
+    }
+  }
+
+  .style3 {
+    position: relative;
+    margin: 5px;
+    background-image: url(../public/svg/howtobuy/quote4.svg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: top left;
+    text-indent: 23px;
+
+    p {
+      position: absolute;
+      top: 20%;
+      font-size: 15px;
+      font-weight: 600;
+      left: 12%;
+      width: 250px;
+    }
   }
 }

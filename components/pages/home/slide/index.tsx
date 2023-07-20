@@ -18,30 +18,20 @@ export default function Slide() {
       {
         breakpoint: 700,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: false,
-          dots: false,
+          dots: true,
           arrows: false,
         },
       },
       {
         breakpoint: 475,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: false,
-          dots: false,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 374,
-        settings: {
-          slidesToShow: 1.5,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: false,
+          dots: true,
           arrows: false,
         },
       },
@@ -57,13 +47,15 @@ export default function Slide() {
             cursor="pointer"
             mr="16px"
             w="100%"
+            h="100%"
             boxShadow="8px 9px #bfbfbf"
             borderRadius="29px"
           >
             <Image
               src={item.image}
               maxW="100%"
-              minH={{ base: "100%", lg: "300px", xl: "500px" }}
+              minH="280px"
+              maxH="370px"
               borderRadius="29px"
               margin="0 auto"
             />

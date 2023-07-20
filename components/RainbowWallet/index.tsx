@@ -1,15 +1,10 @@
-import { ReactNode } from "react";
+import { ComponentProps, ReactNode } from "react";
 import {
   connectorsForWallets,
-  darkTheme,
   getDefaultWallets,
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
-import {
-  argentWallet,
-  ledgerWallet,
-  trustWallet,
-} from "@rainbow-me/rainbowkit/wallets";
+
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
 import { goerli, mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";

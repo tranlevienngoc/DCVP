@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Ambassadors() {
   return (
-    <Flex direction="column" alignItems="center" className="maxW" pb="100px">
+    <Flex direction="column" alignItems="center" className="maxW">
       <TemplateText txt="AMBASSADORS" fontSize="35px" fontWeight={700} />
       <Box border="3px dashed #1e1e1e" w="150px" />
 

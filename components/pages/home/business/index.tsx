@@ -1,37 +1,47 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import { BUSINESS_INFOR } from "data/business";
 import React from "react";
 
 export default function Business() {
   return (
-    <Box mt="250px" className="maxW">
+    <Box
+      mt={{ base: "350px", md: "250px" }}
+      className="maxW"
+      p={{ base: "0 16px", lg: "unset" }}
+    >
       <Flex
         alignItems="center"
         justifyContent={{ base: "center", lg: "space-between" }}
+        gap="10px"
       >
         <Image
           src="/svg/meme/business-meme.svg"
           w="190px"
-          display={{ base: "none", lg: "block" }}
+          display={{ base: "none", md: "block" }}
         />
-        <Box
-          w={{ base: "100%", lg: "50%" }}
-          p={{ base: "0 16px", lg: "unset" }}
-        >
+        <Box w={{ base: "100%", md: "50%" }}>
           <TemplateText
-            fontSize="35px"
+            fontSize={{ base: "48px", md: "35px" }}
             textAlign="center"
             fontWeight={700}
             txt="WE MEME BUSINESS!"
           />
-          <Flex mt="48px" alignItems="center" justifyContent="space-between">
+          <Flex
+            pt="48px"
+            flexWrap="wrap"
+            m="0 auto"
+            justifyContent="space-around"
+            maxW="100%"
+            gap={{ base: "20px", md: "unset" }}
+          >
             {BUSINESS_INFOR.map((item) => (
               <Box key={item.name}>
                 <TemplateText
                   txt={item.value}
-                  fontSize="25px"
+                  textAlign={{ base: "center", lg: "start" }}
                   fontWeight={700}
+                  fontSize={{ base: "40px", md: "25px" }}
                 />
                 <TemplateText
                   txt={item.name}
@@ -47,7 +57,7 @@ export default function Business() {
         <Image
           src="/svg/meme/business-meme1.svg"
           w="190px"
-          display={{ base: "none", lg: "block" }}
+          display={{ base: "none", md: "block" }}
         />
       </Flex>
 
@@ -59,7 +69,7 @@ export default function Business() {
       >
         <Image src="/svg/meme/wow-meme.svg" w="200px" />
         <TemplateText
-          fontSize="35px"
+          fontSize={{ base: "48px", md: "35px" }}
           fontWeight={700}
           textAlign="center"
           mt="24px 0"

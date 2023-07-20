@@ -1,6 +1,6 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Flex, Image, Link, Stack, useDisclosure } from "@chakra-ui/react";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
+
 import ButtonBase from "components/common/Buttons/ButtonBase";
 import DrawerItem from "components/common/DrawerItem";
 import TemplateText from "components/common/Text/TemplateText";
@@ -10,6 +10,11 @@ import useVisible from "hooks/useVisible";
 
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
+import { useAccountModal, useConnectModal } from "@rainbow-me/rainbowkit";
+import { useAccount } from "wagmi";
+
+import { useCallback } from "react";
+import truncateEthAddress from "utils/truncateEthAddress";
 
 interface props {
   onCloseMenu: () => void;
@@ -17,7 +22,20 @@ interface props {
 
 const Header = () => {
   const { isOpen, onToggle, onClose } = useDisclosure();
-  const detailModal = useVisible();
+
+  const { openAccountModal } = useAccountModal();
+  const { openConnectModal } = useConnectModal();
+
+  const handleClickScroll = useCallback((id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      const timer = setTimeout(() => openConnectModal?.(), 1500);
+      return () => clearTimeout(timer);
+    }
+  }, []);
+
+  const { isConnected, address } = useAccount();
 
   const DesktopNav = () => {
     return (
@@ -48,12 +66,10 @@ const Header = () => {
         borderStyle="solid"
         justifyContent="space-between"
         alignItems="center"
-        p={{ base: "15px 0px 20px 0px", xl: "15px 25px" }}
+        p={{ base: "15px 16px 20px 16px", xl: "15px 25px" }}
       >
         <Link href="/">
-          <Flex mt="-10px" alignItems="center" gap="10px">
-            <Image src="/images/logo.png" w="140px" />
-          </Flex>
+          <Image mt="-10px" src="/images/logo.png" w="140px" />
         </Link>
         <Flex
           display={{ base: "none", xl: "flex" }}
@@ -72,48 +88,28 @@ const Header = () => {
           >
             <TemplateText txt="Merch" fontSize="18px" fontWeight={700} />
 
-            <ConnectButton.Custom>
-              {({
-                account,
-                chain,
-                openAccountModal,
-                openChainModal,
-                openConnectModal,
-              }) => {
-                const connected = account && chain;
-                return (
-                  <>
-                    <ButtonBase
-                      onClick={openConnectModal}
-                      colorText="text.500"
-                      fsText="14px"
-                      fwText={700}
-                      content="Buy now"
-                      bg="text.100"
-                      borderRadius="50px"
-                    />
-
-                    {connected && (
-                      <>
-                        <ButtonBase
-                          onClick={openAccountModal}
-                          colorText="text.500"
-                          fsText="14px"
-                          fwText={700}
-                          content={`${account.displayName} ${
-                            account.displayBalance
-                              ? ` (${account.displayBalance})`
-                              : ""
-                          }`}
-                          bg="text.100"
-                          borderRadius="10px"
-                        />
-                      </>
-                    )}
-                  </>
-                );
+            <ButtonBase
+              onClick={() => {
+                handleClickScroll("#walletBox");
               }}
-            </ConnectButton.Custom>
+              colorText="text.500"
+              fsText="14px"
+              fwText={700}
+              content="Buy now"
+              bg="text.100"
+              borderRadius="50px"
+            />
+            {isConnected && (
+              <ButtonBase
+                onClick={openAccountModal}
+                colorText="text.500"
+                fsText="14px"
+                fwText={700}
+                content={truncateEthAddress(`${address}`)}
+                bg="text.100"
+                borderRadius="10px"
+              />
+            )}
           </Flex>
 
           <Flex>

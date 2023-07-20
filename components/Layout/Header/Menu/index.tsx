@@ -15,7 +15,7 @@ import ArrowRightButton from "components/svg/ArrowRightButton";
 import { NavItem } from "constants/interface";
 
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 interface props {
@@ -26,6 +26,13 @@ const Menu = ({ navItem }: props) => {
   const menu = useDisclosure();
   const [ishover, setIsHover] = useState<boolean>();
 
+  const handleClickScroll = useCallback((id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   return (
     <Flex
       onClick={() => {
@@ -33,7 +40,12 @@ const Menu = ({ navItem }: props) => {
       }}
       alignItems="center"
     >
-      <Box p="0px 10px" w="100%" cursor="pointer">
+      <Box
+        onClick={() => handleClickScroll(navItem.href || "")}
+        p="0px 10px"
+        w="100%"
+        cursor="pointer"
+      >
         <TemplateText
           _hover={{ color: "#2669f5" }}
           fontWeight={700}
