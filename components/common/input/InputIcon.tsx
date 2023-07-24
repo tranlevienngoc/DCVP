@@ -56,11 +56,11 @@ export default function InputIcon({
         <NumberInput
           value={defaultValue}
           onChange={(e) => onChange?.(parse(e))}
+          w={w}
         >
           <NumberInputField
             _focus={{ boxShadow: "none" }}
             pl="10px"
-            w="100%"
             h={h}
             border={border}
             borderColor={borderColor}
