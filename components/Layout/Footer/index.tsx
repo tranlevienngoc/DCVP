@@ -4,6 +4,7 @@ import ButtonBase from "components/common/Buttons/ButtonBase";
 import TemplateText from "components/common/Text/TemplateText";
 
 import MoonRiver from "components/svg/network/MoonRiver";
+import { LIST_SOCIAL_NETWORK } from "data/banner";
 import useModeTheme from "hooks/colorDarkMode";
 import React from "react";
 import { AiOutlineTwitter } from "react-icons/ai";
@@ -48,7 +49,14 @@ export default function Footer() {
             txt="Cookies"
           />
           <Image src="/svg/icons/audit.svg" w="120px" />
-          <TemplateText color="text.500" txt="contact@wallstmemes.com" />
+          <Box textAlign="center">
+            <Flex gap="10px" alignItems="center" mb="7px">
+              {LIST_SOCIAL_NETWORK.map((item) => (
+                <Image key={item.name} src={item.icon} w="25px" h="25px" />
+              ))}
+            </Flex>
+            <TemplateText color="text.500" txt="contact@wallstmemes.com" />
+          </Box>
         </Flex>
         <TemplateText
           mt="20px"

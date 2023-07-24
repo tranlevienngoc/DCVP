@@ -10,18 +10,22 @@ const Layout = ({ children }: { children: JSX.Element }) => {
   useEffect(() => setMounted(true), []);
   return (
     <Box bg="bg.100">
-      <Box
-        position="fixed"
-        top="0px"
-        left="0px"
-        zIndex={999}
-        right="0px"
-        bg="rgba(255,255,255,.85)"
-      >
-        {mounted && <Header />}
-      </Box>
-      <Box>{children}</Box>
-      <Footer />
+      {mounted && (
+        <>
+          <Box
+            position="fixed"
+            top="0px"
+            left="0px"
+            zIndex={999}
+            right="0px"
+            bg="rgba(255,255,255,.85)"
+          >
+            <Header />
+          </Box>
+          <Box>{children}</Box>
+          <Footer />
+        </>
+      )}
     </Box>
   );
 };

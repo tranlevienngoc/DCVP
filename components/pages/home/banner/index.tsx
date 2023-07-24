@@ -1,19 +1,20 @@
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Icon, Image } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import React, { useCallback, useState } from "react";
 import Countdown from "./coundown";
 import Progress from "./progress";
-import { LIST_OPTION_COIN } from "data/banner";
+import { LIST_OPTION_COIN, LIST_SOCIAL_NETWORK } from "data/banner";
 import { CoinPayType } from "constants/types";
 import InputIcon from "components/common/input/InputIcon";
 import ButtonBase from "components/common/Buttons/ButtonBase";
-import {
-  ConnectButton,
-  useAccountModal,
-  useConnectModal,
-} from "@rainbow-me/rainbowkit";
+import { useConnectModal } from "@rainbow-me/rainbowkit";
+import copy from "copy-to-clipboard";
 
 import dynamic from "next/dynamic";
+import { useAccount } from "wagmi";
+import { FiCopy } from "react-icons/fi";
+import { toastSuccess } from "utils/toast";
+import { convertBigNumber } from "utils/number";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Banner() {
@@ -23,24 +24,30 @@ export default function Banner() {
 
   const [seclected, setSelected] = useState<CoinPayType>(LIST_OPTION_COIN[0]);
 
-  const [valueCoin, setValueCoin] = useState("");
-  const [valueMyCoin, setValueMyCoin] = useState("");
+  const { isConnected } = useAccount();
+
+  const [valueCoin, setValueCoin] = useState(0);
+  const [valueMyCoin, setValueMyCoin] = useState(0);
 
   const { openConnectModal } = useConnectModal();
 
-  const handleChangeCoin = useCallback(
-    (value: string) => {
-      setValueCoin(value);
-    },
-    [setValueCoin]
-  );
+  const handleChangeCoin = useCallback((value: number) => {
+    console.log("asd");
 
-  const handleChangeMyCoin = useCallback(
-    (value: string) => {
-      setValueMyCoin(value);
-    },
-    [setValueMyCoin]
-  );
+    setValueCoin(value);
+    setValueMyCoin(convertBigNumber(value * Number(seclected.value)));
+  }, []);
+
+  const handleChangeMyCoin = useCallback((value: number) => {
+    setValueMyCoin(value);
+
+    setValueCoin(convertBigNumber(value / Number(seclected.value)));
+  }, []);
+
+  const copyToClipboard = () => {
+    copy("https://bs_066ea8e0.youpromote.care?aff=228261");
+    toastSuccess("You have copied!");
+  };
 
   return (
     <Box
@@ -49,16 +56,10 @@ export default function Banner() {
         xl: "/svg/bg/banner.svg",
       }}
       backgroundSize="cover"
-      h="1120px"
       w="100%"
       pt="70px"
     >
-      <Flex
-        justifyContent="center"
-        alignItems="center"
-        direction="column"
-        position="relative"
-      >
+      <Flex justifyContent="center" alignItems="center" direction="column">
         <Flex
           direction="column"
           alignItems="center"
@@ -66,6 +67,11 @@ export default function Banner() {
           p={{ base: "0 16px", md: "unset" }}
         >
           <Image src="/images/logo.png" w="200px" />
+          <Flex gap="10px" alignItems="center" mt="20px">
+            {LIST_SOCIAL_NETWORK.map((item) => (
+              <Image key={item.name} w="42px" h="42px" src={item.icon} />
+            ))}
+          </Flex>
 
           <Box
             mt="30px"
@@ -106,6 +112,40 @@ export default function Banner() {
                 fontWeight={600}
                 txt="Your Purchased PPM = 0"
               />
+
+              {isConnected && (
+                <Flex direction="column" alignItems="center" gap="20px">
+                  <TemplateText
+                    fontSize="16px"
+                    color="text.500"
+                    txt="Refer your friends to participate in the presale"
+                  />
+                  <Flex
+                    p="10px"
+                    border="1px solid #0DC5F5"
+                    borderRadius="20px"
+                    alignItems="center"
+                    gap="5px"
+                    w="40%"
+                  >
+                    <TemplateText
+                      textOverflow="ellipsis"
+                      overflow="hidden"
+                      whiteSpace="nowrap"
+                      color="text.500"
+                      txt="https://bs_066ea8e0.youpromote.care?aff=228261"
+                    />
+
+                    <Icon
+                      onClick={copyToClipboard}
+                      as={FiCopy}
+                      color="text.500"
+                      h={5}
+                      w={5}
+                    />
+                  </Flex>
+                </Flex>
+              )}
             </Box>
 
             <Box textAlign="center" p="16px" w="100%">
@@ -176,15 +216,12 @@ export default function Banner() {
                     type="number"
                     icon={seclected.icon}
                     h="40px"
-                    paddingRight="90px"
                     placeholder="0"
                     border="none"
-                    value={valueCoin}
-                    isVisible
-                    isFocus={true}
+                    onChange={handleChangeCoin}
+                    defaultValue={valueCoin}
                     w="100%"
                     backgroundColor="#F1F4f6"
-                    onChange={handleChangeCoin}
                   />
                 </Box>
                 <Box w="100%">
@@ -195,16 +232,14 @@ export default function Banner() {
                   />
                   <InputIcon
                     type="number"
+                    icon="/images/apple-touch-icon.png"
                     h="40px"
-                    paddingRight="90px"
                     placeholder="0"
                     border="none"
-                    value={valueMyCoin}
-                    icon="/images/apple-touch-icon.png"
-                    isVisible
-                    isFocus={true}
-                    w="100%"
                     onChange={handleChangeMyCoin}
+                    defaultValue={valueMyCoin}
+                    w="100%"
+                    backgroundColor="#F1F4f6"
                   />
                 </Box>
               </Flex>

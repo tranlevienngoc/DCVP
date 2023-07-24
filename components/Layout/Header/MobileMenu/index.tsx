@@ -1,19 +1,13 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
-import {
-  Box,
-  Collapse,
-  Flex,
-  Icon,
-  Stack,
-  useColorModeValue,
-  useDisclosure,
-} from "@chakra-ui/react";
+import { Flex, useDisclosure } from "@chakra-ui/react";
 import FlexBox from "components/common/FlexBox";
 import TemplateText from "components/common/Text/TemplateText";
 import { NavItem } from "constants/interface";
 import useModeTheme from "hooks/colorDarkMode";
 
 import Link from "next/link";
+
+import { useCallback } from "react";
 
 interface props {
   navItem: NavItem;
@@ -23,7 +17,12 @@ interface props {
 const MobileMenu = ({ navItem, onCloseMenu }: props) => {
   const { isOpen, onToggle } = useDisclosure();
   const { darkModeColors } = useModeTheme();
-
+  const handleClickScroll = useCallback((id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
   return (
     <Flex
       h="51px"
@@ -36,6 +35,10 @@ const MobileMenu = ({ navItem, onCloseMenu }: props) => {
         textDecoration: "none",
       }}
       borderBottom={darkModeColors.border400}
+      onClick={() => {
+        onCloseMenu();
+        handleClickScroll(navItem.href || "");
+      }}
     >
       <TemplateText fontWeight={700} fontSize={16} txt={navItem.label} />
     </Flex>

@@ -5,11 +5,7 @@ import React from "react";
 
 export default function Business() {
   return (
-    <Box
-      mt={{ base: "350px", md: "250px" }}
-      className="maxW"
-      p={{ base: "0 16px", lg: "unset" }}
-    >
+    <Box className="maxW" p={{ base: "0 16px", lg: "unset" }}>
       <Flex
         alignItems="center"
         justifyContent={{ base: "center", lg: "space-between" }}

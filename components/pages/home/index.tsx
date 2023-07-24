@@ -16,7 +16,9 @@ export default function HomePage() {
   return (
     <Box pb="40px">
       <Banner />
-      <Business />
+      <Box pt="100px">
+        <Business />
+      </Box>
       <Slide />
       <Information />
       <HowToBuy />

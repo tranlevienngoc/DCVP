@@ -10,20 +10,7 @@ import Layout from "components/Layout";
 import { AppProps } from "next/app";
 import { WalletProvider } from "components/RainbowWallet";
 
-// const WalletProvider = dynamic(() => import('../components/RainbowWallet'))
-
 function MyApp({ Component, pageProps }: AppProps) {
-  // const [showChild, setShowChild] = useState(false);
-  // useEffect(() => {
-  //   setShowChild(true);
-  // }, []);
-
-  // if (!showChild) {
-  //   return null;
-  // }
-  // if (typeof window === "undefined") {
-  //   return <></>;
-  // } else {
   return (
     <WalletProvider>
       <ChakraProvider theme={theme}>

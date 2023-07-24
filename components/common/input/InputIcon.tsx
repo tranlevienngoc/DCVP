@@ -4,42 +4,45 @@ import {
   InputGroup,
   InputLeftElement,
   InputRightElement,
+  NumberInput,
+  NumberInputField,
 } from "@chakra-ui/react";
 import { ChakraType } from "constants/types";
 import useModeTheme from "hooks/colorDarkMode";
+import { parse } from "utils/number";
 
 interface SearchInputProps {
   h?: ChakraType;
   w?: ChakraType;
+  type: string;
   value?: string;
-  isVisible?: boolean;
   border?: ChakraType;
   borderColor?: string;
   className?: string;
   placeholder?: string;
-  paddingRight?: string;
   backgroundColor?: string;
-  onChange: (value: string) => void;
   isFocus?: boolean;
   borderRadius?: string;
   icon?: string;
-  type: string;
+  defaultValue?: number;
+  onChange?: (value: number) => void;
+  onChangeText?: (value: string) => void;
 }
 
 export default function InputIcon({
   h,
   w,
-  value,
+  type,
   className,
   placeholder,
-  isVisible,
-  onChange,
   borderColor,
   border,
   isFocus = false,
   borderRadius,
+  onChange,
+  onChangeText,
   icon,
-  type,
+  defaultValue,
   ...rest
 }: SearchInputProps) {
   const { isLightMode } = useModeTheme();
@@ -49,7 +52,30 @@ export default function InputIcon({
         {icon && <Image src={icon} w="25px" />}
       </InputRightElement>
 
-      {isVisible && (
+      {type == "number" && (
+        <NumberInput
+          value={defaultValue}
+          onChange={(e) => onChange?.(parse(e))}
+        >
+          <NumberInputField
+            _focus={{ boxShadow: "none" }}
+            pl="10px"
+            w="100%"
+            h={h}
+            border={border}
+            borderColor={borderColor}
+            fontSize="14px"
+            fontWeight={500}
+            color={isLightMode ? "#171924" : "#F6F7F9"}
+            className={className}
+            placeholder={placeholder}
+            borderRadius={borderRadius ? borderRadius : "8px"}
+            {...rest}
+          />
+        </NumberInput>
+      )}
+
+      {type === "text" && (
         <Input
           w={w}
           h={h}
@@ -57,12 +83,12 @@ export default function InputIcon({
           borderColor={borderColor}
           type={type}
           fontSize="14px"
-          value={value}
+          value={defaultValue}
           color={isLightMode ? "#171924" : "#F6F7F9"}
           className={className}
           placeholder={placeholder}
           bg={isLightMode ? "#F6F7F9" : "#171924"}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => onChangeText?.(e.target.value)}
           borderRadius={borderRadius ? borderRadius : "8px"}
           {...rest}
         />
