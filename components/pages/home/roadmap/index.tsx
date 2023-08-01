@@ -18,9 +18,8 @@ export default function Roadmap() {
         pb="24px"
         textAlign="center"
         fontSize="24px"
-        txt="We're laying the foundation and empowering our community every step of the way. Together, we'll show the world that Wall Street Memes is here to stay."
+        txt="We're laying the foundation and empowering our community every step of the way. Together, we'll show the world that Popoy Meme is here to stay."
       />
-      <Image src="/svg/bg/car.svg" w="35%" />
       <SimpleGrid columns={{ base: 1, lg: 3 }} gap="20px" mt="30px">
         {ROADMAP.map((item) => (
           <Box

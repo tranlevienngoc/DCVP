@@ -13,13 +13,13 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Tokenomics",
     href: "#tokenomics",
   },
+  // {
+  //   label: "Ambassadors",
+  //   href: "#ambassadors",
+  // },
   {
-    label: "Ambassadors",
-    href: "#ambassadors",
-  },
-  {
-    label: "Airdrop",
-    href: "#airdrop",
+    label: "Merch",
+    href: "",
   },
 ];
 export default NAV_ITEMS;

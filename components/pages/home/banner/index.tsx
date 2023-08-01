@@ -29,6 +29,13 @@ export default function Banner() {
   const [valueCoin, setValueCoin] = useState(0);
   const [valueMyCoin, setValueMyCoin] = useState(0);
 
+  const handleClickScroll = useCallback((id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   const { openConnectModal } = useConnectModal();
 
   const handleChangeCoin = useCallback((value: number) => {
@@ -51,11 +58,10 @@ export default function Banner() {
 
   return (
     <Box
-      backgroundImage={{
-        base: "svg/bg/bannermb.svg",
-        xl: "/svg/bg/banner.svg",
-      }}
-      backgroundSize="cover"
+      backgroundImage="/images/bg/bg.png"
+      backgroundSize="contain"
+      backgroundRepeat="no-repeat"
+      height="100%"
       w="100%"
       pt="70px"
     >
@@ -66,7 +72,7 @@ export default function Banner() {
           id="#walletBox"
           p={{ base: "0 16px", md: "unset" }}
         >
-          <Image src="/images/logo.png" w="200px" />
+          <Image src="/svg/logo.svg" w="250px" />
           <Flex gap="10px" alignItems="center" mt="20px">
             {LIST_SOCIAL_NETWORK.map((item) => (
               <Image key={item.name} w="42px" h="42px" src={item.icon} />
@@ -110,7 +116,7 @@ export default function Banner() {
                 color="text.600"
                 fontSize="16px"
                 fontWeight={600}
-                txt="Your Purchased PPM = 0"
+                txt="Your Purchased POPOY = 0"
               />
 
               {isConnected && (
@@ -151,7 +157,7 @@ export default function Banner() {
             <Box textAlign="center" p="16px" w="100%">
               <Flex alignItems="center" justifyContent="space-between">
                 <Box bg="text.100" h="1px" w="100px" />
-                <TemplateText txt="1 PPM = $0.0316" />
+                <TemplateText txt="1 POPOY = $0.0316" />
                 <Box bg="text.100" h="1px" w="100px" />
               </Flex>
               <Flex justifyContent="space-between" mt="20px" gap="20px">
@@ -228,7 +234,7 @@ export default function Banner() {
                   <TemplateText
                     mb="10px"
                     w="max-content"
-                    txt="Amount in <b>PPM</b> you receive"
+                    txt="Amount in <b>POPOY</b> you receive"
                   />
                   <InputIcon
                     type="number"
@@ -262,21 +268,8 @@ export default function Banner() {
                 w="100%"
                 mt="10px"
                 fwText={700}
-                content="Buy with BNB"
-                bg="#fff"
-                _hover={{
-                  background: "text.600",
-                }}
-                border="2px solid #1E1E1E"
-                borderRadius="50px"
-              />
-              <ButtonBase
-                colorText="text.100"
-                fsText="14px"
-                w="100%"
-                mt="10px"
-                fwText={700}
-                content="how to buy"
+                onClick={() => handleClickScroll("#howtobuy")}
+                content="How to buy"
                 _hover={{
                   background: "text.300",
                 }}
@@ -288,7 +281,12 @@ export default function Banner() {
         </Flex>
       </Flex>
       <Flex className="video" justifyContent="center" mt="20px">
-        <ReactPlayer url="https://www.youtube.com/watch?v=k85mRPqvMbE&ab_channel=CrazyFrog" />
+        <video width="700px" height="394px" controls>
+          <source
+            src="https://adoptvietnam.vn/file/video.mp4"
+            type="video/mp4"
+          />
+        </video>
       </Flex>
     </Box>
   );

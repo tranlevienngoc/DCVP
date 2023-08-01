@@ -11,12 +11,6 @@ export const LIST_OPTION_COIN = [
     icon: "/svg/icons/usdt.svg",
     value: "30",
   },
-  {
-    name: "CARD",
-    image: "/svg/icons/card.svg",
-    icon: "/svg/icons/cardicon.svg",
-    value: "0",
-  },
 ];
 
 export const LIST_SOCIAL_NETWORK = [

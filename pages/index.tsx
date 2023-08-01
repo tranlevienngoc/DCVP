@@ -6,7 +6,7 @@ import HomePage from "components/pages/home";
 export default function Home() {
   return (
     <Box>
-      <Seo templateTitle="home" />
+      <Seo templateTitle="Popoy" />
       <HomePage />
     </Box>
   );

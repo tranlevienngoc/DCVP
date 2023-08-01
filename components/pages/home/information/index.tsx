@@ -23,7 +23,7 @@ export default function Information() {
           w="100px"
         />
         <TemplateText
-          txt="$PPM TOKEN"
+          txt="&POPY TOKEN"
           textAlign={{ base: "center", lg: "start" }}
           fontSize="35px"
           fontWeight={700}
@@ -39,20 +39,20 @@ export default function Information() {
           textAlign={{ base: "center", lg: "start" }}
           mb="16px"
           fontSize="16px"
-          txt="Born out of that movement is Wall Street Memes - the ultimate expression of the internet’s triumph over rampant capitalism. “Greed is good,” said Gordon Gekko in the ‘80s as he got rich off useless stocks. Around 30 years later, hundreds of arguably even more useless meme coins allow ordinary people to do the same."
+          txt="Born out of that movement is Popoy Meme - the ultimate expression of the internet’s triumph over rampant capitalism. “Greed is good,” said Gordon Gekko in the ‘80s as he got rich off useless stocks. Around 30 years later, hundreds of arguably even more useless meme coins allow ordinary people to do the same."
         />
         <TemplateText
           textAlign={{ base: "center", lg: "start" }}
           mb="16px"
           fontSize="16px"
-          txt="Wall Street Memes is tokenising the movement. Join the $WSM army today and prove that greed is, indeed, very good."
+          txt="Popoy Meme is tokenising the movement. Join the $POPOY army today and prove that greed is, indeed, very good."
         />
       </Flex>
       <Flex
         w={{ base: "100%", lg: "50%" }}
         justifyContent={{ base: "center", lg: "end" }}
       >
-        <Image src="/svg/bg/information.svg" />
+        <Image src="/images/bg/information.png" />
       </Flex>
     </Flex>
   );

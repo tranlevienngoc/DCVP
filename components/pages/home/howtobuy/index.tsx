@@ -10,23 +10,22 @@ export default function HowToBuy() {
       direction="column"
       alignItems="center"
       className="maxW"
-      p="80px 16px 80px 16px"
+      p="80px 16px 120px 16px"
       id="#howtobuy"
     >
-      <Image src="/images/apple-touch-icon.png" w="80px" />
       <TemplateText
         mt="10px"
         fontSize="35px"
         textAlign="center"
         fontWeight={700}
-        txt="HOW TO BUY POPOY MEMES TOKEN"
+        txt="HOW TO BUY POPOY MEME TOKEN"
       />
       <TemplateText
         mt="10px"
         mb="48px"
         textAlign="center"
         fontSize="18px"
-        txt="Take charge and buy $WSM tokens in presale using ETH, BNB, USDT, or bank card before it lists on DEX."
+        txt="Take charge and buy $POPOY tokens in presale using ETH, BNB, USDT, or bank card before it lists on DEX."
       />
       <SimpleGrid gap="50px" columns={{ base: 1, lg: 3 }}>
         {HOWTOBUY.map((item, index) => (
@@ -51,23 +50,14 @@ export default function HowToBuy() {
             >
               <Image
                 className="image"
+                transform={{ base: item.transformmb, md: item.transform }}
                 src={item.ava}
-                w={{ base: "120px", md: "150px" }}
+                w={item.width}
               />
             </Box>
           </Box>
         ))}
       </SimpleGrid>
-      <ButtonBase
-        mt="50px"
-        bg="#1E1E1E"
-        colorText="#fff"
-        borderRadius="50px"
-        border="3px solid #fff"
-        w="150px"
-        boxShadow="0 4px 4px #00000040"
-        content="More Help"
-      />
     </Flex>
   );
 }

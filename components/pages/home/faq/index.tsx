@@ -20,7 +20,7 @@ export default function FAQ() {
         textAlign="center"
       />
       <TemplateText
-        txt="Common answers to questions about Wall Street Memes ($WSM) can be found below."
+        txt="Common answers to questions about Popoy Meme ($POPOY) can be found below."
         fontSize="24px"
         textAlign="center"
       />

@@ -28,14 +28,7 @@ export default function Footer() {
               <Image key={item.name} src={item.icon} w="25px" h="25px" />
             ))}
           </Flex>
-          <TemplateText color="text.500" txt="contact@wallstmemes.com" />
         </Flex>
-        <TemplateText
-          color="text.500"
-          mt={{ base: "20px", xl: "unset" }}
-          textAlign={{ base: "center", xl: "start" }}
-          txt="Tower Financial Centre, 10th Floor, 50th Street & Corner of Elvira, Panama City, Panama"
-        />
         <Flex
           direction={{ base: "column", xl: "row" }}
           mt="20px"
@@ -75,14 +68,19 @@ export default function Footer() {
                 <Image key={item.name} src={item.icon} w="25px" h="25px" />
               ))}
             </Flex>
-            <TemplateText color="text.500" txt="contact@wallstmemes.com" />
           </Box>
         </Flex>
         <TemplateText
           mt="20px"
           color="text.500"
           textAlign={{ base: "center", xl: "start" }}
-          txt="Cryptocurrency may be unregulated in your jurisdiction. The value of cryptocurrencies may go down as well as up. Profits may be subject to capital gains or other taxes applicable in your jurisdiction."
+          txt="$POPOY coin has no association with Ultra Records. This token is simply paying homage to a meme we all love and recognize."
+        />
+        <TemplateText
+          mt="7px"
+          color="text.500"
+          textAlign={{ base: "center", xl: "start" }}
+          txt="$POPOY is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. the coin is completely useless and for entertainment purposes only."
         />
       </Box>
     </Box>

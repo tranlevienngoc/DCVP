@@ -21,7 +21,10 @@ export default function Tokenomics() {
         justifyContent="center"
         gap="50px"
       >
-        <Image src="/svg/bg/tokenomics.svg" w={{ base: "100%", lg: "30%" }} />
+        <Image
+          src="/images/bg/tokenomics.png"
+          w={{ base: "100%", lg: "30%" }}
+        />
         <Flex
           p={{ base: "0 16px", lg: "unset" }}
           w={{ base: "100%", lg: "20%" }}
@@ -40,7 +43,7 @@ export default function Tokenomics() {
           <TemplateText
             w="250px"
             mt="20px"
-            txt="The launch of the $PPM token will help sustain the growth of the PoPoy Memes community and reward loyal members."
+            txt="The launch of the $POPOY token will help sustain the growth of the PoPoy Memes community and reward loyal members."
           />
         </Flex>
       </Flex>

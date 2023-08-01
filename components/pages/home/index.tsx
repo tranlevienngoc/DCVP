@@ -8,8 +8,6 @@ import Information from "./information";
 import HowToBuy from "./howtobuy";
 import Roadmap from "./roadmap";
 import Tokenomics from "./tokenomics";
-import Ambassadors from "./ambassadors";
-import Airdrop from "./airdrop";
 import FAQ from "./faq";
 
 export default function HomePage() {
@@ -25,12 +23,6 @@ export default function HomePage() {
       <Roadmap />
       <Box pt="100px" id="#tokenomics">
         <Tokenomics />
-      </Box>
-      <Box pt="100px" id="#ambassadors">
-        <Ambassadors />
-      </Box>
-      <Box pt="100px" id="#airdrop">
-        <Airdrop />
       </Box>
       <FAQ />
     </Box>

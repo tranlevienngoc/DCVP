@@ -91,15 +91,9 @@ const Header = () => {
       >
         <Link href="/">
           <Image
-            display={{ base: "none", xl: "block" }}
             mt="-10px"
-            src="/images/logo.png"
-            w="140px"
-          />
-          <Image
-            display={{ base: "block", xl: "none" }}
-            src="/images/apple-touch-icon.png"
-            w="40px"
+            src="/svg/logo.svg"
+            w={{ base: "120px", md: "140px" }}
           />
         </Link>
         <Flex
@@ -116,13 +110,6 @@ const Header = () => {
           alignItems="center"
           justifyContent="center"
         >
-          <TemplateText
-            display={{ base: "none", xl: "block" }}
-            txt="Merch"
-            fontSize="18px"
-            fontWeight={700}
-          />
-
           <ButtonBase
             onClick={() => {
               handleClickScroll("#walletBox");
