@@ -13,7 +13,7 @@ export default function Progress({ completed, content }: props) {
       <Flex
         h="100%"
         w={completed}
-        bg="#308807"
+        bg="rgb(139 221 255)"
         borderRadius={completed === "100%" ? "inherit" : "50px 0 0 50px"}
         transition="width 1s ease-in-out"
       >

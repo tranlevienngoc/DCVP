@@ -2,6 +2,7 @@ import { ComponentProps, ReactNode } from "react";
 import {
   connectorsForWallets,
   getDefaultWallets,
+  lightTheme,
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
 
@@ -48,9 +49,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <WagmiConfig config={wagmiConfig}>
-      <RainbowKitProvider chains={chains} theme={ModalConnectTheme}>
-        {children}
-      </RainbowKitProvider>
+      <RainbowKitProvider chains={chains}>{children}</RainbowKitProvider>
     </WagmiConfig>
   );
 };

@@ -10,8 +10,7 @@ export default function HowToBuy() {
       direction="column"
       alignItems="center"
       className="maxW"
-      p="80px 16px 120px 16px"
-      id="#howtobuy"
+      p="50px 16px 00px 16px"
     >
       <TemplateText
         mt="10px"
@@ -19,6 +18,8 @@ export default function HowToBuy() {
         textAlign="center"
         fontWeight={700}
         txt="HOW TO BUY POPOY MEME TOKEN"
+        fontFamily="Bangers"
+        letterSpacing="3px"
       />
       <TemplateText
         mt="10px"

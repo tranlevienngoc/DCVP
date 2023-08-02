@@ -9,7 +9,7 @@ export default function Information() {
       alignItems="center"
       justifyContent="center"
       direction={{ base: "column", lg: "row" }}
-      p={{ base: "0 16px", xl: "unset" }}
+      p={{ base: "0 16px", "2xl": "unset" }}
       gap={{ base: "20px", lg: "100px" }}
     >
       <Flex
@@ -17,17 +17,14 @@ export default function Information() {
         direction="column"
         alignItems="center"
       >
-        <Image
-          display={{ base: "block", lg: "none" }}
-          src="/images/apple-touch-icon.png"
-          w="100px"
-        />
         <TemplateText
-          txt="&POPY TOKEN"
+          txt="&POPOY TOKEN"
           textAlign={{ base: "center", lg: "start" }}
           fontSize="35px"
           fontWeight={700}
           mb="40px"
+          fontFamily="Bangers"
+          letterSpacing="3px"
         />
         <TemplateText
           mb="32px"

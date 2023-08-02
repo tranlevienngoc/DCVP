@@ -13,10 +13,10 @@ export default function DateTimeDisplay({ value, type, isDanger }: props) {
     <Box
       bg="#fff"
       borderRadius="10px"
-      p={{ base: "10px", md: "10px 30px" }}
+      p={{ base: "10px", md: "7px 10px" }}
       w="100%"
     >
-      <TemplateText fontWeight={700} fontSize="18px" txt={`${value} ${type}`} />
+      <TemplateText fontWeight={700} fontSize="18px" txt={`${value}${type}`} />
     </Box>
   );
 }

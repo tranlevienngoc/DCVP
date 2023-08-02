@@ -10,9 +10,15 @@ export default function Roadmap() {
       justifyContent="center"
       alignItems="center"
       className="maxW"
-      p={{ base: "0 16px", lg: "0 0 80px 0" }}
+      p={{ base: "0 16px", "2xl": "0 0 80px 0" }}
     >
-      <TemplateText txt="ROADMAP" fontSize="35px" fontWeight={700} />
+      <TemplateText
+        txt="ROADMAP"
+        fontFamily="Bangers"
+        letterSpacing="3px"
+        fontSize="35px"
+        fontWeight={700}
+      />
       <TemplateText
         m="16px 0"
         pb="24px"
@@ -34,6 +40,8 @@ export default function Roadmap() {
               txt={item.title}
               fontSize="28px"
               fontWeight={700}
+              fontFamily="Bangers"
+              letterSpacing="3px"
             />
             <TemplateText
               mb="16px"

@@ -22,23 +22,23 @@ export default function Questions({ item, index, length }: props) {
         onClick={onToggle}
         bg="rgba(255, 255, 255, 0.8)"
         border={isOpen ? "3px solid #1e1e1e" : "3px solid #737373"}
-        borderRadius="12px"
+        borderRadius="50px"
+        p="0 16px"
       >
         <Flex
-          p="16px"
+          p="16px 0"
           justify={"space-between"}
           align={"center"}
-          borderBottomWidth={1}
-          borderStyle={"solid"}
           _hover={{
             textDecoration: "none",
           }}
           cursor="pointer"
+          borderBottom={isOpen ? "1px solid #73737326" : "unset"}
         >
           <TemplateText
             txt={item.question}
             color={isOpen ? "text.100" : "text.600"}
-            fontSize={{ base: "18px", md: "26px" }}
+            fontSize={{ base: "18px", md: "20px" }}
             fontWeight={700}
           />
 
@@ -56,8 +56,8 @@ export default function Questions({ item, index, length }: props) {
           style={{ marginTop: "0!important" }}
         >
           <TemplateText
-            p="16px"
-            fontSize={{ base: "16px", md: "24px" }}
+            p="16px 0"
+            fontSize={{ base: "16px", md: "18px" }}
             txt={item.answer}
           />
         </Collapse>

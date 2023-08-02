@@ -25,22 +25,26 @@ const MobileMenu = ({ navItem, onCloseMenu }: props) => {
   }, []);
   return (
     <Flex
-      h="51px"
       cursor="pointer"
-      mt="-8px"
       align="center"
       justify="space-between"
       alignItems="center"
       _hover={{
         textDecoration: "none",
       }}
+      p="10px 0"
       borderBottom={darkModeColors.border400}
       onClick={() => {
         onCloseMenu();
         handleClickScroll(navItem.href || "");
       }}
     >
-      <TemplateText fontWeight={700} fontSize={16} txt={navItem.label} />
+      <TemplateText
+        w="100%"
+        fontWeight={700}
+        fontSize={16}
+        txt={navItem.label}
+      />
     </Flex>
   );
 };

@@ -4,7 +4,7 @@ export const HOWTOBUY = [
     content:
       "Send ETH or BNB to your wallet and ape in using your preferred chain. Use the presale widget above to swap for $POPOY.",
     style: "style1",
-    bottom: "-10%",
+    bottom: "-13%",
     left: "-12%",
     leftmb: "52%",
     width: "100px",
@@ -16,8 +16,8 @@ export const HOWTOBUY = [
     content:
       "You can also buy $POPOY tokens with USDT (ERC-20 or BEP-20). Use the USDT option and swap your desired amount.",
     style: "style2",
-    bottom: "-10%",
-    right: "20%",
+    bottom: "-13%",
+    right: "19%",
     rightmb: "43%",
     transform: "scaleX(-1)",
     width: "125px",

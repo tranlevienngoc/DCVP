@@ -3,7 +3,6 @@ import React from "react";
 import Banner from "./banner";
 import TemplateText from "components/common/Text/TemplateText";
 import Business from "./business";
-import Slide from "./slide";
 import Information from "./information";
 import HowToBuy from "./howtobuy";
 import Roadmap from "./roadmap";
@@ -14,14 +13,17 @@ export default function HomePage() {
   return (
     <Box pb="40px">
       <Banner />
-      <Box pt="100px">
+      <Box p="50px 0" id="#about">
         <Business />
       </Box>
-      <Slide />
       <Information />
-      <HowToBuy />
-      <Roadmap />
-      <Box pt="100px" id="#tokenomics">
+      <Box id="#howtobuy">
+        <HowToBuy />
+      </Box>
+      <Box pt="70px" id="#roadmap">
+        <Roadmap />
+      </Box>
+      <Box p="50px 0" id="#tokenomics">
         <Tokenomics />
       </Box>
       <FAQ />

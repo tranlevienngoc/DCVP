@@ -8,16 +8,17 @@ export default function FAQ() {
   return (
     <Box
       className="maxW"
-      mt={{ base: "40px", lg: "100px" }}
       pb="40px"
-      mb={{ base: "40px", lg: "unset" }}
-      p={{ base: "0 16px", lg: "unset" }}
+      mb="40px"
+      p={{ base: "0 16px", "2xl": "unset" }}
     >
       <TemplateText
         txt="FAQ"
         fontSize="35px"
         fontWeight={700}
         textAlign="center"
+        fontFamily="Bangers"
+        letterSpacing="3px"
       />
       <TemplateText
         txt="Common answers to questions about Popoy Meme ($POPOY) can be found below."

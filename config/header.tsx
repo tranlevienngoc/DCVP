@@ -2,8 +2,8 @@ import { NavItem } from "constants/interface";
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Community",
-    href: "#!",
+    label: "About",
+    href: "#about",
   },
   {
     label: "How To Buy",
@@ -13,13 +13,9 @@ const NAV_ITEMS: Array<NavItem> = [
     label: "Tokenomics",
     href: "#tokenomics",
   },
-  // {
-  //   label: "Ambassadors",
-  //   href: "#ambassadors",
-  // },
   {
-    label: "Merch",
-    href: "",
+    label: "Roadmap ",
+    href: "#roadmap",
   },
 ];
 export default NAV_ITEMS;

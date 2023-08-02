@@ -31,7 +31,7 @@ const Header = () => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      const timer = setTimeout(() => openConnectModal?.(), 1500);
+      const timer = setTimeout(() => openConnectModal?.(), 500);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -59,20 +59,36 @@ const Header = () => {
             <MobileMenu onCloseMenu={onCloseMenu} key={k} navItem={navItem} />
           ))}
         </Stack>
-        {isConnected && (
+        {isConnected ? (
           <ButtonBase
-            pl="24px"
             onClick={openAccountModal}
             colorText="text.100"
-            h="51px"
             fsText="16px"
+            h="49px"
+            pl="24px"
             fwText={700}
             content={address}
+            alignItems="center"
             bg="none"
             borderRadius="10px"
           />
+        ) : (
+          <ButtonBase
+            onClick={openConnectModal}
+            fsText="16px"
+            fwText={700}
+            content="Connect Wallet"
+            m="10px 0 0 24px"
+            colorText="text.500"
+            bg="text.100"
+            borderRadius="50px"
+          />
         )}
-        <Flex alignItems="center" gap="10px" pl="24px" h="51px">
+        <Flex
+          alignItems="center"
+          gap="10px"
+          p={isConnected ? "0 0 0 24px" : "10px 0 10px 24px"}
+        >
           {LIST_SOCIAL_NETWORK.map((item) => (
             <Image key={item.name} src={item.icon} w="35px" h="35px" />
           ))}
@@ -92,15 +108,11 @@ const Header = () => {
         <Link href="/">
           <Image
             mt="-10px"
-            src="/svg/logo.svg"
+            src="/Logo.png"
             w={{ base: "120px", md: "140px" }}
           />
         </Link>
-        <Flex
-          display={{ base: "none", xl: "flex" }}
-          ml="30px"
-          alignItems="center"
-        >
+        <Flex display={{ base: "none", xl: "flex" }} alignItems="center">
           <DesktopNav />
         </Flex>
 
@@ -108,20 +120,9 @@ const Header = () => {
           gap="20px"
           mr={{ base: "10px", xl: "unset" }}
           alignItems="center"
-          justifyContent="center"
+          justifyContent="end"
         >
-          <ButtonBase
-            onClick={() => {
-              handleClickScroll("#walletBox");
-            }}
-            colorText="text.500"
-            fsText="14px"
-            fwText={700}
-            content="Buy now"
-            bg="text.100"
-            borderRadius="50px"
-          />
-          {isConnected && (
+          {isConnected ? (
             <ButtonBase
               onClick={openAccountModal}
               display={{ base: "none", xl: "block" }}
@@ -130,39 +131,50 @@ const Header = () => {
               fwText={700}
               content={truncateEthAddress(`${address}`)}
               bg="text.100"
-              borderRadius="10px"
+              borderRadius="50px"
+            />
+          ) : (
+            <ButtonBase
+              onClick={() => {
+                handleClickScroll("#walletBox");
+              }}
+              colorText="text.500"
+              fsText="14px"
+              fwText={700}
+              content="Connect Wallet"
+              display={{ base: "none", xl: "block" }}
+              bg="text.100"
+              borderRadius="50px"
             />
           )}
         </Flex>
 
-        <Flex alignItems="center" justifyContent="center">
-          <Box
-            w="40px"
-            h="46px"
-            bg="bg.100"
-            cursor="pointer"
-            borderRadius="4px"
-            alignItems="center"
-            justifyContent="center"
-            display={{ base: "flex", xl: "none" }}
-            onClick={() => {
-              onToggle();
-            }}
-          >
-            {isOpen ? (
-              <CloseIcon color="text.100" w={3} h={3} />
-            ) : (
-              <HamburgerIcon w={6} h={6} color="text.100" />
-            )}
-          </Box>
-        </Flex>
+        <Box
+          w="40px"
+          h="46px"
+          bg="bg.100"
+          cursor="pointer"
+          borderRadius="4px"
+          alignItems="center"
+          justifyContent="center"
+          display={{ base: "flex", xl: "none" }}
+          onClick={() => {
+            onToggle();
+          }}
+        >
+          {isOpen ? (
+            <CloseIcon color="text.100" w={3} h={3} />
+          ) : (
+            <HamburgerIcon w={6} h={6} color="text.100" />
+          )}
+        </Box>
       </Flex>
 
       <DrawerItem
         pbody="0px"
         onClose={onClose}
         isOpen={isOpen}
-        logo="/images/logo.png"
+        logo="/Logo.png"
       >
         <MobileNav onCloseMenu={onClose} />
       </DrawerItem>

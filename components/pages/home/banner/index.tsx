@@ -58,12 +58,12 @@ export default function Banner() {
 
   return (
     <Box
-      backgroundImage="/images/bg/bg.png"
-      backgroundSize="contain"
+      backgroundImage={{ base: "unset", xl: "/images/bg/bg.png" }}
+      backgroundSize="cover"
       backgroundRepeat="no-repeat"
       height="100%"
       w="100%"
-      pt="70px"
+      pt="90px"
     >
       <Flex justifyContent="center" alignItems="center" direction="column">
         <Flex
@@ -72,7 +72,7 @@ export default function Banner() {
           id="#walletBox"
           p={{ base: "0 16px", md: "unset" }}
         >
-          <Image src="/svg/logo.svg" w="250px" />
+          <Image src="/Logo.png" w="250px" />
           <Flex gap="10px" alignItems="center" mt="20px">
             {LIST_SOCIAL_NETWORK.map((item) => (
               <Image key={item.name} w="42px" h="42px" src={item.icon} />
@@ -81,7 +81,7 @@ export default function Banner() {
 
           <Box
             mt="30px"
-            w={{ base: "100%", md: "500px" }}
+            w={{ base: "100%", md: "450px" }}
             bg="#fff"
             borderRadius="20px"
             border="5px solid #1E1E1E"
@@ -97,7 +97,7 @@ export default function Banner() {
               <TemplateText
                 m="15px 0"
                 color="text.500"
-                fontSize="20px"
+                fontSize="18px"
                 fontWeight={600}
                 txt="BUY IN BEFORE PRICE INCREASES!"
               />
@@ -111,46 +111,48 @@ export default function Banner() {
                 fontWeight={600}
                 txt="USDT Raised: $15,173,561.68 / $15,441,744.63"
               />
-              <TemplateText
-                m="15px 0"
-                color="text.600"
-                fontSize="16px"
-                fontWeight={600}
-                txt="Your Purchased POPOY = 0"
-              />
 
               {isConnected && (
-                <Flex direction="column" alignItems="center" gap="20px">
+                <>
                   <TemplateText
+                    m="15px 0"
+                    color="text.600"
                     fontSize="16px"
-                    color="text.500"
-                    txt="Refer your friends to participate in the presale"
+                    fontWeight={600}
+                    txt="Your Purchased POPOY = 0"
                   />
-                  <Flex
-                    p="10px"
-                    border="1px solid #0DC5F5"
-                    borderRadius="20px"
-                    alignItems="center"
-                    gap="5px"
-                    w="40%"
-                  >
+                  <Flex direction="column" alignItems="center" gap="20px">
                     <TemplateText
-                      textOverflow="ellipsis"
-                      overflow="hidden"
-                      whiteSpace="nowrap"
+                      fontSize="16px"
                       color="text.500"
-                      txt="https://bs_066ea8e0.youpromote.care?aff=228261"
+                      txt="Refer your friends to participate in the presale"
                     />
+                    <Flex
+                      p="10px"
+                      border="1px solid #0DC5F5"
+                      borderRadius="20px"
+                      alignItems="center"
+                      gap="5px"
+                      w="40%"
+                    >
+                      <TemplateText
+                        textOverflow="ellipsis"
+                        overflow="hidden"
+                        whiteSpace="nowrap"
+                        color="text.500"
+                        txt="https://bs_066ea8e0.youpromote.care?aff=228261"
+                      />
 
-                    <Icon
-                      onClick={copyToClipboard}
-                      as={FiCopy}
-                      color="text.500"
-                      h={5}
-                      w={5}
-                    />
+                      <Icon
+                        onClick={copyToClipboard}
+                        as={FiCopy}
+                        color="text.500"
+                        h={5}
+                        w={5}
+                      />
+                    </Flex>
                   </Flex>
-                </Flex>
+                </>
               )}
             </Box>
 
@@ -209,12 +211,12 @@ export default function Banner() {
                   >
                     <TemplateText
                       w="max-content"
-                      txt={`Amount in <b>${seclected.name}</b> you pay`}
+                      txt={`Amount in <span class="text-color">${seclected.name}</span> you pay`}
                     />
                     <TemplateText
                       cursor="pointer"
                       txt="Max"
-                      fontSize="16px"
+                      fontSize="14px"
                       fontWeight={700}
                     />
                   </Flex>
@@ -234,7 +236,7 @@ export default function Banner() {
                   <TemplateText
                     mb="10px"
                     w="max-content"
-                    txt="Amount in <b>POPOY</b> you receive"
+                    txt={`Amount in <span class="text-color">POPOY</span> you receive`}
                   />
                   <InputIcon
                     type="number"
@@ -250,17 +252,30 @@ export default function Banner() {
                 </Box>
               </Flex>
 
-              <ButtonBase
-                onClick={openConnectModal}
-                colorText="text.500"
-                fsText="14px"
-                w="100%"
-                mt="10px"
-                fwText={700}
-                content="Buy now"
-                bg="text.100"
-                borderRadius="50px"
-              />
+              {isConnected ? (
+                <ButtonBase
+                  colorText="text.500"
+                  fsText="14px"
+                  w="100%"
+                  mt="10px"
+                  fwText={700}
+                  content="Buy now"
+                  bg="text.100"
+                  borderRadius="50px"
+                />
+              ) : (
+                <ButtonBase
+                  onClick={openConnectModal}
+                  colorText="text.500"
+                  fsText="14px"
+                  w="100%"
+                  mt="10px"
+                  fwText={700}
+                  content="Connect Wallet"
+                  bg="text.100"
+                  borderRadius="50px"
+                />
+              )}
 
               <ButtonBase
                 colorText="text.100"
@@ -279,14 +294,6 @@ export default function Banner() {
             </Box>
           </Box>
         </Flex>
-      </Flex>
-      <Flex className="video" justifyContent="center" mt="20px">
-        <video width="700px" height="394px" controls>
-          <source
-            src="https://adoptvietnam.vn/file/video.mp4"
-            type="video/mp4"
-          />
-        </video>
       </Flex>
     </Box>
   );

@@ -8,6 +8,8 @@ export default function Tokenomics() {
     <Box className="maxW">
       <TemplateText
         txt="TOKENOMICS"
+        fontFamily="Bangers"
+        letterSpacing="3px"
         fontWeight={700}
         textAlign="center"
         fontSize="35px"
@@ -23,6 +25,7 @@ export default function Tokenomics() {
       >
         <Image
           src="/images/bg/tokenomics.png"
+          p={{ base: "0 16px", lg: "unset" }}
           w={{ base: "100%", lg: "30%" }}
         />
         <Flex
