@@ -39,8 +39,6 @@ export default function Banner() {
   const { openConnectModal } = useConnectModal();
 
   const handleChangeCoin = useCallback((value: number) => {
-    console.log("asd");
-
     setValueCoin(value);
     setValueMyCoin(convertBigNumber(value * Number(seclected.value)));
   }, []);
@@ -59,7 +57,7 @@ export default function Banner() {
   return (
     <Box
       backgroundImage={{ base: "unset", xl: "/images/bg/bg.png" }}
-      backgroundSize="cover"
+      backgroundSize={isConnected ? "contain" : "cover"}
       backgroundRepeat="no-repeat"
       height="100%"
       w="100%"

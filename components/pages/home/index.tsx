@@ -20,10 +20,10 @@ export default function HomePage() {
       <Box id="#howtobuy">
         <HowToBuy />
       </Box>
-      <Box pt="70px" id="#roadmap">
+      <Box pt="120px" id="#roadmap">
         <Roadmap />
       </Box>
-      <Box p="50px 0" id="#tokenomics">
+      <Box p="100px 0" id="#tokenomics">
         <Tokenomics />
       </Box>
       <FAQ />
