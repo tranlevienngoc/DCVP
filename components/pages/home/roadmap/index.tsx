@@ -10,7 +10,7 @@ export default function Roadmap() {
       justifyContent="center"
       alignItems="center"
       className="maxW"
-      p={{ base: "0 16px", "2xl": "0 0 80px 0" }}
+      p={{ base: "0 16px", "2xl": "unset" }}
     >
       <TemplateText
         txt="ROADMAP"
