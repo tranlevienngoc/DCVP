@@ -17,7 +17,7 @@ export default function HomePage() {
         <Business />
       </Box>
       <Information />
-      <Box id="#howtobuy">
+      <Box id="#howtobuy" pt="50px">
         <HowToBuy />
       </Box>
       <Box pt="120px" id="#roadmap">

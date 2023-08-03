@@ -23,8 +23,7 @@ export default function Questions({ item, index, length }: props) {
         mb={length - 1 == index ? "unset" : "20px"}
         onClick={onToggle}
         bg="rgba(255, 255, 255, 0.8)"
-        borderBottom={isOpen ? "3px solid #1e1e1e" : "3px solid #737373"}
-        p="0 16px"
+        borderBottom={isOpen ? "1px solid #1e1e1e" : "1px solid #737373"}
       >
         <Flex
           p="16px 0"
@@ -43,12 +42,6 @@ export default function Questions({ item, index, length }: props) {
             fontWeight={700}
           />
 
-          {/* <ChevronDownIcon
-            transition={"all .25s ease-in-out"}
-            transform={isOpen ? "rotate(180deg)" : ""}
-            w={6}
-            h={6}
-          /> */}
           {isOpen ? <MinusIcon /> : <AddIcon />}
         </Flex>
 

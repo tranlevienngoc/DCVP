@@ -26,7 +26,7 @@ export default function Tokenomics() {
         <Image
           src="/images/bg/tokenomics.png"
           p={{ base: "0 16px", lg: "unset" }}
-          w={{ base: "100%", lg: "30%" }}
+          w={{ base: "70%", lg: "30%" }}
         />
         <Flex
           p={{ base: "0 16px", lg: "unset" }}
@@ -53,7 +53,11 @@ export default function Tokenomics() {
               borderRadius="29px"
             >
               {CONTENT_TOKENOMICS.map((item) => (
-                <TemplateText key={item.content} txt={item.content} />
+                <TemplateText
+                  fontSize="18px"
+                  key={item.content}
+                  txt={item.content}
+                />
               ))}
             </Flex>
           </Box>

@@ -11,10 +11,11 @@ import { useConnectModal } from "@rainbow-me/rainbowkit";
 import copy from "copy-to-clipboard";
 
 import dynamic from "next/dynamic";
-import { useAccount } from "wagmi";
+import { useAccount, useBalance } from "wagmi";
 import { FiCopy } from "react-icons/fi";
 import { toastSuccess } from "utils/toast";
 import { convertBigNumber } from "utils/number";
+import { log } from "console";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Banner() {
@@ -24,7 +25,11 @@ export default function Banner() {
 
   const [seclected, setSelected] = useState<CoinPayType>(LIST_OPTION_COIN[0]);
 
-  const { isConnected } = useAccount();
+  const { isConnected, address } = useAccount();
+
+  const { data } = useBalance({
+    address: `0x${address?.replace("0x", "")}`,
+  });
 
   const [valueCoin, setValueCoin] = useState(0);
   const [valueMyCoin, setValueMyCoin] = useState(0);
@@ -73,7 +78,6 @@ export default function Banner() {
           id="#walletBox"
           p={{ base: "0 16px", md: "unset" }}
         >
-          <Image src="/Logo.png" w="250px" />
           <Flex gap="10px" alignItems="center" mt="20px">
             {LIST_SOCIAL_NETWORK.map((item) => (
               <Image key={item.name} w="42px" h="42px" src={item.icon} />
@@ -165,9 +169,9 @@ export default function Banner() {
 
             <Box textAlign="center" p="16px" w="100%">
               <Flex alignItems="center" justifyContent="space-between">
-                <Box bg="text.100" h="1px" w="100px" />
-                <TemplateText txt="1 POPOY = $0.0316" />
-                <Box bg="text.100" h="1px" w="100px" />
+                <Box bg="text.100" h="1px" w={{ base: "80px", md: "100px" }} />
+                <TemplateText txt="1 POPOY = $0.0316" display="inline-flex" />
+                <Box bg="text.100" h="1px" w={{ base: "80px", md: "100px" }} />
               </Flex>
               <Flex justifyContent="space-between" mt="20px" gap="20px">
                 {LIST_OPTION_COIN.map((item) => (
@@ -200,16 +204,13 @@ export default function Banner() {
                 pb="10px"
               >
                 {seclected.name !== "CARD" && (
-                  <TemplateText txt={`${seclected.name} Balance: 0`} />
+                  <TemplateText
+                    txt={`${seclected.name} Balance: ${data?.formatted}`}
+                  />
                 )}
               </Flex>
 
-              <Flex
-                alignItems="center"
-                direction={{ base: "column", md: "row" }}
-                gap="10px"
-                mt="20px"
-              >
+              <Flex alignItems="center" direction="column" gap="10px" mt="20px">
                 <Box w="100%">
                   <Flex
                     mb="10px"
@@ -259,11 +260,22 @@ export default function Banner() {
                 </Box>
               </Flex>
 
+              {Number(data?.formatted) < valueCoin && isConnected && (
+                <Box mt="10px">
+                  <TemplateText
+                    fontSize="13px"
+                    fontWeight={400}
+                    txt={`You do not have enough ${seclected.name} to pay for this transaction.`}
+                  />
+                </Box>
+              )}
+
               {isConnected ? (
                 <ButtonBase
                   colorText="text.500"
                   fsText="14px"
                   w="100%"
+                  h="48px"
                   mt="10px"
                   fwText={700}
                   content="Buy now"
@@ -276,6 +288,7 @@ export default function Banner() {
                   colorText="text.500"
                   fsText="14px"
                   w="100%"
+                  h="48px"
                   mt="10px"
                   fwText={700}
                   content="Connect Wallet"
@@ -289,6 +302,7 @@ export default function Banner() {
                 fsText="14px"
                 w="100%"
                 mt="10px"
+                h="48px"
                 fwText={700}
                 onClick={() => handleClickScroll("#howtobuy")}
                 content="How to buy"

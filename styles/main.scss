@@ -277,15 +277,14 @@ body {
 
 
 @media only screen and (max-width: 765px) {
-
-
-  .style1 {
+  .block-quote {
     position: relative;
     margin: 5px;
-    background-image: url(../public/svg/howtobuy/quote2.svg);
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: top left;
+    border: 1px solid #000;
+    box-shadow: 4px 4px 0 #262626;
+    padding: 16px;
+    border-radius: 29px;
+    width: 330px;
     text-indent: 23px;
 
     p {
