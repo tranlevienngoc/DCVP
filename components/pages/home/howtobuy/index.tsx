@@ -31,7 +31,7 @@ export default function HowToBuy() {
       <SimpleGrid gap="50px" columns={{ base: 1, lg: 3 }}>
         {HOWTOBUY.map((item, index) => (
           <Box position="relative" key={item.ava}>
-            <blockquote className={item.style}>
+            <blockquote className="block-quote">
               <TemplateText
                 as="span"
                 position="absolute"
@@ -45,7 +45,7 @@ export default function HowToBuy() {
             </blockquote>
             <Box
               position="absolute"
-              bottom={item.bottom}
+              bottom={{ base: item.bottommb, md: item.bottom }}
               left={{ base: item.leftmb, md: item.left }}
               right={{ base: item.rightmb, md: item.right }}
             >

@@ -30,10 +30,10 @@ export default function Roadmap() {
         {ROADMAP.map((item) => (
           <Box
             key={item.title}
-            border="3px solid #000000"
-            boxShadow="5px 6px #00000040"
-            borderRadius="29px"
+            border="1px solid #000"
+            boxShadow="4px 4px 0 #262626"
             p="16px"
+            borderRadius="29px"
           >
             <TemplateText
               m="16px 0 8px 0"

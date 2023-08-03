@@ -67,7 +67,7 @@ const Header = () => {
             h="49px"
             pl="24px"
             fwText={700}
-            content={address}
+            content={truncateEthAddress(`${address}`)}
             alignItems="center"
             bg="none"
             borderRadius="10px"

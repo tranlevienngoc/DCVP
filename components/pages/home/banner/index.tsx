@@ -56,8 +56,11 @@ export default function Banner() {
 
   return (
     <Box
-      backgroundImage={{ base: "unset", xl: "/images/bg/bg.png" }}
-      backgroundSize={isConnected ? "contain" : "cover"}
+      backgroundImage={{ base: "/images/bg/bg2.png", xl: "/images/bg/bg2.png" }}
+      backgroundSize={{
+        base: "cover",
+        lg: isConnected ? "contain" : "cover",
+      }}
       backgroundRepeat="no-repeat"
       height="100%"
       w="100%"
@@ -111,7 +114,7 @@ export default function Banner() {
               />
 
               {isConnected && (
-                <>
+                <Box w="100%">
                   <TemplateText
                     m="15px 0"
                     color="text.600"
@@ -119,7 +122,12 @@ export default function Banner() {
                     fontWeight={600}
                     txt="Your Purchased POPOY = 0"
                   />
-                  <Flex direction="column" alignItems="center" gap="20px">
+                  <Flex
+                    w="100%"
+                    direction="column"
+                    alignItems="center"
+                    gap="20px"
+                  >
                     <TemplateText
                       fontSize="16px"
                       color="text.500"
@@ -137,6 +145,7 @@ export default function Banner() {
                         textOverflow="ellipsis"
                         overflow="hidden"
                         whiteSpace="nowrap"
+                        maxW="255px"
                         color="text.500"
                         txt="https://bs_066ea8e0.youpromote.care?aff=228261"
                       />
@@ -150,7 +159,7 @@ export default function Banner() {
                       />
                     </Flex>
                   </Flex>
-                </>
+                </Box>
               )}
             </Box>
 

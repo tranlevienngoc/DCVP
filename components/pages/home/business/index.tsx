@@ -18,7 +18,15 @@ export default function Business() {
           letterSpacing="3px"
           txt="THE MOST AMUSING MEMECOIN IN THE UNIVERSE"
         />
-        <Flex mt="16px" direction="column" gap="15px">
+        <Flex
+          mt="16px"
+          direction="column"
+          gap="15px"
+          border="1px solid #000"
+          boxShadow="4px 4px 0 #262626"
+          p="16px"
+          borderRadius="29px"
+        >
           {TEXT_DESCRIPTIONS.map((item) => (
             <TemplateText
               key={item.paragraph}
