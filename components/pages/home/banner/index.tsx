@@ -31,7 +31,9 @@ export default function Banner() {
     address: `0x${address?.replace("0x", "")}`,
   });
 
-  const [valueCoin, setValueCoin] = useState(0);
+  const [valueCoin, setValueCoin] = useState(
+    isConnected ? convertBigNumber(Number(data?.formatted)) : 0
+  );
   const [valueMyCoin, setValueMyCoin] = useState(0);
 
   const handleClickScroll = useCallback((id: string) => {
@@ -100,34 +102,98 @@ export default function Banner() {
               w="100%"
               borderRadius="12px 12px 0 0"
             >
-              <Countdown targetDate={dateTimeAfterThreeDays} />
+              {/* <Countdown targetDate={dateTimeAfterThreeDays} /> */}
               <TemplateText
                 m="15px 0"
                 color="text.500"
-                fontSize="18px"
-                fontWeight={600}
-                txt="BUY IN BEFORE PRICE INCREASES!"
+                fontSize="30px"
+                fontWeight={700}
+                txt="$AIRB Pre-Sale"
               />
 
-              <Progress content="Next Stage Price: $0.0319" completed="70%" />
+              <Progress completed="70%" />
 
               <TemplateText
                 m="15px 0"
                 color="text.500"
                 fontSize="16px"
                 fontWeight={600}
-                txt="USDT Raised: $15,173,561.68 / $15,441,744.63"
+                txt="USDT Raised: <span class='textColorOrange'>$15,173,561.68 / $15,441,744.63</span>"
+              />
+              <TemplateText
+                color="text.200"
+                fontSize="16px"
+                fontWeight={600}
+                txt="Listing price: $0.060"
               />
 
+              <Flex mt="20px" gap="20px">
+                <Box
+                  p="4px"
+                  // className="boxRotate"
+                  position="relative"
+                  flexGrow="1"
+                  flexBasis="50%"
+                  overflow="hidden"
+                  borderRadius="8px"
+                  bg="red"
+                >
+                  <Flex
+                    position="relative"
+                    p="13px 0"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignContent="center"
+                    bg="rgb(218, 255, 251)"
+                    borderRadius="8px"
+                  >
+                    <TemplateText
+                      txt="Current Price"
+                      color="rgb(255, 113, 33)"
+                      fontWeight={700}
+                    />
+                    <TemplateText
+                      txt="1 SHMU = 0.017875 USDT"
+                      fontWeight={700}
+                      color="rgb(23, 17, 105)"
+                    />
+                  </Flex>
+                </Box>
+                <Box
+                  p="4px"
+                  // className="boxRotate"
+                  position="relative"
+                  flexGrow="1"
+                  flexBasis="50%"
+                  overflow="hidden"
+                  borderRadius="8px"
+                  bg="blue"
+                >
+                  <Flex
+                    position="relative"
+                    p="13px 0"
+                    flexDirection="column"
+                    justifyContent="center"
+                    alignContent="center"
+                    bg="rgb(218, 255, 251)"
+                    borderRadius="8px"
+                  >
+                    <TemplateText
+                      txt="Next Price"
+                      color="rgb(255, 113, 33)"
+                      fontWeight={700}
+                    />
+                    <TemplateText
+                      txt="1 SHMU = 0.018100 USDT"
+                      fontWeight={700}
+                      color="rgb(23, 17, 105)"
+                    />
+                  </Flex>
+                </Box>
+              </Flex>
+
               {isConnected && (
-                <Box w="100%">
-                  <TemplateText
-                    m="15px 0"
-                    color="text.600"
-                    fontSize="16px"
-                    fontWeight={600}
-                    txt="Your Purchased POPOY = 0"
-                  />
+                <Box w="100%" mt="20px">
                   <Flex
                     w="100%"
                     direction="column"
@@ -170,7 +236,7 @@ export default function Banner() {
             </Box>
 
             <Box textAlign="center" p="16px" w="100%">
-              <Flex alignItems="center" justifyContent="space-between">
+              {/* <Flex alignItems="center" justifyContent="space-between">
                 <Box
                   bg="#C7CED3"
                   h="1px"
@@ -182,8 +248,8 @@ export default function Banner() {
                   h="1px"
                   w={{ base: "53px", sm: "80px", md: "100px" }}
                 />
-              </Flex>
-              <Flex justifyContent="space-between" mt="20px" gap="20px">
+              </Flex> */}
+              {/* <Flex justifyContent="space-between" mt="20px" gap="20px">
                 {LIST_OPTION_COIN.map((item) => (
                   <Flex
                     justifyContent="center"
@@ -206,19 +272,7 @@ export default function Banner() {
                     <TemplateText txt={item.name} />
                   </Flex>
                 ))}
-              </Flex>
-              <Flex
-                borderBottom="1px solid #C7CED3"
-                justifyContent="center"
-                mt="20px"
-                pb="10px"
-              >
-                {isConnected && (
-                  <TemplateText
-                    txt={`${seclected.name} Balance: ${data?.formatted}`}
-                  />
-                )}
-              </Flex>
+              </Flex> */}
 
               <Flex alignItems="center" direction="column" gap="10px" mt="20px">
                 <Box w="100%">
@@ -280,18 +334,30 @@ export default function Banner() {
                 </Box>
               )}
 
+              <TemplateText
+                m="10px 0 5px 0"
+                fontWeight={600}
+                textAlign="start"
+                txt="You hget free 0 NFT Ticket"
+              />
+
               {isConnected ? (
-                <ButtonBase
-                  colorText="text.500"
-                  fsText="14px"
-                  w="100%"
-                  h="48px"
-                  mt="10px"
-                  fwText={700}
-                  content="Buy now"
-                  bg="text.100"
-                  borderRadius="50px"
-                />
+                <>
+                  <ButtonBase
+                    colorText="text.500"
+                    fsText="14px"
+                    w="100%"
+                    h="48px"
+                    mt="10px"
+                    fwText={700}
+                    content="Buy now"
+                    bg="text.100"
+                    borderRadius="50px"
+                  />
+                  <Flex justifyContent="center" mt="20px" pb="10px">
+                    <TemplateText txt={`You have 0 POPOY`} />
+                  </Flex>
+                </>
               ) : (
                 <ButtonBase
                   onClick={openConnectModal}
@@ -307,21 +373,37 @@ export default function Banner() {
                 />
               )}
 
-              <ButtonBase
-                colorText="text.100"
-                fsText="14px"
-                w="100%"
-                mt="10px"
-                h="48px"
-                fwText={700}
-                onClick={() => handleClickScroll("#howtobuy")}
-                content="How to buy"
-                _hover={{
-                  background: "text.300",
-                }}
-                bg="#F1F4f6"
-                borderRadius="50px"
-              />
+              <Flex gap="20px">
+                <ButtonBase
+                  colorText="text.100"
+                  fsText="14px"
+                  w="100%"
+                  mt="10px"
+                  h="48px"
+                  fwText={700}
+                  onClick={() => handleClickScroll("#howtobuy")}
+                  content="How to buy"
+                  _hover={{
+                    background: "text.300",
+                  }}
+                  bg="#F1F4f6"
+                  borderRadius="10px"
+                />
+                <ButtonBase
+                  colorText="text.100"
+                  fsText="14px"
+                  w="100%"
+                  mt="10px"
+                  h="48px"
+                  fwText={700}
+                  content="5% Referral Link"
+                  _hover={{
+                    background: "text.300",
+                  }}
+                  bg="#F1F4f6"
+                  borderRadius="10px"
+                />
+              </Flex>
             </Box>
           </Box>
         </Flex>

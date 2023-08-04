@@ -4,28 +4,21 @@ import React from "react";
 
 interface props {
   completed: string;
-  content: string;
 }
 
-export default function Progress({ completed, content }: props) {
+export default function Progress({ completed }: props) {
   return (
     <Box position="relative" h="25px" w="100%" bg="#fff" borderRadius="50px">
       <Flex
         h="100%"
         w={completed}
-        bg="rgb(139 221 255)"
-        borderRadius={completed === "100%" ? "inherit" : "50px 0 0 50px"}
+        bg="rgb(255, 113, 33)"
+        position="absolute"
+        className="process"
+        borderRadius="50px"
         transition="width 1s ease-in-out"
-      >
-        <TemplateText
-          position="absolute"
-          txt={content}
-          color="text.100"
-          fontWeight={600}
-          left={{ base: "25%", md: "30%" }}
-          top="5%"
-        />
-      </Flex>
+        animation="1.2s linear 0.5s infinite normal none running load"
+      ></Flex>
     </Box>
   );
 }
