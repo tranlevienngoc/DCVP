@@ -14,7 +14,7 @@ import "@rainbow-me/rainbowkit/styles.css";
 import { ModalConnectTheme } from "../../styles/theme/modalconnectTheme";
 
 export const WalletProvider = ({ children }: { children: ReactNode }) => {
-  const projectId = "3b2702fff16f0a67ec37f565da4a5401";
+  const projectId = "c35f9d5f14d231f9a724b84d800cb5ea";
 
   const { chains, publicClient, webSocketPublicClient } = configureChains(
     [goerli, mainnet, polygon, optimism, arbitrum],
@@ -22,7 +22,7 @@ export const WalletProvider = ({ children }: { children: ReactNode }) => {
   );
 
   const { wallets } = getDefaultWallets({
-    appName: "Test",
+    appName: "Popoy-Meme",
     projectId,
     chains,
   });
