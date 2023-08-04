@@ -16,6 +16,9 @@ import { FiCopy } from "react-icons/fi";
 import { toastSuccess } from "utils/toast";
 import { convertBigNumber } from "utils/number";
 import { log } from "console";
+import useVisible from "hooks/useVisible";
+import ModalItem from "components/common/ModalItem";
+import ModalRefferal from "./modalrefferal";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 export default function Banner() {
@@ -60,6 +63,8 @@ export default function Banner() {
     copy("https://bs_066ea8e0.youpromote.care?aff=228261");
     toastSuccess("You have copied!");
   };
+
+  const modalRefferal = useVisible();
 
   return (
     <Box
@@ -108,7 +113,7 @@ export default function Banner() {
                 color="text.500"
                 fontSize="30px"
                 fontWeight={700}
-                txt="$AIRB Pre-Sale"
+                txt="$POPOY PRE-SALE"
               />
 
               <Progress completed="70%" />
@@ -129,14 +134,14 @@ export default function Banner() {
 
               <Flex mt="20px" gap="20px">
                 <Box
-                  p="4px"
+                  p="2px"
                   // className="boxRotate"
                   position="relative"
                   flexGrow="1"
                   flexBasis="50%"
                   overflow="hidden"
                   borderRadius="8px"
-                  bg="red"
+                  bg="white "
                 >
                   <Flex
                     position="relative"
@@ -160,14 +165,14 @@ export default function Banner() {
                   </Flex>
                 </Box>
                 <Box
-                  p="4px"
+                  p="2px"
                   // className="boxRotate"
                   position="relative"
                   flexGrow="1"
                   flexBasis="50%"
                   overflow="hidden"
                   borderRadius="8px"
-                  bg="blue"
+                  bg="white"
                 >
                   <Flex
                     position="relative"
@@ -191,48 +196,6 @@ export default function Banner() {
                   </Flex>
                 </Box>
               </Flex>
-
-              {isConnected && (
-                <Box w="100%" mt="20px">
-                  <Flex
-                    w="100%"
-                    direction="column"
-                    alignItems="center"
-                    gap="20px"
-                  >
-                    <TemplateText
-                      fontSize="16px"
-                      color="text.500"
-                      txt="Refer your friends to participate in the presale"
-                    />
-                    <Flex
-                      p="10px"
-                      border="1px solid #0DC5F5"
-                      borderRadius="20px"
-                      alignItems="center"
-                      gap="5px"
-                      w="40%"
-                    >
-                      <TemplateText
-                        textOverflow="ellipsis"
-                        overflow="hidden"
-                        whiteSpace="nowrap"
-                        maxW="255px"
-                        color="text.500"
-                        txt="https://bs_066ea8e0.youpromote.care?aff=228261"
-                      />
-
-                      <Icon
-                        onClick={copyToClipboard}
-                        as={FiCopy}
-                        color="text.500"
-                        h={5}
-                        w={5}
-                      />
-                    </Flex>
-                  </Flex>
-                </Box>
-              )}
             </Box>
 
             <Box textAlign="center" p="16px" w="100%">
@@ -295,7 +258,7 @@ export default function Banner() {
                   <InputIcon
                     type="number"
                     icon={seclected.icon}
-                    h="40px"
+                    h="50px"
                     placeholder="0"
                     border="none"
                     onChange={handleChangeCoin}
@@ -313,9 +276,9 @@ export default function Banner() {
                   <InputIcon
                     type="number"
                     icon="/images/apple-touch-icon.png"
-                    h="40px"
                     placeholder="0"
                     border="none"
+                    h="50px"
                     onChange={handleChangeMyCoin}
                     defaultValue={valueMyCoin}
                     w="100%"
@@ -333,13 +296,6 @@ export default function Banner() {
                   />
                 </Box>
               )}
-
-              <TemplateText
-                m="10px 0 5px 0"
-                fontWeight={600}
-                textAlign="start"
-                txt="You hget free 0 NFT Ticket"
-              />
 
               {isConnected ? (
                 <>
@@ -373,7 +329,7 @@ export default function Banner() {
                 />
               )}
 
-              <Flex gap="20px">
+              <Flex gap="10px">
                 <ButtonBase
                   colorText="text.100"
                   fsText="14px"
@@ -387,7 +343,7 @@ export default function Banner() {
                     background: "text.300",
                   }}
                   bg="#F1F4f6"
-                  borderRadius="10px"
+                  borderRadius="50px"
                 />
                 <ButtonBase
                   colorText="text.100"
@@ -396,18 +352,27 @@ export default function Banner() {
                   mt="10px"
                   h="48px"
                   fwText={700}
+                  onClick={modalRefferal.show}
                   content="5% Referral Link"
                   _hover={{
                     background: "text.300",
                   }}
                   bg="#F1F4f6"
-                  borderRadius="10px"
+                  borderRadius="50px"
                 />
               </Flex>
             </Box>
           </Box>
         </Flex>
       </Flex>
+      <ModalItem
+        onClose={modalRefferal.hide}
+        isOpen={modalRefferal.visible}
+        maxW={{ base: "287px", sm: "400px" }}
+        bg="#fff"
+      >
+        <ModalRefferal />
+      </ModalItem>
     </Box>
   );
 }
