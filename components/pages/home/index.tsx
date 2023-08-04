@@ -1,5 +1,5 @@
 import { Box } from "@chakra-ui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "./banner";
 import TemplateText from "components/common/Text/TemplateText";
 import Business from "./business";
@@ -8,8 +8,17 @@ import HowToBuy from "./howtobuy";
 import Roadmap from "./roadmap";
 import Tokenomics from "./tokenomics";
 import FAQ from "./faq";
+import Aos from "aos";
 
 export default function HomePage() {
+  useEffect(() => {
+    Aos.init({
+      easing: "ease-out-cubic",
+      offset: 100,
+      duration: 1000,
+      delay: 50,
+    });
+  }, []);
   return (
     <Box pb="40px">
       <Banner />

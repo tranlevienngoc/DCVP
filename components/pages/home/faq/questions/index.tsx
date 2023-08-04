@@ -9,12 +9,14 @@ interface props {
     question: string;
     answer: string;
   };
-  index?: number;
+  index: number;
   length: number;
+  dataAos?: string;
 }
 
-export default function Questions({ item, index, length }: props) {
+export default function Questions({ item, index, length, dataAos }: props) {
   const { isOpen, onToggle } = useDisclosure();
+
   return (
     <Box>
       <Stack

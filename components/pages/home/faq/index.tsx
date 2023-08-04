@@ -19,19 +19,29 @@ export default function FAQ() {
         textAlign="center"
         fontFamily="Bangers"
         letterSpacing="3px"
+        data-aos="fade-up"
       />
       <TemplateText
         txt="Common answers to questions about Popoy Meme ($POPOY) can be found below."
+        data-aos="fade-up"
         fontSize="24px"
         textAlign="center"
       />
-      <Box mt="20px">
+      <Box
+        mt="20px"
+        border="1px solid #000"
+        boxShadow="4px 4px 0 #262626"
+        p="16px"
+        borderRadius="29px"
+        data-aos="fade-up"
+      >
         {LISTQUESTION.map((item, index) => (
           <Questions
             key={item.question}
             length={LISTQUESTION.length}
             index={index}
             item={item}
+            dataAos="fade-up"
           />
         ))}
       </Box>

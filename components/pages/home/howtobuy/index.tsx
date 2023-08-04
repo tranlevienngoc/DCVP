@@ -20,6 +20,7 @@ export default function HowToBuy() {
         txt="HOW TO BUY POPOY MEME TOKEN"
         fontFamily="Bangers"
         letterSpacing="3px"
+        data-aos="fade-up"
       />
       <TemplateText
         mt="10px"
@@ -27,11 +28,12 @@ export default function HowToBuy() {
         textAlign="center"
         fontSize="18px"
         txt="Take charge and buy $POPOY tokens in presale using ETH, BNB, USDT, or bank card before it lists on DEX."
+        data-aos="zoom-in"
       />
       <SimpleGrid gap="50px" columns={{ base: 1, lg: 3 }}>
         {HOWTOBUY.map((item, index) => (
           <Box position="relative" key={item.ava}>
-            <blockquote className="block-quote">
+            <blockquote className="block-quote" data-aos="fade-up">
               <TemplateText
                 as="span"
                 position="absolute"
@@ -48,6 +50,8 @@ export default function HowToBuy() {
               bottom={{ base: item.bottommb, md: item.bottom }}
               left={{ base: item.leftmb, md: item.left }}
               right={{ base: item.rightmb, md: item.right }}
+              data-aos="fade-up"
+              data-aos-duration="2000"
             >
               <Image
                 className="image"

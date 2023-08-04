@@ -77,14 +77,16 @@ export default function Banner() {
           alignItems="center"
           id="#walletBox"
           p={{ base: "0 16px", md: "unset" }}
+          data-aos="fade-in"
         >
-          <Flex gap="10px" alignItems="center" mt="20px">
+          <Flex gap="10px" alignItems="center" mt="20px" data-aos="fade-in">
             {LIST_SOCIAL_NETWORK.map((item) => (
               <Image key={item.name} w="42px" h="42px" src={item.icon} />
             ))}
           </Flex>
 
           <Box
+            data-aos="fade-up"
             mt="30px"
             w={{ base: "100%", md: "450px" }}
             bg="#fff"

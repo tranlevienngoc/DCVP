@@ -18,12 +18,14 @@ export default function Roadmap() {
         letterSpacing="3px"
         fontSize="35px"
         fontWeight={700}
+        data-aos="fade-up"
       />
       <TemplateText
         m="16px 0"
         pb="24px"
         textAlign="center"
         fontSize="24px"
+        data-aos="zoom-in"
         txt="We're laying the foundation and empowering our community every step of the way. Together, we'll show the world that Popoy Meme is here to stay."
       />
       <SimpleGrid columns={{ base: 1, lg: 3 }} gap="20px" mt="30px">
@@ -42,14 +44,23 @@ export default function Roadmap() {
               fontWeight={700}
               fontFamily="Bangers"
               letterSpacing="3px"
+              data-aos="zoom-out"
+              data-aos-duration="2000"
             />
             <TemplateText
               mb="16px"
               txt={item.lable}
               fontSize="17px"
               fontWeight={600}
+              data-aos="zoom-out"
+              data-aos-duration="2000"
             />
-            <TemplateText txt={item.content} fontSize="16px" />
+            <TemplateText
+              txt={item.content}
+              data-aos="zoom-out"
+              fontSize="16px"
+              data-aos-duration="2000"
+            />
           </Box>
         ))}
       </SimpleGrid>

@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import Seo from "components/Seo";
+import "aos/dist/aos.css";
 
 import HomePage from "components/pages/home";
 

@@ -15,6 +15,7 @@ export default function Tokenomics() {
         fontSize="35px"
         mb={{ base: "20px", lg: "48px" }}
         mt={{ base: "40px", lg: "unset" }}
+        data-aos="fade-up"
       />
       <Flex
         direction={{ base: "column-reverse", lg: "row" }}
@@ -27,6 +28,7 @@ export default function Tokenomics() {
           src="/images/bg/tokenomics.png"
           p={{ base: "0 16px", lg: "unset" }}
           w={{ base: "70%", lg: "30%" }}
+          data-aos="zoom-in-left"
         />
         <Flex
           p={{ base: "0 16px", lg: "unset" }}
@@ -43,6 +45,7 @@ export default function Tokenomics() {
               fontWeight={700}
               txt="Total supply: </br> 108,642,000,000,000"
               mb="20px"
+              data-aos="fade-down"
             />
             <Flex
               direction="column"
@@ -51,6 +54,7 @@ export default function Tokenomics() {
               boxShadow="4px 4px 0 #262626"
               p="16px"
               borderRadius="29px"
+              data-aos="fade-up"
             >
               {CONTENT_TOKENOMICS.map((item) => (
                 <TemplateText
@@ -64,8 +68,14 @@ export default function Tokenomics() {
           <Flex direction="column" gap="10px">
             {TOKENOMICS.map((item) => (
               <Flex gap="10px" alignItems="center" key={item.color}>
-                <Box bg={item.color} w="40px" h="40px" borderRadius="50px" />
-                <TemplateText txt={item.label} />
+                <Box
+                  bg={item.color}
+                  w="40px"
+                  h="40px"
+                  borderRadius="50px"
+                  data-aos="zoom-in-left"
+                />
+                <TemplateText txt={item.label} data-aos="zoom-in-right" />
               </Flex>
             ))}
           </Flex>
