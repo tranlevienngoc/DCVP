@@ -70,7 +70,6 @@ export default function Banner() {
       height="100%"
       w="100%"
       pt="90px"
-      h="100vh"
     >
       <Flex justifyContent="center" alignItems="center" direction="column">
         <Flex
@@ -172,9 +171,17 @@ export default function Banner() {
 
             <Box textAlign="center" p="16px" w="100%">
               <Flex alignItems="center" justifyContent="space-between">
-                <Box bg="#C7CED3" h="1px" w={{ base: "80px", md: "100px" }} />
+                <Box
+                  bg="#C7CED3"
+                  h="1px"
+                  w={{ base: "53px", sm: "80px", md: "100px" }}
+                />
                 <TemplateText txt="1 POPOY = $0.0316" display="inline-flex" />
-                <Box bg="#C7CED3" h="1px" w={{ base: "80px", md: "100px" }} />
+                <Box
+                  bg="#C7CED3"
+                  h="1px"
+                  w={{ base: "53px", sm: "80px", md: "100px" }}
+                />
               </Flex>
               <Flex justifyContent="space-between" mt="20px" gap="20px">
                 {LIST_OPTION_COIN.map((item) => (
