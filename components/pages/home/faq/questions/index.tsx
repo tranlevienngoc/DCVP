@@ -25,7 +25,13 @@ export default function Questions({ item, index, length, dataAos }: props) {
         mb={length - 1 == index ? "unset" : "20px"}
         onClick={onToggle}
         bg="rgba(255, 255, 255, 0.8)"
-        borderBottom={isOpen ? "1px solid #1e1e1e" : "1px solid #737373"}
+        borderBottom={
+          length - 1 !== index
+            ? isOpen
+              ? "1px solid #1e1e1e"
+              : "1px solid #737373"
+            : "unset "
+        }
       >
         <Flex
           p="16px 0"

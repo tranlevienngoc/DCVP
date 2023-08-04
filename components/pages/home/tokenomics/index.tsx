@@ -38,7 +38,7 @@ export default function Tokenomics() {
           gap={{ base: "20px", md: "unset" }}
           alignItems="center"
         >
-          <Box w={{ base: "100%", md: "50%" }}>
+          <Box w={{ base: "100%", md: "60%" }}>
             <TemplateText
               textAlign="center"
               fontSize="20px"
