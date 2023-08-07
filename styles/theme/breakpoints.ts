@@ -4,5 +4,5 @@ export const breakpoints: DeepPartial<Theme["breakpoints"]> = {
   md: "768px",
   lg: "1024px",
   xl: "1200px",
-  "2xl": "1450px",
+  "2xl": "1650px",
 };

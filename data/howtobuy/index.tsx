@@ -16,7 +16,7 @@ export const HOWTOBUY = [
     content:
       "Connect your wallet to the site and simply swap ETH for POPOY using the buy widget above. There is no buy tax for presale transactions.",
     bottom: "-13%",
-    right: "19%",
+    right: "16%",
     bottommb: "-20%",
     rightmb: "43%",
     transform: "scaleX(-1)",

@@ -22,7 +22,14 @@ export default function HomePage() {
   return (
     <Box pb="40px">
       <Banner />
-      <Box p="50px 0" id="#about">
+      <Box
+        p={{
+          base: "100px 0 100px 0",
+          lg: "100px 0 50px 0",
+          "2xl": "50px 0 100px 0",
+        }}
+        id="#about"
+      >
         <Business />
       </Box>
       <Information />

@@ -72,246 +72,237 @@ export default function Banner() {
         lg: "contain",
       }}
       backgroundRepeat="no-repeat"
-      height="100%"
+      height="100vh"
       w="100%"
       pt="90px"
     >
-      <Flex justifyContent="center" alignItems="center" direction="column">
-        <Flex
-          direction="column"
-          alignItems="center"
+      <Flex
+        justifyContent="center"
+        alignItems="center"
+        direction="column"
+        p={{ base: "0 16px", md: "unset" }}
+      >
+        <Box
           id="#walletBox"
-          p={{ base: "0 16px", md: "unset" }}
-          data-aos="fade-in"
+          data-aos="fade-up"
+          mt="30px"
+          w={{ base: "100%", md: "450px" }}
+          maxW="450px"
+          bg="#fff"
+          borderRadius="20px"
+          border="5px solid #1E1E1E"
         >
           <Box
-            data-aos="fade-up"
-            mt="30px"
-            w={{ base: "100%", md: "450px" }}
-            bg="#fff"
-            borderRadius="20px"
-            border="5px solid #1E1E1E"
+            textAlign="center"
+            p="16px"
+            bg="text.100"
+            w="100%"
+            borderRadius="12px 12px 0 0"
           >
-            <Box
-              textAlign="center"
-              p="16px"
-              bg="text.100"
-              w="100%"
-              borderRadius="12px 12px 0 0"
-            >
-              {/* <Countdown targetDate={dateTimeAfterThreeDays} /> */}
-              <TemplateText
-                mb="15px"
-                color="text.500"
-                fontSize="30px"
-                fontWeight={700}
-                txt="$POPOY PRE-SALE"
-              />
+            {/* <Countdown targetDate={dateTimeAfterThreeDays} /> */}
+            <TemplateText
+              mb="15px"
+              color="text.500"
+              fontSize="30px"
+              fontWeight={700}
+              txt="$POPOY PRE-SALE"
+            />
 
-              <Progress completed="70%" />
+            <Progress completed="70%" />
 
-              <TemplateText
-                m="15px 0"
-                color="text.500"
-                fontSize="16px"
-                fontWeight={600}
-                txt="USDT Raised: <span class='textColorOrange'>$15,173,561.68 / $15,441,744.63</span>"
-              />
-              <TemplateText
-                color="text.200"
-                fontSize="16px"
-                fontWeight={600}
-                txt="Listing price: $0.060"
-              />
+            <TemplateText
+              m="15px 0"
+              color="text.500"
+              fontSize="16px"
+              fontWeight={600}
+              txt="USDT Raised: <span class='textColorOrange'>$15,173,561.68 / $15,441,744.63</span>"
+            />
+            <TemplateText
+              color="text.200"
+              fontSize="16px"
+              fontWeight={600}
+              txt="Listing price: $0.060"
+            />
 
-              <Flex mt="20px" gap="20px">
-                <Box
-                  p="2px"
-                  flexGrow="1"
-                  flexBasis="50%"
+            <Flex mt="20px" gap="20px" justifyContent="center">
+              <Box p="2px" w="50%" borderRadius="8px" bg="white ">
+                <Flex
+                  p="13px 0"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignContent="center"
+                  bg="rgb(218, 255, 251)"
                   borderRadius="8px"
-                  bg="white "
                 >
-                  <Flex
-                    p="13px 0"
-                    flexDirection="column"
-                    justifyContent="center"
-                    alignContent="center"
-                    bg="rgb(218, 255, 251)"
-                    borderRadius="8px"
-                  >
-                    <TemplateText
-                      txt="Current Price"
-                      color="rgb(255, 113, 33)"
-                      fontWeight={700}
-                    />
-                    <TemplateText
-                      txt="1 POPOY = $0.00000001"
-                      fontWeight={700}
-                      color="rgb(23, 17, 105)"
-                    />
-                  </Flex>
-                </Box>
-                <Box
-                  p="2px"
-                  flexGrow="1"
-                  flexBasis="50%"
-                  borderRadius="8px"
-                  bg="white"
-                >
-                  <Flex
-                    p="13px 0"
-                    flexDirection="column"
-                    justifyContent="center"
-                    alignContent="center"
-                    bg="rgb(218, 255, 251)"
-                    borderRadius="8px"
-                  >
-                    <TemplateText
-                      txt="Next Price"
-                      color="rgb(255, 113, 33)"
-                      fontWeight={700}
-                    />
-                    <TemplateText
-                      txt="1 POPOY = $0.000000012"
-                      fontWeight={700}
-                      color="rgb(23, 17, 105)"
-                    />
-                  </Flex>
-                </Box>
-              </Flex>
-            </Box>
-
-            <Box textAlign="center" p="16px" w="100%">
-              <Flex alignItems="center" direction="column" gap="10px" mt="20px">
-                <Box w="100%">
-                  <Flex
-                    mb="10px"
-                    justifyContent="space-between"
-                    alignItems="center"
-                  >
-                    <TemplateText
-                      w="max-content"
-                      txt={`Amount in <span class="text-color">${seclected.name}</span> you pay`}
-                    />
-                    <TemplateText
-                      cursor="pointer"
-                      txt="Max"
-                      fontSize="14px"
-                      fontWeight={700}
-                    />
-                  </Flex>
-                  <InputIcon
-                    type="number"
-                    icon={seclected.icon}
-                    placeholder={
-                      convertBigNumber(Number(data?.formatted))
-                        ? `${convertBigNumber(Number(data?.formatted))}`
-                        : "0"
-                    }
-                    h="50px"
-                    defaultValue={valueCoin}
-                    border="none"
-                    onChange={handleChangeCoin}
-                    w="100%"
-                    backgroundColor="#F1F4f6"
-                  />
-                </Box>
-                <Box w="100%">
                   <TemplateText
-                    mb="10px"
+                    txt="Current Price"
+                    color="rgb(255, 113, 33)"
+                    fontWeight={700}
+                  />
+                  <TemplateText
+                    txt="1 POPOY = $0.00000001"
+                    w="100%"
+                    fontWeight={700}
+                    display="inline-block"
+                    color="rgb(23, 17, 105)"
+                  />
+                </Flex>
+              </Box>
+              <Box p="2px" w="50%" borderRadius="8px" bg="white">
+                <Flex
+                  p="13px 0"
+                  flexDirection="column"
+                  justifyContent="center"
+                  alignContent="center"
+                  bg="rgb(218, 255, 251)"
+                  borderRadius="8px"
+                >
+                  <TemplateText
+                    txt="Next Price"
+                    color="rgb(255, 113, 33)"
+                    fontWeight={700}
+                  />
+                  <TemplateText
+                    txt="1 POPOY = $0.00000012"
+                    w="100%"
+                    fontWeight={700}
+                    display="inline-block"
+                    color="rgb(23, 17, 105)"
+                  />
+                </Flex>
+              </Box>
+            </Flex>
+          </Box>
+
+          <Box textAlign="center" p="16px" w="100%">
+            <Flex alignItems="center" direction="column" gap="10px" mt="20px">
+              <Box w="100%">
+                <Flex
+                  mb="10px"
+                  justifyContent="space-between"
+                  alignItems="center"
+                >
+                  <TemplateText
                     w="max-content"
-                    txt={`Amount in <span class="text-color">POPOY</span> you receive`}
+                    txt={`Amount in <span class="text-color">${seclected.name}</span> you pay`}
                   />
-                  <InputIcon
-                    type="number"
-                    icon="/images/apple-touch-icon.png"
-                    placeholder="0"
-                    border="none"
-                    defaultValue={valueMyCoin}
-                    h="50px"
-                    onChange={handleChangeMyCoin}
-                    w="100%"
-                    backgroundColor="#F1F4f6"
+                  <TemplateText
+                    cursor="pointer"
+                    txt="Max"
+                    fontSize="14px"
+                    fontWeight={700}
                   />
-                </Box>
-              </Flex>
-
-              {isConnected && notEnough && (
-                <TemplateText
-                  fontSize="13px"
-                  fontWeight={400}
-                  txt={`You do not have enough ${seclected.name} to pay for this transaction.`}
+                </Flex>
+                <InputIcon
+                  type="number"
+                  icon={seclected.icon}
+                  placeholder={
+                    convertBigNumber(Number(data?.formatted))
+                      ? `${convertBigNumber(Number(data?.formatted))}`
+                      : "0"
+                  }
+                  h="50px"
+                  defaultValue={valueCoin}
+                  border="none"
+                  onChange={handleChangeCoin}
+                  w="100%"
+                  backgroundColor="#F1F4f6"
                 />
-              )}
+              </Box>
+              <Box w="100%">
+                <TemplateText
+                  mb="10px"
+                  w="max-content"
+                  txt={`Amount in <span class="text-color">POPOY</span> you receive`}
+                />
+                <InputIcon
+                  type="number"
+                  icon="/images/apple-touch-icon.png"
+                  placeholder="0"
+                  border="none"
+                  defaultValue={valueMyCoin}
+                  h="50px"
+                  onChange={handleChangeMyCoin}
+                  w="100%"
+                  backgroundColor="#F1F4f6"
+                />
+              </Box>
+            </Flex>
 
-              {isConnected ? (
-                <>
-                  <ButtonBase
-                    colorText="text.500"
-                    fsText="14px"
-                    w="100%"
-                    h="48px"
-                    mt="10px"
-                    fwText={700}
-                    content="Buy now"
-                    bg="text.100"
-                    borderRadius="50px"
-                  />
-                  <Flex justifyContent="center" mt="20px" pb="10px">
-                    <TemplateText txt={`You have 0 POPOY`} />
-                  </Flex>
-                </>
-              ) : (
+            {isConnected && notEnough && (
+              <TemplateText
+                fontSize="13px"
+                fontWeight={400}
+                txt={`You do not have enough ${seclected.name} to pay for this transaction.`}
+              />
+            )}
+
+            {isConnected ? (
+              <>
                 <ButtonBase
-                  onClick={openConnectModal}
                   colorText="text.500"
                   fsText="14px"
                   w="100%"
                   h="48px"
                   mt="10px"
                   fwText={700}
-                  content="Connect Wallet"
+                  content="Buy now"
                   bg="text.100"
                   borderRadius="50px"
                 />
-              )}
+                <Flex justifyContent="center" mt="20px" pb="10px">
+                  <TemplateText txt={`You have 0 POPOY`} />
+                </Flex>
+              </>
+            ) : (
+              <ButtonBase
+                onClick={openConnectModal}
+                colorText="text.500"
+                fsText="14px"
+                w="100%"
+                h="48px"
+                mt="10px"
+                fwText={700}
+                content="Connect Wallet"
+                bg="text.100"
+                borderRadius="50px"
+              />
+            )}
 
-              <Flex gap="10px">
-                <ButtonBase
-                  colorText="text.100"
-                  fsText="14px"
-                  w="100%"
-                  mt="10px"
-                  h="48px"
-                  fwText={700}
-                  onClick={() => handleClickScroll("#howtobuy")}
-                  content="How to buy"
-                  _hover={{
-                    background: "text.300",
-                  }}
-                  bg="#F1F4f6"
-                  borderRadius="50px"
-                />
-                <ButtonBase
-                  colorText="text.100"
-                  fsText="14px"
-                  w="100%"
-                  mt="10px"
-                  h="48px"
-                  fwText={700}
-                  onClick={modalRefferal.show}
-                  content="5% Referral Link"
-                  _hover={{
-                    background: "text.300",
-                  }}
-                  bg="#F1F4f6"
-                  borderRadius="50px"
-                />
-              </Flex>
-            </Box>
+            <Flex gap="10px">
+              <ButtonBase
+                colorText="text.100"
+                fsText="14px"
+                w="100%"
+                mt="10px"
+                h="48px"
+                fwText={700}
+                onClick={() => handleClickScroll("#howtobuy")}
+                content="How to buy"
+                _hover={{
+                  background: "text.300",
+                }}
+                bg="#F1F4f6"
+                borderRadius="50px"
+              />
+              <ButtonBase
+                colorText="text.100"
+                fsText="14px"
+                w="100%"
+                mt="10px"
+                h="48px"
+                fwText={700}
+                onClick={modalRefferal.show}
+                content="5% Referral Link"
+                _hover={{
+                  background: "text.300",
+                }}
+                bg="#F1F4f6"
+                borderRadius="50px"
+              />
+            </Flex>
           </Box>
-        </Flex>
+        </Box>
       </Flex>
       <ModalItem
         onClose={modalRefferal.hide}

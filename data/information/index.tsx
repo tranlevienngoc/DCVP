@@ -7,7 +7,7 @@ export const INFORMATION_TEXT = [
   },
   {
     paragraph:
-      "he launch of the $POPOY token will help sustain the growth of the Popoy Meme Token community and reward loyal members, zero taxes, LP burnt and contract renounced.",
+      "The launch of the $POPOY token will help sustain the growth of the Popoy Meme Token community and reward loyal members, zero taxes, LP burnt and contract renounced.",
     animation: "fade-up",
     duration: "2000",
   },
