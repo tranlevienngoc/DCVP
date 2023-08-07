@@ -70,6 +70,7 @@ export default function InputIcon({
             border={border}
             borderColor={borderColor}
             fontSize="14px"
+            value={defaultValue}
             fontWeight={500}
             color={isLightMode ? "#171924" : "#F6F7F9"}
             className={className}

@@ -1,6 +1,6 @@
 import { Box, Flex, Icon, Image } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect, useMemo } from "react";
 import Countdown from "./coundown";
 import Progress from "./progress";
 import { LIST_OPTION_COIN, LIST_SOCIAL_NETWORK } from "data/banner";
@@ -34,13 +34,9 @@ export default function Banner() {
     address: `0x${address?.replace("0x", "")}`,
   });
 
-  const [valueCoin, setValueCoin] = useState<number>(0);
+  const [valueCoin, setValueCoin] = useState<number>();
 
-  useEffect(() => {
-    setValueCoin(isConnected ? convertBigNumber(Number(data?.formatted)) : 0);
-  }, [isConnected]);
-
-  const [valueMyCoin, setValueMyCoin] = useState(0);
+  const [valueMyCoin, setValueMyCoin] = useState<number>();
 
   const handleClickScroll = useCallback((id: string) => {
     const element = document.getElementById(id);
@@ -58,14 +54,13 @@ export default function Banner() {
 
   const handleChangeMyCoin = useCallback((value: number) => {
     setValueMyCoin(value);
-
     setValueCoin(convertBigNumber(value / Number(seclected.value)));
   }, []);
 
-  const copyToClipboard = () => {
-    copy("https://bs_066ea8e0.youpromote.care?aff=228261");
-    toastSuccess("You have copied!");
-  };
+  const notEnough = useMemo(
+    () => (valueCoin && Number(data?.formatted) < valueCoin ? true : false),
+    [valueCoin]
+  );
 
   const modalRefferal = useVisible();
 
@@ -209,8 +204,13 @@ export default function Banner() {
                   <InputIcon
                     type="number"
                     icon={seclected.icon}
+                    placeholder={
+                      convertBigNumber(Number(data?.formatted))
+                        ? `${convertBigNumber(Number(data?.formatted))}`
+                        : "0"
+                    }
                     h="50px"
-                    placeholder={`${valueCoin}`}
+                    defaultValue={valueCoin}
                     border="none"
                     onChange={handleChangeCoin}
                     w="100%"
@@ -228,6 +228,7 @@ export default function Banner() {
                     icon="/images/apple-touch-icon.png"
                     placeholder="0"
                     border="none"
+                    defaultValue={valueMyCoin}
                     h="50px"
                     onChange={handleChangeMyCoin}
                     w="100%"
@@ -236,7 +237,7 @@ export default function Banner() {
                 </Box>
               </Flex>
 
-              {isConnected && Number(data?.formatted) < valueCoin && (
+              {isConnected && notEnough && (
                 <TemplateText
                   fontSize="13px"
                   fontWeight={400}
