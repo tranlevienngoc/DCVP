@@ -1,6 +1,6 @@
 import { Box, Flex, Icon, Image } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import Countdown from "./coundown";
 import Progress from "./progress";
 import { LIST_OPTION_COIN, LIST_SOCIAL_NETWORK } from "data/banner";
@@ -34,9 +34,12 @@ export default function Banner() {
     address: `0x${address?.replace("0x", "")}`,
   });
 
-  const [valueCoin, setValueCoin] = useState(
-    isConnected ? convertBigNumber(Number(data?.formatted)) : 0
-  );
+  const [valueCoin, setValueCoin] = useState<number>(0);
+
+  useEffect(() => {
+    setValueCoin(isConnected ? convertBigNumber(Number(data?.formatted)) : 0);
+  }, [isConnected]);
+
   const [valueMyCoin, setValueMyCoin] = useState(0);
 
   const handleClickScroll = useCallback((id: string) => {
@@ -86,12 +89,6 @@ export default function Banner() {
           p={{ base: "0 16px", md: "unset" }}
           data-aos="fade-in"
         >
-          <Flex gap="10px" alignItems="center" mt="20px" data-aos="fade-in">
-            {LIST_SOCIAL_NETWORK.map((item) => (
-              <Image key={item.name} w="42px" h="42px" src={item.icon} />
-            ))}
-          </Flex>
-
           <Box
             data-aos="fade-up"
             mt="30px"
@@ -109,7 +106,7 @@ export default function Banner() {
             >
               {/* <Countdown targetDate={dateTimeAfterThreeDays} /> */}
               <TemplateText
-                m="15px 0"
+                mb="15px"
                 color="text.500"
                 fontSize="30px"
                 fontWeight={700}
@@ -135,16 +132,12 @@ export default function Banner() {
               <Flex mt="20px" gap="20px">
                 <Box
                   p="2px"
-                  // className="boxRotate"
-                  position="relative"
                   flexGrow="1"
                   flexBasis="50%"
-                  overflow="hidden"
                   borderRadius="8px"
                   bg="white "
                 >
                   <Flex
-                    position="relative"
                     p="13px 0"
                     flexDirection="column"
                     justifyContent="center"
@@ -158,7 +151,7 @@ export default function Banner() {
                       fontWeight={700}
                     />
                     <TemplateText
-                      txt="1 SHMU = 0.017875 USDT"
+                      txt="1 POPOY = $0.00000001"
                       fontWeight={700}
                       color="rgb(23, 17, 105)"
                     />
@@ -166,16 +159,12 @@ export default function Banner() {
                 </Box>
                 <Box
                   p="2px"
-                  // className="boxRotate"
-                  position="relative"
                   flexGrow="1"
                   flexBasis="50%"
-                  overflow="hidden"
                   borderRadius="8px"
                   bg="white"
                 >
                   <Flex
-                    position="relative"
                     p="13px 0"
                     flexDirection="column"
                     justifyContent="center"
@@ -189,7 +178,7 @@ export default function Banner() {
                       fontWeight={700}
                     />
                     <TemplateText
-                      txt="1 SHMU = 0.018100 USDT"
+                      txt="1 POPOY = $0.000000012"
                       fontWeight={700}
                       color="rgb(23, 17, 105)"
                     />
@@ -199,44 +188,6 @@ export default function Banner() {
             </Box>
 
             <Box textAlign="center" p="16px" w="100%">
-              {/* <Flex alignItems="center" justifyContent="space-between">
-                <Box
-                  bg="#C7CED3"
-                  h="1px"
-                  w={{ base: "53px", sm: "80px", md: "100px" }}
-                />
-                <TemplateText txt="1 POPOY = $0.0316" display="inline-flex" />
-                <Box
-                  bg="#C7CED3"
-                  h="1px"
-                  w={{ base: "53px", sm: "80px", md: "100px" }}
-                />
-              </Flex> */}
-              {/* <Flex justifyContent="space-between" mt="20px" gap="20px">
-                {LIST_OPTION_COIN.map((item) => (
-                  <Flex
-                    justifyContent="center"
-                    cursor="pointer"
-                    border={
-                      seclected?.name === item.name
-                        ? "1px solid #1E1E1E"
-                        : "unset"
-                    }
-                    bg="#f1f4f6"
-                    p="12px 16px"
-                    key={item.name}
-                    alignItems="center"
-                    gap="10px"
-                    w="100%"
-                    borderRadius="10px"
-                    onClick={() => setSelected(item)}
-                  >
-                    <Image src={item.image} w="25px" />
-                    <TemplateText txt={item.name} />
-                  </Flex>
-                ))}
-              </Flex> */}
-
               <Flex alignItems="center" direction="column" gap="10px" mt="20px">
                 <Box w="100%">
                   <Flex
@@ -259,10 +210,9 @@ export default function Banner() {
                     type="number"
                     icon={seclected.icon}
                     h="50px"
-                    placeholder="0"
+                    placeholder={`${valueCoin}`}
                     border="none"
                     onChange={handleChangeCoin}
-                    defaultValue={valueCoin}
                     w="100%"
                     backgroundColor="#F1F4f6"
                   />
@@ -280,21 +230,18 @@ export default function Banner() {
                     border="none"
                     h="50px"
                     onChange={handleChangeMyCoin}
-                    defaultValue={valueMyCoin}
                     w="100%"
                     backgroundColor="#F1F4f6"
                   />
                 </Box>
               </Flex>
 
-              {Number(data?.formatted) < valueCoin && isConnected && (
-                <Box mt="10px">
-                  <TemplateText
-                    fontSize="13px"
-                    fontWeight={400}
-                    txt={`You do not have enough ${seclected.name} to pay for this transaction.`}
-                  />
-                </Box>
+              {isConnected && Number(data?.formatted) < valueCoin && (
+                <TemplateText
+                  fontSize="13px"
+                  fontWeight={400}
+                  txt={`You do not have enough ${seclected.name} to pay for this transaction.`}
+                />
               )}
 
               {isConnected ? (
@@ -368,8 +315,9 @@ export default function Banner() {
       <ModalItem
         onClose={modalRefferal.hide}
         isOpen={modalRefferal.visible}
-        maxW={{ base: "287px", sm: "400px" }}
+        maxW={{ base: "100%", md: "400px" }}
         bg="#fff"
+        pBody={{ base: "0px", md: "8px 24px" }}
       >
         <ModalRefferal />
       </ModalItem>

@@ -27,7 +27,7 @@ export default function HowToBuy() {
         mb="48px"
         textAlign="center"
         fontSize="18px"
-        txt="Take charge and buy $POPOY tokens in presale using ETH, BNB, USDT, or bank card before it lists on DEX."
+        txt="Take charge and use ETH to purchase $POPOY tokens during the presale before it is listed on DEX."
         data-aos="zoom-in"
       />
       <SimpleGrid gap="50px" columns={{ base: 1, lg: 3 }}>

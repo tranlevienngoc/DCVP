@@ -42,13 +42,12 @@ export default function ModalRefferal() {
         borderRadius="20px"
         alignItems="center"
         gap="5px"
-        w="40%"
+        w="100%"
       >
         <TemplateText
           textOverflow="ellipsis"
           overflow="hidden"
           whiteSpace="nowrap"
-          maxW="255px"
           txt="https://bs_066ea8e0.youpromote.care?aff=228261"
         />
       </Flex>
@@ -68,7 +67,7 @@ export default function ModalRefferal() {
         fontSize="16px"
         textAlign="center"
         fontWeight={600}
-        txt="share it directly on your social media!"
+        txt="Share it directly on your social media!"
       />
       <Flex gap="10px" alignItems="center" mt="20px" data-aos="fade-in">
         {LIST_SOCIAL_NETWORK.map((item) => (

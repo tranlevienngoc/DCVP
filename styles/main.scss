@@ -285,7 +285,7 @@ body {
 .process::after {
   content: "";
   position: absolute;
-  height: 24px;
+  height: 20px;
   border-radius: 16px;
   top: 0px;
   left: 0px;
@@ -310,25 +310,13 @@ body {
   color: orange;
 }
 
-.boxRotate::before {
 
 
-  content: "";
-  position: absolute;
-  border-radius: 8px;
-  inset: -2px;
-  background-image: linear-gradient(rgba(255, 113, 33, 1) 60%, rgba(255, 172, 64, 1) 100%);
-  background-size: 100% 100%;
-  z-index: 0;
-  animation: rotate 2s linear infinite;
-}
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
 
-  to {
-    transform: rotate(360deg);
+@media only screen and (max-width: 765px) {
+  .chakra-modal__content-container {
+
+    padding: 0 16px;
   }
 }

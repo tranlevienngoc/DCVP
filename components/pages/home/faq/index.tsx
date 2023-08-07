@@ -22,7 +22,7 @@ export default function FAQ() {
         data-aos="fade-up"
       />
       <TemplateText
-        txt="Common answers to questions about Popoy Meme ($POPOY) can be found below."
+        txt="Common answers to questions about Popoy Meme Token ($POPOY) can be found below."
         data-aos="fade-up"
         fontSize="24px"
         textAlign="center"

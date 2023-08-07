@@ -8,11 +8,11 @@ interface props {
 
 export default function Progress({ completed }: props) {
   return (
-    <Box position="relative" h="25px" w="100%" bg="#fff" borderRadius="50px">
+    <Box position="relative" h="20px" w="100%" bg="#fff" borderRadius="50px">
       <Flex
         h="100%"
         w={completed}
-        bg="rgb(255, 113, 33)"
+        bg="rgb(30 30 30)"
         position="absolute"
         className="process"
         borderRadius="50px"

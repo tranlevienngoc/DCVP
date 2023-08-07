@@ -37,7 +37,7 @@ export default function Footer() {
         >
           <TemplateText
             color="text.500"
-            txt="Copyright © 2023 Popoy Memes. All Rights Reserved."
+            txt="Copyright © 2023 Popoy. All Rights Reserved."
             textAlign={{ base: "center", xl: "start" }}
           />
           <Flex

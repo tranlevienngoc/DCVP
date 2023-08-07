@@ -35,7 +35,7 @@ export default function Business() {
           {TEXT_DESCRIPTIONS.map((item) => (
             <TemplateText
               key={item.paragraph}
-              fontSize="18px"
+              fontSize="16px"
               textAlign={{ base: "center", lg: "start" }}
               txt={item.paragraph}
               data-aos={item.animation}

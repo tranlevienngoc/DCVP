@@ -7,7 +7,7 @@ export default function Tokenomics() {
   return (
     <Box className="maxW">
       <TemplateText
-        txt="TOKENOMICS"
+        txt="POPOY TOKENOMICS"
         fontFamily="Bangers"
         letterSpacing="3px"
         fontWeight={700}

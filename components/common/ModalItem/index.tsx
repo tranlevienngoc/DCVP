@@ -7,6 +7,7 @@ import {
   type ModalContentProps,
   ModalOverlay,
 } from "@chakra-ui/react";
+import { ChakraType } from "constants/interface";
 import { type ReactNode } from "react";
 
 interface PopoverItemProps extends ModalContentProps {
@@ -16,9 +17,9 @@ interface PopoverItemProps extends ModalContentProps {
   onClose?: () => void;
   onCloseOtherModal?: () => void;
   children?: ReactNode;
-  p?: string;
+  p?: ChakraType;
   pHeader?: string;
-  pBody?: string;
+  pBody?: ChakraType;
   bg?: string;
   top?: string;
   right?: string;
