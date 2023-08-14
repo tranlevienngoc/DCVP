@@ -21,7 +21,7 @@ export default function Footer() {
           gap="10px"
           display={{ base: "flex", xl: "none" }}
         >
-          <Image src="/images/apple-touch-icon.png" w="100px" />
+          <Image src="/images/Coin.svg" w="100px" />
 
           <Flex gap="10px" alignItems="center" justifyContent="center" mb="7px">
             {LIST_SOCIAL_NETWORK.map((item) => (
@@ -37,7 +37,7 @@ export default function Footer() {
         >
           <TemplateText
             color="text.500"
-            txt="Copyright © 2023 Popoy Memes. All Rights Reserved."
+            txt="Copyright © 2023 Popoy. All Rights Reserved."
             textAlign={{ base: "center", xl: "start" }}
           />
           <Flex
@@ -73,12 +73,14 @@ export default function Footer() {
         <TemplateText
           mt="20px"
           color="text.500"
+          fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
           txt="$POPOY coin has no association with Ultra Records. This token is simply paying homage to a meme we all love and recognize."
         />
         <TemplateText
           mt="7px"
           color="text.500"
+          fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
           txt="$POPOY is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. the coin is completely useless and for entertainment purposes only."
         />

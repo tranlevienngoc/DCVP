@@ -48,7 +48,12 @@ export default function InputIcon({
   const { isLightMode } = useModeTheme();
   return (
     <InputGroup w={w} h={h}>
-      <InputRightElement h={h} cursor="pointer">
+      <InputRightElement
+        h={h}
+        cursor="pointer"
+        borderLeft="1px solid #DFDCDC"
+        w="50px"
+      >
         {icon && <Image src={icon} w="25px" />}
       </InputRightElement>
 
@@ -60,11 +65,12 @@ export default function InputIcon({
         >
           <NumberInputField
             _focus={{ boxShadow: "none" }}
-            pl="10px"
+            pl="18px"
             h={h}
             border={border}
             borderColor={borderColor}
             fontSize="14px"
+            value={defaultValue}
             fontWeight={500}
             color={isLightMode ? "#171924" : "#F6F7F9"}
             className={className}

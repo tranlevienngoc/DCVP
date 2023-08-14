@@ -8,11 +8,7 @@ export default function Business() {
   return (
     <Box className="maxW" p={{ base: "0 16px", "2xl": "unset" }}>
       <Flex mt="24px" direction="column" alignItems="center">
-        <Image
-          src="/images/apple-touch-icon.png"
-          w="200px"
-          data-aos="zoom-in"
-        />
+        <Image src="/images/Coin.svg" w="200px" data-aos="zoom-in" />
         <TemplateText
           fontSize={{ base: "48px", md: "35px" }}
           fontWeight={700}
@@ -35,7 +31,7 @@ export default function Business() {
           {TEXT_DESCRIPTIONS.map((item) => (
             <TemplateText
               key={item.paragraph}
-              fontSize="18px"
+              fontSize="16px"
               textAlign={{ base: "center", lg: "start" }}
               txt={item.paragraph}
               data-aos={item.animation}

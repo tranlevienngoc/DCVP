@@ -13,7 +13,7 @@ export default function Roadmap() {
       p={{ base: "0 16px", "2xl": "unset" }}
     >
       <TemplateText
-        txt="ROADMAP"
+        txt="POPOY ROADMAP"
         fontFamily="Bangers"
         letterSpacing="3px"
         fontSize="35px"
@@ -26,7 +26,7 @@ export default function Roadmap() {
         textAlign="center"
         fontSize="24px"
         data-aos="zoom-in"
-        txt="We're laying the foundation and empowering our community every step of the way. Together, we'll show the world that Popoy Meme is here to stay."
+        txt="UwU, here is a rough sketch of $POPOY path ahead. We'll prove to the world that the Popoy Meme Token is here to stay by working together."
       />
       <SimpleGrid columns={{ base: 1, lg: 3 }} gap="20px" mt="30px">
         {ROADMAP.map((item) => (

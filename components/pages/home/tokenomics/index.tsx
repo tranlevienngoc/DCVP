@@ -7,7 +7,7 @@ export default function Tokenomics() {
   return (
     <Box className="maxW">
       <TemplateText
-        txt="TOKENOMICS"
+        txt="POPOY TOKENOMICS"
         fontFamily="Bangers"
         letterSpacing="3px"
         fontWeight={700}
@@ -25,7 +25,7 @@ export default function Tokenomics() {
         gap="50px"
       >
         <Image
-          src="/images/bg/tokenomics.png"
+          src="/images/bg/Money.svg"
           p={{ base: "0 16px", lg: "unset" }}
           w={{ base: "70%", lg: "30%" }}
           data-aos="zoom-in-left"

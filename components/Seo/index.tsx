@@ -16,7 +16,7 @@ const defaultMeta = {
    * No need to be filled, will be populated with openGraph function
    * If you wish to use a normal image, just specify the path below
    */
-  image: "/images/apple-touch-icon.png",
+  image: "/images/Coin.svg",
 };
 
 type SeoProps = {
@@ -52,7 +52,7 @@ export default function Seo(props: SeoProps) {
       <link rel="alternate" hrefLang="en" href={meta.url} />
       <link rel="alternate" hrefLang="vi" href={`${meta.url}/vi`} />
 
-      <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" href="/images/Coin.svg" />
       <link rel="shortcut icon" href="/images/favicon.ico" />
       {/* Open Graph */}
       <meta property="og:type" content={meta.type} />

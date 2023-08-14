@@ -23,7 +23,6 @@ export default function Questions({ item, index, length, dataAos }: props) {
         key={item.question}
         className="content"
         mb={length - 1 == index ? "unset" : "20px"}
-        onClick={onToggle}
         bg="rgba(255, 255, 255, 0.8)"
         borderBottom={
           length - 1 !== index
@@ -34,6 +33,7 @@ export default function Questions({ item, index, length, dataAos }: props) {
         }
       >
         <Flex
+          onClick={onToggle}
           p="16px 0"
           justify={"space-between"}
           align={"center"}

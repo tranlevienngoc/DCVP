@@ -51,7 +51,7 @@ export default function Information() {
         w={{ base: "100%", lg: "50%" }}
         justifyContent={{ base: "center", lg: "end" }}
       >
-        <Image src="/images/bg/information.png" data-aos="zoom-in-up" />
+        <Image src="/images/bg/Finger.svg" data-aos="zoom-in-up" />
       </Flex>
     </Flex>
   );

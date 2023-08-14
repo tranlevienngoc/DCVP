@@ -27,7 +27,7 @@ export default function HowToBuy() {
         mb="48px"
         textAlign="center"
         fontSize="18px"
-        txt="Take charge and buy $POPOY tokens in presale using ETH, BNB, USDT, or bank card before it lists on DEX."
+        txt="Take charge and use ETH to purchase $POPOY tokens on Uniswap Exchange."
         data-aos="zoom-in"
       />
       <SimpleGrid gap="50px" columns={{ base: 1, lg: 3 }}>
@@ -50,8 +50,8 @@ export default function HowToBuy() {
               bottom={{ base: item.bottommb, md: item.bottom }}
               left={{ base: item.leftmb, md: item.left }}
               right={{ base: item.rightmb, md: item.right }}
-              data-aos="fade-up"
-              data-aos-duration="2000"
+              // data-aos="fade-up"
+              // data-aos-duration="2000"
             >
               <Image
                 className="image"
