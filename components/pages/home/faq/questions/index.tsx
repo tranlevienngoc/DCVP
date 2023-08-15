@@ -41,7 +41,7 @@ export default function Questions({ item, index, length, dataAos }: props) {
             textDecoration: "none",
           }}
           cursor="pointer"
-          borderBottom={isOpen ? "1px solid #73737326" : "unset"}
+          borderBottom={isOpen ? "1px solid #737373" : "unset"}
         >
           <TemplateText
             txt={item.question}

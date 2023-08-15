@@ -41,7 +41,7 @@ export default function Tokenomics() {
           <Box w={{ base: "100%", md: "65%" }}>
             <TemplateText
               textAlign="center"
-              fontSize="20px"
+              fontSize="24px"
               fontWeight={700}
               txt="Total supply: </br> 108,642,000,000,000"
               mb="20px"
