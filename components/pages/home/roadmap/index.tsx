@@ -24,7 +24,7 @@ export default function Roadmap() {
         m="16px 0"
         pb="24px"
         textAlign="center"
-        fontSize="24px"
+        fontSize="18px"
         data-aos="zoom-in"
         txt="Here is a rough sketch of $POPOY path ahead. We'll prove to the world that the Popoy Meme Token is here to stay by working together."
       />

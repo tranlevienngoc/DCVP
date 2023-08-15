@@ -24,7 +24,7 @@ export default function HomePage() {
       <Banner />
       <Box
         p={{
-          base: "20px 0 100px 0",
+          base: "20px 0 80px 0",
           lg: "100px 0 50px 0",
           "2xl": "25px 0 50px 0",
         }}
@@ -36,15 +36,14 @@ export default function HomePage() {
       <Box id="#howtobuy" mt="-20px">
         <HowToBuy />
       </Box>
-      <Box pt="120px" id="#roadmap">
+      <Box pt={{ base: "110px", md: "120px" }} id="#roadmap">
         <Roadmap />
       </Box>
-      <Box p="100px 0" id="#tokenomics">
+      <Box p={{ base: "50px 0 ", md: "100px 0" }} id="#tokenomics">
         <Tokenomics />
       </Box>
-      <Box mt="-40px">
-        <FAQ />
-      </Box>
+
+      <FAQ />
     </Box>
   );
 }

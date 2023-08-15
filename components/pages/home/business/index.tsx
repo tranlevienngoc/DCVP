@@ -10,7 +10,7 @@ export default function Business() {
       <Flex mt="24px" direction="column" alignItems="center">
         <Image src="/images/Coin.svg" w="200px" data-aos="zoom-in" />
         <TemplateText
-          fontSize={{ base: "48px", md: "35px" }}
+          fontSize={{ base: "24px", md: "35px" }}
           fontWeight={700}
           textAlign="center"
           p="16px 0"

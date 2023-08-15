@@ -23,7 +23,7 @@ export default function Information() {
           textAlign={{ base: "center", lg: "start" }}
           fontSize="35px"
           fontWeight={700}
-          mb="40px"
+          mb={{ base: "24px", md: "40px" }}
           fontFamily="Bangers"
           letterSpacing="3px"
           data-aos="fade-left"
