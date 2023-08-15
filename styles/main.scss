@@ -212,6 +212,8 @@ body {
   }
 }
 
+
+
 @media only screen and (max-width: 850px) {
   .video {
     video {
@@ -222,6 +224,24 @@ body {
 }
 
 
+
+.background-banner {
+  background: url(../public/images/bg/bg.svg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 765px) {
+  .background-banner {
+    padding: 16px;
+    background-size: contain;
+    margin-top: 80px;
+    height: 30vh;
+
+  }
+}
 
 
 .block-quote {

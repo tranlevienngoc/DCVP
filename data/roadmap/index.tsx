@@ -2,7 +2,7 @@ export const ROADMAP = [
   {
     title: "PHASE 1:",
     lable: "FOUNDATION",
-    content: `<b>✲ Smart Contract Development: </b>Secure and audited smart contract for POPOY token to ensure transparency and trust.</br></br><b>✲ Community Building: </b>Telegram, X (aka Twitter), Discord, Youtube, Tiktok, Facebook - Get ready for the hype train with a strong and engaged POPOY community.</br></br><b>✲ Branding and Marketing: </b>Spread the word about Popoy Meme Token with a comprehensive marketing campaign. Get $POPOY trending on X</br></br><b>✲ Merchandise: </b>Rock the POPOY style with branded merchandise. Show off your Popoy pride.`,
+    content: `<b>✲ Smart Contract Development: </b>Secure and audited smart contract for POPOY token to ensure transparency and trust.</br></br><b>✲ Community Building: </b>Telegram, X (aka Twitter), Discord, Youtube, Tiktok, Facebook - Get ready for the hype train with a strong and engaged POPOY community.</br></br><b>✲ Branding and Marketing: </b>Spread the word about Popoy Meme Token with a comprehensive marketing campaign. Get $POPOY trending on X.</br></br><b>✲ Merchandise: </b>Rock the POPOY style with branded merchandise. Show off your Popoy pride.`,
   },
   {
     title: "PHASE 2:",

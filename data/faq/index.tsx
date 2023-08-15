@@ -15,16 +15,6 @@ export const LISTQUESTION = [
       "As one of the biggest communities in crypto with some of the highest social engagement, the $POPOY token aims to legitimize loyal supporters of the movement.",
   },
   {
-    question: " When is the claim and launch of $POPOY?  ",
-    answer:
-      "The claim period will start a number of days after the conclusion of the presale. The specific date and time to claim as well as the launch details will be announced on our website and official social media platforms in due course.",
-  },
-  {
-    question: " How do I claim my $POPOY tokens? ",
-    answer:
-      "Claiming will be live on the Popoy Meme website using the same wallet you used to contribute. $POPOY is an ERC-20 token on the Ethereum network.",
-  },
-  {
     question: " How do I contact support? ",
     answer:
       "Get in touch with us at hello@popoy.xyz or join our Discord community, scroll down to the Help channel, and create a support ticket.",
