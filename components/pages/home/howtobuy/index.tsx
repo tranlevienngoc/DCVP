@@ -37,7 +37,7 @@ export default function HowToBuy() {
               <TemplateText
                 as="span"
                 position="absolute"
-                top="8%"
+                top="5%"
                 left="40%"
                 fontSize="25px"
                 fontWeight={700}

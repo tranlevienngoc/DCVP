@@ -26,7 +26,7 @@ export default function Roadmap() {
         textAlign="center"
         fontSize="24px"
         data-aos="zoom-in"
-        txt="UwU, here is a rough sketch of $POPOY path ahead. We'll prove to the world that the Popoy Meme Token is here to stay by working together."
+        txt="Here is a rough sketch of $POPOY path ahead. We'll prove to the world that the Popoy Meme Token is here to stay by working together."
       />
       <SimpleGrid columns={{ base: 1, lg: 3 }} gap="20px" mt="30px">
         {ROADMAP.map((item) => (

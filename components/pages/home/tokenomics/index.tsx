@@ -27,7 +27,7 @@ export default function Tokenomics() {
         <Image
           src="/images/bg/Money.svg"
           p={{ base: "0 16px", lg: "unset" }}
-          w={{ base: "70%", lg: "30%" }}
+          w={{ base: "70%", lg: "35%" }}
           data-aos="zoom-in-left"
         />
         <Flex
@@ -38,7 +38,7 @@ export default function Tokenomics() {
           gap={{ base: "20px", md: "unset" }}
           alignItems="center"
         >
-          <Box w={{ base: "100%", md: "60%" }}>
+          <Box w={{ base: "100%", md: "65%" }}>
             <TemplateText
               textAlign="center"
               fontSize="20px"

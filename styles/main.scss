@@ -227,19 +227,26 @@ body {
 
 .background-banner {
   background: url(../public/images/bg/bg.svg);
-  height: 100vh;
+  height: 90vh;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
 }
 
-@media only screen and (max-width: 765px) {
+@media only screen and (max-width: 768px) {
+  .background-banner {
+    padding: 16px;
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 400px) {
   .background-banner {
     padding: 16px;
     background-size: contain;
     margin-top: 80px;
-    height: 30vh;
-
+    width: 100%;
+    height: 20vh;
   }
 }
 
@@ -259,9 +266,8 @@ body {
 
   p {
     position: absolute;
-    top: 26%;
-    font-size: 15px;
-    font-weight: 600;
+    top: 24%;
+    font-size: 16px;
     left: 10%;
     text-align: center;
     width: 250px;
@@ -283,9 +289,8 @@ body {
 
     p {
       position: absolute;
-      top: 25%;
-      font-size: 15px;
-      font-weight: 600;
+      top: 23%;
+      font-size: 16px;
       left: 10%;
       width: 250px;
     }

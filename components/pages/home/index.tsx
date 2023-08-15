@@ -24,9 +24,9 @@ export default function HomePage() {
       <Banner />
       <Box
         p={{
-          base: "70px 0 100px 0",
+          base: "20px 0 100px 0",
           lg: "100px 0 50px 0",
-          "2xl": "100px 0 50px 0",
+          "2xl": "25px 0 50px 0",
         }}
         id="#about"
       >

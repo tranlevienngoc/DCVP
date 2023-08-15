@@ -135,9 +135,7 @@ const Header = () => {
             />
           ) : (
             <ButtonBase
-              onClick={() => {
-                handleClickScroll("#walletBox");
-              }}
+              onClick={openConnectModal}
               colorText="text.500"
               fsText="14px"
               fwText={700}

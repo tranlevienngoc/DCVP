@@ -6,7 +6,7 @@ const NAV_ITEMS: Array<NavItem> = [
     href: "#about",
   },
   {
-    label: "How To Buy",
+    label: "How to buy",
     href: "#howtobuy",
   },
   {
