@@ -21,7 +21,7 @@ export default function Information() {
         <TemplateText
           txt="&POPOY TOKEN"
           textAlign={{ base: "center", lg: "start" }}
-          fontSize="35px"
+          fontSize={{ base: "24px", md: "35px" }}
           fontWeight={700}
           mb={{ base: "24px", md: "40px" }}
           fontFamily="Bangers"

@@ -12,7 +12,7 @@ export default function Tokenomics() {
         letterSpacing="3px"
         fontWeight={700}
         textAlign="center"
-        fontSize="35px"
+        fontSize={{ base: "24px", md: "35px" }}
         mb={{ base: "20px", lg: "48px" }}
         mt={{ base: "40px", lg: "unset" }}
         data-aos="fade-up"

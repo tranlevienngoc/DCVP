@@ -16,7 +16,7 @@ export default function Roadmap() {
         txt="POPOY ROADMAP"
         fontFamily="Bangers"
         letterSpacing="3px"
-        fontSize="35px"
+        fontSize={{ base: "24px", md: "35px" }}
         fontWeight={700}
         data-aos="fade-up"
       />

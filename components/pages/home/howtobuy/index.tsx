@@ -14,7 +14,7 @@ export default function HowToBuy() {
     >
       <TemplateText
         mt="10px"
-        fontSize="35px"
+        fontSize={{ base: "24px", md: "35px" }}
         textAlign="center"
         fontWeight={700}
         txt="HOW TO BUY POPOY MEME TOKEN"

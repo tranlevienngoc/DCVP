@@ -24,7 +24,7 @@ export default function FAQ() {
       <TemplateText
         txt="Common answers to questions about Popoy Meme Token ($POPOY) can be found below."
         data-aos="fade-up"
-        fontSize="24px"
+        fontSize="18px"
         textAlign="center"
       />
       <Box
