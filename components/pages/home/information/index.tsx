@@ -12,6 +12,7 @@ export default function Information() {
       direction={{ base: "column", lg: "row" }}
       p={{ base: "0 16px", "2xl": "unset" }}
       gap={{ base: "20px", lg: "100px" }}
+      mb="-30px"
     >
       <Flex
         w={{ base: "100%", lg: "50%" }}
@@ -51,7 +52,7 @@ export default function Information() {
         w={{ base: "100%", lg: "50%" }}
         justifyContent={{ base: "center", lg: "end" }}
       >
-        <Image src="/images/bg/Finger.svg" data-aos="zoom-in-up" />
+        <Image src="/images/bg/Finger.svg" w="90%" />
       </Flex>
     </Flex>
   );

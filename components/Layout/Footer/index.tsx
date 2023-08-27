@@ -57,11 +57,6 @@ export default function Footer() {
             ))}
           </Flex>
 
-          <Image
-            src="/svg/icons/audit.svg"
-            w="120px"
-            display={{ base: "none", xl: "block" }}
-          />
           <Box textAlign="center" display={{ base: "none", xl: "block" }}>
             <Flex gap="10px" alignItems="center" mb="7px">
               {LIST_SOCIAL_NETWORK.map((item) => (

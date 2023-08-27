@@ -14,7 +14,7 @@ export const HOWTOBUY = [
   {
     ava: "/images/slide/2.svg",
     content:
-      "Go to app.uniswap.org. Connect your wallet. Paste the $POPOY token address into Uniswap, select Poooy, and confirm. When Metamask prompts you for a wallet signature, sign.",
+      "Go to app.uniswap.org. Connect your wallet. Paste the $POPOY token address into Uniswap, select Popoy, and confirm. When Metamask prompts you for a wallet signature, sign.",
     bottom: "-22%",
     right: "-2%",
     bottommb: "-20%",

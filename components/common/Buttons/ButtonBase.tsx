@@ -11,6 +11,7 @@ interface Props extends ButtonProps {
   iconRight?: ReactNode;
   colorText?: string;
   nameCoin?: string;
+  mtText?: string;
 }
 export default function ButtonBase({
   content = "",
@@ -20,6 +21,7 @@ export default function ButtonBase({
   iconRight,
   colorText,
   nameCoin,
+  mtText,
   ...props
 }: Props) {
   return (
@@ -33,6 +35,7 @@ export default function ButtonBase({
           fontSize={fsText}
           fontWeight={fwText}
           color={colorText}
+          mt={mtText}
         />
         {iconRight}
         {nameCoin && (

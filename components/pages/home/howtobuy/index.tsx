@@ -6,12 +6,7 @@ import React from "react";
 
 export default function HowToBuy() {
   return (
-    <Flex
-      direction="column"
-      alignItems="center"
-      className="maxW"
-      p="50px 16px 00px 16px"
-    >
+    <Flex direction="column" alignItems="center" className="maxW">
       <TemplateText
         mt="10px"
         fontSize={{ base: "24px", md: "35px" }}
@@ -39,6 +34,7 @@ export default function HowToBuy() {
                 position="absolute"
                 top="5%"
                 left="40%"
+                zIndex={999}
                 fontSize="25px"
                 fontWeight={700}
                 txt={`${index + 1}`}
@@ -50,8 +46,8 @@ export default function HowToBuy() {
               bottom={{ base: item.bottommb, md: item.bottom }}
               left={{ base: item.leftmb, md: item.left }}
               right={{ base: item.rightmb, md: item.right }}
-              // data-aos="fade-up"
-              // data-aos-duration="2000"
+              data-aos="fade-up"
+              data-aos-duration="2000"
             >
               <Image
                 className="image"

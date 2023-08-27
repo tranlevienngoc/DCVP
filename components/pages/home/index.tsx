@@ -25,15 +25,15 @@ export default function HomePage() {
       <Box
         p={{
           base: "20px 0 80px 0",
-          lg: "100px 0 50px 0",
-          "2xl": "25px 0 50px 0",
+          lg: "50px 0 50px 0",
+          "2xl": "50px 0 50px 0",
         }}
         id="#about"
       >
         <Business />
       </Box>
       <Information />
-      <Box id="#howtobuy" mt="-20px">
+      <Box id="#howtobuy" p="70px 16px 00px 16px">
         <HowToBuy />
       </Box>
       <Box pt={{ base: "110px", md: "120px" }} id="#roadmap">

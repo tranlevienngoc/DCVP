@@ -4,9 +4,10 @@ import { BASE_LINK } from "../../config";
 
 // !STARTERCONF Change these default meta
 const defaultMeta = {
-  title: "Coin+",
-  siteName: "Coin+",
-  description: "",
+  title: "Popoy",
+  siteName: "Popoy",
+  description:
+    "Welcome to Popoy – Where laughter knows no bounds, and the pursuit of joy brings us closer to the stars! Together, let's create a universe filled with love, laughter, and endless entertainment!",
   /** Without additional '/' on the end, e.g. https://theodorusclarence.com */
   url: `${BASE_LINK}`,
 
@@ -44,16 +45,26 @@ export default function Seo(props: SeoProps) {
 
   return (
     <Head>
+      <meta charSet="UTF-8" />
       <title>{meta.title}</title>
       <meta name="robots" content={meta.robots} />
       <meta content={meta.description} name="description" />
       <meta property="og:url" content={`${meta.url}${router.asPath}`} />
       <link rel="canonical" href={meta.canonical} />
       <link rel="alternate" hrefLang="en" href={meta.url} />
-      <link rel="alternate" hrefLang="vi" href={`${meta.url}/vi`} />
 
       <link rel="apple-touch-icon" href="/images/Coin.svg" />
       <link rel="shortcut icon" href="/images/favicon.ico" />
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap"
+        rel="stylesheet"
+      />
       {/* Open Graph */}
       <meta property="og:type" content={meta.type} />
       <meta property="og:site_name" content={meta.title} />
@@ -62,7 +73,7 @@ export default function Seo(props: SeoProps) {
       <meta name="image" property="og:image" content={meta.image} />
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@CoinsPlusApp" />
+      <meta name="twitter:site" content="@Popoy_Memes" />
       <meta name="twitter:title" content={meta.title} />
       <meta name="twitter:description" content={meta.description} />
       <meta name="twitter:image" content={meta.image} />

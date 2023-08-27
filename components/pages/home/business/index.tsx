@@ -16,7 +16,7 @@ export default function Business() {
           p="16px 0"
           fontFamily="Bangers"
           letterSpacing="3px"
-          txt="THE MOST AMUSING MEMECOIN IN THE UNIVERSE"
+          txt="THE MOST ENTHUSIASTIC MEMECOIN IN THE UNIVERSE"
           data-aos="fade-up"
         />
         <Flex

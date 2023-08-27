@@ -1,33 +1,24 @@
-import { ColorModeScript } from "@chakra-ui/react";
-import NextDocument, { Head, Html, Main, NextScript } from "next/document";
-import theme from "../styles/theme";
+import Document, {
+  DocumentContext,
+  Head,
+  Html,
+  Main,
+  NextScript,
+} from "next/document";
 
-class Document extends NextDocument {
+class MyDocument extends Document {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
   render() {
     return (
-      <Html lang="en">
+      <Html>
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-
-          <link
-            href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@100;200;300;400;500;600;700&display=swap"
-            rel="stylesheet"
-          ></link>
-
-          <link
-            href="https://fonts.googleapis.com/css2?family=ABeeZee&display=swap"
-            rel="stylesheet"
-          />
-          <link
-            rel="shortcut icon"
-            type="image/png"
-            href="/images/favicon.ico"
-          />
-          <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>
@@ -35,4 +26,5 @@ class Document extends NextDocument {
     );
   }
 }
-export default Document;
+
+export default MyDocument;

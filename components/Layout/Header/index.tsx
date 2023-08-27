@@ -73,16 +73,25 @@ const Header = () => {
             borderRadius="10px"
           />
         ) : (
-          <ButtonBase
-            onClick={openConnectModal}
-            fsText="16px"
-            fwText={700}
-            content="Connect Wallet"
-            m="10px 0 0 24px"
-            colorText="text.500"
-            bg="text.100"
-            borderRadius="50px"
-          />
+          <Link
+            href="https://dev.coins.plus/"
+            target="_blank"
+            _hover={{
+              textDecoration: "none",
+            }}
+          >
+            <ButtonBase
+              // onClick={openConnectModal}
+              fsText="16px"
+              fwText={700}
+              content="BUY $POPOY"
+              m="10px 0 0 24px"
+              colorText="text.500"
+              mtText="3px"
+              bg="text.100"
+              borderRadius="50px"
+            />
+          </Link>
         )}
         <Flex
           alignItems="center"
@@ -134,16 +143,25 @@ const Header = () => {
               borderRadius="50px"
             />
           ) : (
-            <ButtonBase
-              onClick={openConnectModal}
-              colorText="text.500"
-              fsText="14px"
-              fwText={700}
-              content="Connect Wallet"
-              display={{ base: "none", xl: "block" }}
-              bg="text.100"
-              borderRadius="50px"
-            />
+            <Link
+              href="https://dev.coins.plus/"
+              target="_blank"
+              _hover={{
+                textDecoration: "none",
+              }}
+            >
+              <ButtonBase
+                // onClick={openConnectModal}
+                colorText="text.500"
+                fsText="14px"
+                fwText={700}
+                content="BUY $POPOY"
+                display={{ base: "none", xl: "block" }}
+                bg="text.100"
+                borderRadius="50px"
+                mtText="3px"
+              />
+            </Link>
           )}
         </Flex>
 
