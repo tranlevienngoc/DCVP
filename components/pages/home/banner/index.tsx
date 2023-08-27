@@ -20,7 +20,7 @@ export default function Banner() {
         w={{ base: "50px", md: "100px" }}
         h={{ base: "50px", md: "100px" }}
         position="absolute"
-        top={{ base: "22%", lg: "50%" }}
+        top={{ base: "30%", lg: "50%" }}
         left="50%"
         cursor="pointer"
         transform="translate(-50%,-50%)"
@@ -34,7 +34,7 @@ export default function Banner() {
           as={AiFillPlayCircle}
           w={{ base: 10, md: 20 }}
           h={{ base: 10, md: 20 }}
-          color="red"
+          color="#64a152"
         />
       </Box>
       <ModalItem
