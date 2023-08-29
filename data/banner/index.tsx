@@ -1,41 +1,17 @@
-export const LIST_OPTION_COIN = [
-  {
-    name: "ETH",
-    image: "/svg/icons/eth.svg",
-    icon: "/svg/icons/eth.svg",
-    value: "57449",
-  },
-  {
-    name: "USDT",
-    image: "/svg/icons/usdt.svg",
-    icon: "/svg/icons/usdt.svg",
-    value: "30",
-  },
-];
-
 export const LIST_SOCIAL_NETWORK = [
-  {
-    icon: "/images/social/instagram.png",
-    name: "instagram",
-  },
   {
     icon: "/images/social/twitter.svg",
     name: "twitter",
+    href: "https://twitter.com/popoy_eth",
   },
   {
     icon: "/images/social/telegram.svg",
     name: "telegram",
+    href: "https://t.me/popoy_eth",
   },
   {
-    icon: "/images/social/discord.svg",
-    name: "discord",
-  },
-  {
-    icon: "/images/social/youtube.svg",
-    name: "youtube",
-  },
-  {
-    icon: "/images/social/tiktok.svg",
-    name: "tiktok",
+    icon: "/images/social/telegram.svg",
+    name: "telegram1",
+    href: "https://t.me/popoy_community",
   },
 ];

@@ -3,18 +3,12 @@ import { Box, Flex, Image, Link, Stack, useDisclosure } from "@chakra-ui/react";
 
 import ButtonBase from "components/common/Buttons/ButtonBase";
 import DrawerItem from "components/common/DrawerItem";
-import TemplateText from "components/common/Text/TemplateText";
 
 import NAV_ITEMS from "config/header";
-import useVisible from "hooks/useVisible";
 
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
-import { useAccountModal, useConnectModal } from "@rainbow-me/rainbowkit";
-import { useAccount } from "wagmi";
 
-import { useCallback } from "react";
-import truncateEthAddress from "utils/truncateEthAddress";
 import { LIST_SOCIAL_NETWORK } from "data/banner";
 
 interface props {
@@ -23,20 +17,6 @@ interface props {
 
 const Header = () => {
   const { isOpen, onToggle, onClose } = useDisclosure();
-
-  const { openAccountModal } = useAccountModal();
-  const { openConnectModal } = useConnectModal();
-
-  const handleClickScroll = useCallback((id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      const timer = setTimeout(() => openConnectModal?.(), 500);
-      return () => clearTimeout(timer);
-    }
-  }, []);
-
-  const { isConnected, address } = useAccount();
 
   const DesktopNav = () => {
     return (
@@ -54,52 +34,36 @@ const Header = () => {
   const MobileNav = ({ onCloseMenu }: props) => {
     return (
       <Box>
-        <Stack p="16px 24px 0 24px" display={{ xl: "none" }} bg="bg.100">
+        <Stack p="4px 24px 0 24px" display={{ xl: "none" }} bg="bg.100">
           {NAV_ITEMS.map((navItem, k) => (
             <MobileMenu onCloseMenu={onCloseMenu} key={k} navItem={navItem} />
           ))}
         </Stack>
-        {isConnected ? (
-          <ButtonBase
-            onClick={openAccountModal}
-            colorText="text.100"
-            fsText="16px"
-            h="49px"
-            pl="24px"
-            fwText={700}
-            content={truncateEthAddress(`${address}`)}
-            alignItems="center"
-            bg="none"
-            borderRadius="10px"
-          />
-        ) : (
-          <Link
-            href="https://dev.coins.plus/"
-            target="_blank"
-            _hover={{
-              textDecoration: "none",
-            }}
-          >
-            <ButtonBase
-              // onClick={openConnectModal}
-              fsText="16px"
-              fwText={700}
-              content="BUY $POPOY"
-              m="10px 0 0 24px"
-              colorText="text.500"
-              mtText="3px"
-              bg="text.100"
-              borderRadius="50px"
-            />
-          </Link>
-        )}
-        <Flex
-          alignItems="center"
-          gap="10px"
-          p={isConnected ? "0 0 0 24px" : "10px 0 10px 24px"}
+
+        <Link
+          href="https://app.uniswap.org/#/swap"
+          target="_blank"
+          _hover={{
+            textDecoration: "none",
+          }}
         >
+          <ButtonBase
+            fsText="14px"
+            fwText={700}
+            content="BUY $POPOY"
+            m="14px 0 0 24px"
+            colorText="text.500"
+            mtText="3px"
+            bg="text.100"
+            borderRadius="50px"
+          />
+        </Link>
+
+        <Flex alignItems="center" gap="10px" p="14px 0 10px 24px">
           {LIST_SOCIAL_NETWORK.map((item) => (
-            <Image key={item.name} src={item.icon} w="35px" h="35px" />
+            <Link key={item.name} href={item.href} target="_blank">
+              <Image src={item.icon} w="30px" h="30px" />
+            </Link>
           ))}
         </Flex>
       </Box>
@@ -115,11 +79,7 @@ const Header = () => {
         p={{ base: "15px 16px 20px 16px", xl: "15px 25px" }}
       >
         <Link href="/">
-          <Image
-            mt="-10px"
-            src="/Logo.png"
-            w={{ base: "120px", md: "140px" }}
-          />
+          <Image src="/Logo.svg" w={{ base: "100px", md: "120px" }} />
         </Link>
         <Flex display={{ base: "none", xl: "flex" }} alignItems="center">
           <DesktopNav />
@@ -131,38 +91,24 @@ const Header = () => {
           alignItems="center"
           justifyContent="end"
         >
-          {isConnected ? (
+          <Link
+            href="https://app.uniswap.org/#/swap"
+            target="_blank"
+            _hover={{
+              textDecoration: "none",
+            }}
+          >
             <ButtonBase
-              onClick={openAccountModal}
-              display={{ base: "none", xl: "block" }}
               colorText="text.500"
               fsText="14px"
               fwText={700}
-              content={truncateEthAddress(`${address}`)}
+              content="BUY $POPOY"
+              display={{ base: "none", xl: "block" }}
               bg="text.100"
               borderRadius="50px"
+              mtText="3px"
             />
-          ) : (
-            <Link
-              href="https://dev.coins.plus/"
-              target="_blank"
-              _hover={{
-                textDecoration: "none",
-              }}
-            >
-              <ButtonBase
-                // onClick={openConnectModal}
-                colorText="text.500"
-                fsText="14px"
-                fwText={700}
-                content="BUY $POPOY"
-                display={{ base: "none", xl: "block" }}
-                bg="text.100"
-                borderRadius="50px"
-                mtText="3px"
-              />
-            </Link>
-          )}
+          </Link>
         </Flex>
 
         <Box
@@ -190,7 +136,7 @@ const Header = () => {
         pbody="0px"
         onClose={onClose}
         isOpen={isOpen}
-        logo="/Logo.png"
+        logo="/Logo.svg"
       >
         <MobileNav onCloseMenu={onClose} />
       </DrawerItem>

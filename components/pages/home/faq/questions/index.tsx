@@ -11,10 +11,9 @@ interface props {
   };
   index: number;
   length: number;
-  dataAos?: string;
 }
 
-export default function Questions({ item, index, length, dataAos }: props) {
+export default function Questions({ item, index, length }: props) {
   const { isOpen, onToggle } = useDisclosure();
 
   return (

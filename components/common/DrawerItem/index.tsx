@@ -42,7 +42,7 @@ export default function DrawerItem({
         <DrawerBody zIndex={20} mt={mt} p={pbody}>
           <FlexBox
             justifyContent="space-between"
-            p="0 0 16px 24px"
+            p="0 0 0 24px"
             alignItems="center"
             mb={mb}
           >
@@ -54,7 +54,7 @@ export default function DrawerItem({
               <CloseButton color="text.100" />
             </DrawerCloseButton>
             {txt && <TemplateText txt={txt} fontSize={20} fontWeight={700} />}
-            {logo && <Image src={logo} w="140px" />}
+            {logo && <Image src={logo} w="100px" />}
           </FlexBox>
           {children}
         </DrawerBody>

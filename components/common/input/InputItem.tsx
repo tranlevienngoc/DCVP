@@ -17,7 +17,6 @@ import "react-datepicker/dist/react-datepicker.css";
 
 import Hiden from "./icon/Hiden";
 import Show from "./icon/Show";
-import useModeTheme from "hooks/colorDarkMode";
 import { InputType } from "constants/enum";
 import { ChakraType, ErrorFormType, OptionType } from "constants/types";
 import TemplateText from "../Text/TemplateText";
@@ -62,7 +61,7 @@ export default function InputItem({
 }: TextInputProps) {
   const [show, setShow] = useState(false);
   const [isPass] = useState(type === "password");
-  const { isLightMode } = useModeTheme();
+
   const renderType = useCallback(() => {
     if (isPass) return show ? "text" : "password";
     return type;
@@ -118,7 +117,7 @@ export default function InputItem({
                 placeholder={placeholder}
                 defaultValue={defaultValue}
                 border={border}
-                color={isLightMode ? "#1A202C" : "#fff"}
+                color="#1A202C"
                 _placeholder={{ color: placeholderColor }}
                 focusBorderColor="none"
               />

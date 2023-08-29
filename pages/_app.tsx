@@ -8,18 +8,19 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Layout from "components/Layout";
 import { AppProps } from "next/app";
-import { WalletProvider } from "components/RainbowWallet";
+
+import Seo from "components/Seo";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <WalletProvider>
-      <ChakraProvider theme={theme}>
-        <ToastContainer autoClose={3000} />
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ChakraProvider>
-    </WalletProvider>
+    <ChakraProvider theme={theme}>
+      <Seo templateTitle="Popoy" />
+
+      <ToastContainer autoClose={3000} />
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </ChakraProvider>
   );
 }
 // }

@@ -41,7 +41,6 @@ export default function FAQ() {
             length={LISTQUESTION.length}
             index={index}
             item={item}
-            dataAos="fade-up"
           />
         ))}
       </Box>

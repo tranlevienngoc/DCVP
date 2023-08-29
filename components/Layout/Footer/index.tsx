@@ -1,15 +1,10 @@
-import { Box, Flex, Icon, Image } from "@chakra-ui/react";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
-import ButtonBase from "components/common/Buttons/ButtonBase";
+import { Box, Flex, Image, Link } from "@chakra-ui/react";
+
 import TemplateText from "components/common/Text/TemplateText";
 
-import MoonRiver from "components/svg/network/MoonRiver";
 import { LIST_SOCIAL_NETWORK } from "data/banner";
-import { TEXT_FOOTER } from "data/footer";
-import useModeTheme from "hooks/colorDarkMode";
+
 import React from "react";
-import { AiOutlineTwitter } from "react-icons/ai";
-import { FaMediumM, FaTelegramPlane } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -21,11 +16,11 @@ export default function Footer() {
           gap="10px"
           display={{ base: "flex", xl: "none" }}
         >
-          <Image src="/images/Coin.svg" w="100px" />
-
           <Flex gap="10px" alignItems="center" justifyContent="center" mb="7px">
             {LIST_SOCIAL_NETWORK.map((item) => (
-              <Image key={item.name} src={item.icon} w="25px" h="25px" />
+              <Link key={item.name} href={item.href} target="_blank">
+                <Image key={item.name} src={item.icon} w="25px" h="25px" />
+              </Link>
             ))}
           </Flex>
         </Flex>
@@ -40,27 +35,18 @@ export default function Footer() {
             txt="Copyright © 2023 Popoy. All Rights Reserved."
             textAlign={{ base: "center", xl: "start" }}
           />
-          <Flex
-            gap="20px"
-            alignItems="center"
-            mt={{ base: "10px", xl: "unset" }}
-          >
-            {TEXT_FOOTER.map((item) => (
-              <TemplateText
-                cursor="pointer"
-                color="text.500"
-                txt={item.label}
-                _hover={{
-                  textDecoration: "underline",
-                }}
-              />
-            ))}
-          </Flex>
+          <TemplateText
+            color="text.500"
+            textAlign="center"
+            txt="Contract: 0xG2E45c3Df611dcE236A6DdFsA493d79F9DFadDE"
+          />
 
           <Box textAlign="center" display={{ base: "none", xl: "block" }}>
             <Flex gap="10px" alignItems="center" mb="7px">
               {LIST_SOCIAL_NETWORK.map((item) => (
-                <Image key={item.name} src={item.icon} w="25px" h="25px" />
+                <Link href={item.href} key={item.name} target="_blank">
+                  <Image src={item.icon} w="25px" h="25px" />
+                </Link>
               ))}
             </Flex>
           </Box>

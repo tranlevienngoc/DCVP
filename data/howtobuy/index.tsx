@@ -14,7 +14,7 @@ export const HOWTOBUY = [
   {
     ava: "/images/slide/2.svg",
     content:
-      "Go to app.uniswap.org. Connect your wallet. Paste the $POPOY token address into Uniswap, select Popoy, and confirm. When Metamask prompts you for a wallet signature, sign.",
+      "Go to app.uniswap.org. Connect your wallet. Paste the $POPOY token address into Uniswap, select POPOY, and confirm. When Metamask prompts you for a wallet signature, sign.",
     bottom: "-22%",
     right: "-2%",
     bottommb: "-20%",
@@ -25,7 +25,7 @@ export const HOWTOBUY = [
   {
     ava: "/images/slide/3.svg",
     content:
-      "Switch ETH for $POPOY. We have ZERO taxes so you don’t need to worry about buying with a specific slippage, although you may need to use slippage during times of market volatility.",
+      "Switch ETH for $POPOY. We have small taxes so you don’t need to worry about selling pressure, although you may need to use slippage during times of market volatility.",
     bottom: "-25%",
     bottommb: "-25%",
     right: "-5%",

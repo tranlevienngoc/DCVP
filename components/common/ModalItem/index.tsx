@@ -24,6 +24,7 @@ interface PopoverItemProps extends ModalContentProps {
   top?: string;
   right?: string;
   isFixIcon?: boolean;
+  closeBtnClass?: boolean;
 }
 
 export default function ModalItem({
@@ -37,6 +38,7 @@ export default function ModalItem({
   top,
   right,
   isFixIcon,
+  closeBtnClass,
   ...props
 }: PopoverItemProps) {
   return (
@@ -65,7 +67,10 @@ export default function ModalItem({
           left={isFixIcon ? "100%" : "unset"}
           right={right ?? "16px"}
         >
-          <CloseButton />
+          <CloseButton
+            className={closeBtnClass ? "btnClose" : ""}
+            color="#fff"
+          />
         </ModalCloseButton>
 
         <ModalBody p={pBody}>{children}</ModalBody>

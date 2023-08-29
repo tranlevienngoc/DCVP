@@ -75,7 +75,11 @@ export default function Tokenomics() {
                   borderRadius="50px"
                   data-aos="zoom-in-left"
                 />
-                <TemplateText txt={item.label} data-aos="zoom-in-right" />
+                <TemplateText
+                  txt={item.label}
+                  fontSize="16px"
+                  data-aos="zoom-in-right"
+                />
               </Flex>
             ))}
           </Flex>

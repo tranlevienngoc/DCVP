@@ -3,9 +3,6 @@ import { Flex, useDisclosure } from "@chakra-ui/react";
 import FlexBox from "components/common/FlexBox";
 import TemplateText from "components/common/Text/TemplateText";
 import { NavItem } from "constants/interface";
-import useModeTheme from "hooks/colorDarkMode";
-
-import Link from "next/link";
 
 import { useCallback } from "react";
 
@@ -15,8 +12,6 @@ interface props {
 }
 
 const MobileMenu = ({ navItem, onCloseMenu }: props) => {
-  const { isOpen, onToggle } = useDisclosure();
-  const { darkModeColors } = useModeTheme();
   const handleClickScroll = useCallback((id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -33,7 +28,7 @@ const MobileMenu = ({ navItem, onCloseMenu }: props) => {
         textDecoration: "none",
       }}
       p="10px 0"
-      borderBottom={darkModeColors.border400}
+      borderBottom="1px solid #2c2b38"
       onClick={() => {
         onCloseMenu();
         handleClickScroll(navItem.href || "");

@@ -1,5 +1,4 @@
 import { Text, TextProps } from "@chakra-ui/react";
-import useModeTheme from "hooks/colorDarkMode";
 
 interface Props extends TextProps {
   txt: string;
@@ -11,8 +10,6 @@ const TemplateText = ({
   color,
   ...props
 }: Props) => {
-  const { darkModeColors } = useModeTheme();
-
   return (
     <Text
       {...props}

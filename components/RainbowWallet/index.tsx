@@ -11,10 +11,9 @@ import { goerli, mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 
 import "@rainbow-me/rainbowkit/styles.css";
-import { ModalConnectTheme } from "../../styles/theme/modalconnectTheme";
 
 export const WalletProvider = ({ children }: { children: ReactNode }) => {
-  const projectId = "c35f9d5f14d231f9a724b84d800cb5ea";
+  const projectId = `${process.env.NEXT_PROJECT_ID}`;
 
   const { chains, publicClient, webSocketPublicClient } = configureChains(
     [goerli, mainnet, polygon, optimism, arbitrum],

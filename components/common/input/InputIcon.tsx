@@ -2,13 +2,11 @@ import {
   Image,
   Input,
   InputGroup,
-  InputLeftElement,
   InputRightElement,
   NumberInput,
   NumberInputField,
 } from "@chakra-ui/react";
 import { ChakraType } from "constants/types";
-import useModeTheme from "hooks/colorDarkMode";
 import { parse } from "utils/number";
 
 interface SearchInputProps {
@@ -45,7 +43,6 @@ export default function InputIcon({
   defaultValue,
   ...rest
 }: SearchInputProps) {
-  const { isLightMode } = useModeTheme();
   return (
     <InputGroup w={w} h={h}>
       <InputRightElement
@@ -72,7 +69,7 @@ export default function InputIcon({
             fontSize="14px"
             value={defaultValue}
             fontWeight={500}
-            color={isLightMode ? "#171924" : "#F6F7F9"}
+            color="#171924"
             className={className}
             placeholder={placeholder}
             borderRadius={borderRadius ? borderRadius : "8px"}
@@ -90,10 +87,10 @@ export default function InputIcon({
           type={type}
           fontSize="14px"
           value={defaultValue}
-          color={isLightMode ? "#171924" : "#F6F7F9"}
+          color="#171924"
           className={className}
           placeholder={placeholder}
-          bg={isLightMode ? "#F6F7F9" : "#171924"}
+          bg="#F6F7F9"
           onChange={(e) => onChangeText?.(e.target.value)}
           borderRadius={borderRadius ? borderRadius : "8px"}
           {...rest}

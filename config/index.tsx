@@ -1,1 +1,1 @@
-export const BASE_LINK = `${process.env.NEXT_PUBLIC_URL_WEB}`;
+export const BASE_LINK = `${process.env.NEXT_PUBLIC_URL}`;

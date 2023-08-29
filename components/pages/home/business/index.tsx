@@ -8,7 +8,6 @@ export default function Business() {
   return (
     <Box className="maxW" p={{ base: "0 16px", "2xl": "unset" }}>
       <Flex mt="24px" direction="column" alignItems="center">
-        <Image src="/images/Coin.svg" w="200px" data-aos="zoom-in" />
         <TemplateText
           fontSize={{ base: "24px", md: "35px" }}
           fontWeight={700}

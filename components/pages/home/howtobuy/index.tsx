@@ -1,5 +1,4 @@
-import { Box, Button, Flex, Image, SimpleGrid } from "@chakra-ui/react";
-import ButtonBase from "components/common/Buttons/ButtonBase";
+import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import { HOWTOBUY } from "data/howtobuy";
 import React from "react";

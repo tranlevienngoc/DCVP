@@ -9,6 +9,7 @@ import Roadmap from "./roadmap";
 import Tokenomics from "./tokenomics";
 import FAQ from "./faq";
 import Aos from "aos";
+import Seo from "components/Seo";
 
 export default function HomePage() {
   useEffect(() => {
