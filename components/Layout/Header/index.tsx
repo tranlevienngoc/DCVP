@@ -1,15 +1,12 @@
 import { CloseIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Box, Flex, Image, Link, Stack, useDisclosure } from "@chakra-ui/react";
-
 import ButtonBase from "components/common/Buttons/ButtonBase";
 import DrawerItem from "components/common/DrawerItem";
-
 import NAV_ITEMS from "config/header";
+import { LIST_SOCIAL_NETWORK } from "data/banner";
 
 import Menu from "./Menu";
 import MobileMenu from "./MobileMenu";
-
-import { LIST_SOCIAL_NETWORK } from "data/banner";
 
 interface props {
   onCloseMenu: () => void;
@@ -62,7 +59,7 @@ const Header = () => {
         <Flex alignItems="center" gap="10px" p="14px 0 10px 24px">
           {LIST_SOCIAL_NETWORK.map((item) => (
             <Link key={item.name} href={item.href} target="_blank">
-              <Image src={item.icon} w="30px" h="30px" />
+              <Image src={item.icon} w="30px" h="30px" alt="social" />
             </Link>
           ))}
         </Flex>
@@ -79,7 +76,12 @@ const Header = () => {
         p={{ base: "15px 16px 20px 16px", xl: "15px 25px" }}
       >
         <Link href="/">
-          <Image src="/Logo.svg" w={{ base: "100px", md: "120px" }} />
+          <Image
+            src="/Logo.svg"
+            w={{ base: "100px", md: "120px" }}
+            alt="logo"
+            h="100%"
+          />
         </Link>
         <Flex display={{ base: "none", xl: "flex" }} alignItems="center">
           <DesktopNav />

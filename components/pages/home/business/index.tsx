@@ -1,7 +1,6 @@
-import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import { TEXT_DESCRIPTIONS } from "data/bussiness";
-
 import React from "react";
 
 export default function Business() {

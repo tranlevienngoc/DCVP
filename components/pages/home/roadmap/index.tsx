@@ -1,4 +1,4 @@
-import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import { ROADMAP } from "data/roadmap";
 import React from "react";

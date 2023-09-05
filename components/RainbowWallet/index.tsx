@@ -1,13 +1,11 @@
-import { ComponentProps, ReactNode } from "react";
 import {
   connectorsForWallets,
   getDefaultWallets,
-  lightTheme,
   RainbowKitProvider,
 } from "@rainbow-me/rainbowkit";
-
+import { ReactNode } from "react";
 import { configureChains, createConfig, WagmiConfig } from "wagmi";
-import { goerli, mainnet, polygon, optimism, arbitrum } from "wagmi/chains";
+import { arbitrum, goerli, mainnet, optimism, polygon } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 
 import "@rainbow-me/rainbowkit/styles.css";

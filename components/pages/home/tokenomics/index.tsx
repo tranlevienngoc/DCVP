@@ -1,4 +1,4 @@
-import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import { CONTENT_TOKENOMICS, TOKENOMICS } from "data/tokenomics";
 import React from "react";
@@ -28,7 +28,9 @@ export default function Tokenomics() {
           src="/images/bg/Money.svg"
           p={{ base: "0 16px", lg: "unset" }}
           w={{ base: "70%", lg: "35%" }}
+          h="100%"
           data-aos="zoom-in-left"
+          alt="tokennomics"
         />
         <Flex
           p={{ base: "0 16px", lg: "unset" }}

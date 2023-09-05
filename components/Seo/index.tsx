@@ -1,6 +1,6 @@
+import { BASE_LINK } from "config";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { BASE_LINK } from "../../config";
 
 const defaultMeta = {
   title: "Popoy",

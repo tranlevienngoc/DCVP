@@ -53,6 +53,8 @@ export default function HowToBuy() {
                 transform={{ base: item.transformmb, md: item.transform }}
                 src={item.ava}
                 w={item.width}
+                h="100%"
+                alt={item.ava}
               />
             </Box>
           </Box>

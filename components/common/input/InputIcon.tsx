@@ -7,7 +7,6 @@ import {
   NumberInputField,
 } from "@chakra-ui/react";
 import { ChakraType } from "constants/types";
-import { parse } from "utils/number";
 
 interface SearchInputProps {
   h?: ChakraType;
@@ -35,7 +34,6 @@ export default function InputIcon({
   placeholder,
   borderColor,
   border,
-  isFocus = false,
   borderRadius,
   onChange,
   onChangeText,
@@ -51,13 +49,13 @@ export default function InputIcon({
         borderLeft="1px solid #DFDCDC"
         w="50px"
       >
-        {icon && <Image src={icon} w="25px" />}
+        {icon && <Image src={icon} w="25px" h="25px" alt="icon" />}
       </InputRightElement>
 
       {type == "number" && (
         <NumberInput
           value={defaultValue}
-          onChange={(e) => onChange?.(parse(e))}
+          onChange={(e) => onChange?.(Number(e))}
           w={w}
         >
           <NumberInputField

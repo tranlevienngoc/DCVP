@@ -154,25 +154,11 @@ body {
 
 }
 
-.Toastify__toast {
-  font-family: Inter, system-ui, 'Segoe UI', Helvetica, Arial, sans-serif !important;
-}
 
 .text-color {
   font-weight: 700 !important;
   font-size: 13px;
 }
-
-@keyframes colorrush {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: calc(10*(12px/0.707)) 100%;
-  }
-}
-
 
 
 
@@ -184,17 +170,6 @@ body {
   }
 }
 
-@keyframes growAndFade {
-  0% {
-    opacity: .25;
-    transform: scale(0);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(1);
-  }
-}
 
 .circle {
 
@@ -253,4 +228,9 @@ body {
     width: 17px !important;
     height: 17px !important;
   }
+}
+
+.inforSectionImage {
+  width: 90px !important;
+  height: 100% !important;
 }

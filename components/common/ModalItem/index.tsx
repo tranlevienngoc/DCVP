@@ -1,10 +1,10 @@
 import {
+  type ModalContentProps,
   CloseButton,
   Modal,
   ModalBody,
   ModalCloseButton,
   ModalContent,
-  type ModalContentProps,
   ModalOverlay,
 } from "@chakra-ui/react";
 import { ChakraType } from "constants/interface";
