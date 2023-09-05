@@ -52,7 +52,7 @@ export default function Information() {
         w={{ base: "100%", lg: "50%" }}
         justifyContent={{ base: "center", lg: "end" }}
       >
-        <Image src="/images/bg/Finger.svg" w="90%" />
+        <Image src="/images/bg/Finger.svg" w="90%" h="100%" alt="finger.svg" />
       </Flex>
     </Flex>
   );

@@ -1,15 +1,14 @@
 import { Box } from "@chakra-ui/react";
+import Aos from "aos";
 import React, { useEffect } from "react";
+
 import Banner from "./banner";
-import TemplateText from "components/common/Text/TemplateText";
 import Business from "./business";
-import Information from "./information";
+import FAQ from "./faq";
 import HowToBuy from "./howtobuy";
+import Information from "./information";
 import Roadmap from "./roadmap";
 import Tokenomics from "./tokenomics";
-import FAQ from "./faq";
-import Aos from "aos";
-import Seo from "components/Seo";
 
 export default function HomePage() {
   useEffect(() => {

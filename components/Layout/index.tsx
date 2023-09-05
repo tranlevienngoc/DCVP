@@ -1,9 +1,9 @@
 import { Box } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 
-import Footer from "./Footer";
 import Header from "./Header";
 import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
+const Footer = dynamic(() => import("./Footer"));
 
 const Layout = ({ children }: { children: JSX.Element }) => {
   const [mounted, setMounted] = useState(false);

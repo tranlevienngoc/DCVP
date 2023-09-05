@@ -2,6 +2,7 @@ import { Box } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import { LISTQUESTION } from "data/faq";
 import React from "react";
+
 import Questions from "./questions";
 
 export default function FAQ() {

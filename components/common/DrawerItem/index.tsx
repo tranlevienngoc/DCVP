@@ -54,10 +54,11 @@ export default function DrawerItem({
               <CloseButton color="text.100" />
             </DrawerCloseButton>
             {txt && <TemplateText txt={txt} fontSize={20} fontWeight={700} />}
-            {logo && <Image src={logo} w="100px" />}
+            {logo && <Image src={logo} w="100px" h="100%" alt={logo} />}
           </FlexBox>
           {children}
         </DrawerBody>
+        1
       </DrawerContent>
     </Drawer>
   );

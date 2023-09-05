@@ -1,5 +1,4 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Stack, Flex, Collapse, useDisclosure, Box } from "@chakra-ui/react";
+import { Box, Collapse, Flex, Stack, useDisclosure } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import AddIcon from "components/svg/AddIcon";
 import MinusIcon from "components/svg/MinusIcon";
@@ -34,8 +33,8 @@ export default function Questions({ item, index, length }: props) {
         <Flex
           onClick={onToggle}
           p="16px 0"
-          justify={"space-between"}
-          align={"center"}
+          justify="space-between"
+          align="center"
           _hover={{
             textDecoration: "none",
           }}

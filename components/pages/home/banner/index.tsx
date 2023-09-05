@@ -1,8 +1,9 @@
 import { Box, Icon } from "@chakra-ui/react";
+import ModalItem from "components/common/ModalItem";
+import useVisible from "hooks/useVisible";
 import React from "react";
 import { AiFillPlayCircle } from "react-icons/ai";
-import useVisible from "hooks/useVisible";
-import ModalItem from "components/common/ModalItem";
+
 import VideoModal from "./VideoModal";
 
 export default function Banner() {

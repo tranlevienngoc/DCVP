@@ -1,9 +1,6 @@
-import { ChevronDownIcon } from "@chakra-ui/icons";
-import { Flex, useDisclosure } from "@chakra-ui/react";
-import FlexBox from "components/common/FlexBox";
+import { Flex } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import { NavItem } from "constants/interface";
-
 import { useCallback } from "react";
 
 interface props {

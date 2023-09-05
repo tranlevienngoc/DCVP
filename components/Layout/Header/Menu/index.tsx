@@ -1,9 +1,7 @@
 import { Box, Flex, useDisclosure } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
-
 import { NavItem } from "constants/interface";
-
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 
 interface props {
   navItem: NavItem;

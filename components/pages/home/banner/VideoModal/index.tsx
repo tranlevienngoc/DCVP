@@ -1,15 +1,10 @@
 import { Box } from "@chakra-ui/react";
+import Script from "next/script";
 import React from "react";
 
 export default function VideoModal() {
   return (
     <Box>
-      {/* <video
-        className="video"
-        src="https://adoptvietnam.vn/file/video.mp4"
-        autoPlay
-        controls
-      /> */}
       <div
         style={{ padding: "56.25% 0 0 0", position: "relative" }}
         className="video"
@@ -29,7 +24,7 @@ export default function VideoModal() {
           title="Popoy Dance"
         ></iframe>
       </div>
-      <script src="https://player.vimeo.com/api/player.js"></script>
+      <Script src="https://player.vimeo.com/api/player.js"></Script>
     </Box>
   );
 }

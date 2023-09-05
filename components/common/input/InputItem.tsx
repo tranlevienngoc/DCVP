@@ -9,18 +9,15 @@ import {
   Select,
   Textarea,
 } from "@chakra-ui/react";
-
+import TickPass from "components/svg/TickPass";
+import { InputType } from "constants/enum";
+import { ChakraType, ErrorFormType, OptionType } from "constants/types";
 import { useCallback, useState } from "react";
 import { Controller, FieldValues } from "react-hook-form";
 
-import "react-datepicker/dist/react-datepicker.css";
-
 import Hiden from "./icon/Hiden";
 import Show from "./icon/Show";
-import { InputType } from "constants/enum";
-import { ChakraType, ErrorFormType, OptionType } from "constants/types";
 import TemplateText from "../Text/TemplateText";
-import TickPass from "components/svg/TickPass";
 
 interface TextInputProps {
   type: string;
