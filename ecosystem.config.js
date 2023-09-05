@@ -9,7 +9,7 @@ module.exports = {
     production: {
       key: "popoy.pem",
       user: "ubuntu",
-      host: "54.144.131.76",
+      host: "100.26.171.254",
       ref: "origin/main",
       repo: "git@github.com:Coins-Plus/Popoy-Memes.git",
       path: "/home/ubuntu",
