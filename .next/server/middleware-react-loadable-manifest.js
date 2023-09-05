@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST={"../components/Layout/index.tsx -> ./Footer":{id:8162,files:["static/chunks/162.8fcfa413596ca126.js"]}}

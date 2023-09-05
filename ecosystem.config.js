@@ -15,7 +15,7 @@ module.exports = {
       path: "/home/ubuntu",
       "pre-deploy-local": "",
       "post-deploy":
-        "source ~/.nvm/nvm.sh && yarn install && yarn run build && pm2 reload ecosystem.config.js --env production",
+        "source ~/.nvm/nvm.sh && pm2 reload ecosystem.config.js --env production",
       "pre-setup": "ForwardAgent=yes",
     },
   },
