@@ -11,7 +11,7 @@ export default function Banner() {
   return (
     <Box
       className="background-banner"
-      mb={{ base: "-10px", "2xl": "-25px" }}
+      mb={{ base: "10px", "2xl": "-25px" }}
       position="relative"
     >
       <Box

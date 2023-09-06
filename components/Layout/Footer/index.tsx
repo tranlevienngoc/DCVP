@@ -39,12 +39,6 @@ export default function Footer() {
             txt="Copyright © 2023 Popoy. All Rights Reserved."
             textAlign={{ base: "center", xl: "start" }}
           />
-          <TemplateText
-            color="text.500"
-            textAlign="center"
-            txt="Contract: 0xG2E45c3Df611dcE236A6DdFsA493d79F9DFadDE"
-          />
-
           <Box textAlign="center" display={{ base: "none", xl: "block" }}>
             <Flex gap="10px" alignItems="center" mb="7px">
               {LIST_SOCIAL_NETWORK.map((item) => (

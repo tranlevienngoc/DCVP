@@ -11,7 +11,7 @@ const defaultMeta = {
 
   type: "website",
   robots: "nofollow, noindex",
-  image: "/images/Coin.svg",
+  image: "/images/apple-touch-icon.png",
 };
 
 type SeoProps = {
@@ -36,7 +36,6 @@ export default function Seo(props: SeoProps) {
     <Head>
       <meta charSet="UTF-8" />
       <title>{meta.title}</title>
-      <meta name="robots" content={meta.robots} />
       <meta content={meta.description} name="description" />
       <meta property="og:url" content={`${meta.url}${router.asPath}`} />
       <link rel="canonical" href={meta.canonical} />

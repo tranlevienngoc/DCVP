@@ -10,7 +10,7 @@ import theme from "../styles/theme";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Seo templateTitle="Popoy" />
+      <Seo templateTitle="Popoy - The most enthusiastic memecoin in the universe" />
       <Layout>
         <Component {...pageProps} />
       </Layout>
