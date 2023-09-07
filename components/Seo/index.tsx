@@ -41,6 +41,7 @@ export default function Seo(props: SeoProps) {
       <link rel="canonical" href={meta.canonical} />
       <link rel="alternate" hrefLang="en" href={meta.url} />
 
+      <link rel="apple-touch-icon" href={meta.image} />
       <link rel="shortcut icon" href="/images/favicon.ico" />
 
       {/* Open Graph */}
