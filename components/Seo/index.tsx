@@ -37,7 +37,6 @@ export default function Seo(props: SeoProps) {
       <meta charSet="UTF-8" />
       <title>{meta.title}</title>
       <meta content={meta.description} name="description" />
-      <meta name="robots" content={meta.robots} />
       <meta property="og:url" content={`${meta.url}${router.asPath}`} />
       <link rel="canonical" href={meta.canonical} />
       <link rel="alternate" hrefLang="en" href={meta.url} />
