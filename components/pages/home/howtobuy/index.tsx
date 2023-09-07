@@ -11,7 +11,7 @@ export default function HowToBuy() {
         fontSize={{ base: "24px", md: "35px" }}
         textAlign="center"
         fontWeight={700}
-        txt="HOW TO BUY POPOY MEME TOKEN"
+        txt="HOW TO BUY THE MAGNIFICENT $POPOY MEME TOKEN"
         fontFamily="Bangers"
         letterSpacing="3px"
         data-aos="fade-up"
@@ -21,7 +21,7 @@ export default function HowToBuy() {
         mb="48px"
         textAlign="center"
         fontSize="18px"
-        txt="Take charge and use ETH to purchase $POPOY tokens on Uniswap Exchange."
+        txt="Take a decisive step forward and acquire $POPOY tokens using ETH on the renowned Uniswap Exchange."
         data-aos="zoom-in"
       />
       <SimpleGrid gap="50px" columns={{ base: 1, lg: 3 }}>

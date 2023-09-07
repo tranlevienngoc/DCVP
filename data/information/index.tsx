@@ -1,19 +1,19 @@
 export const INFORMATION_TEXT = [
   {
     paragraph:
-      "$POPOY is not just another meme. It's an unstoppable force, riding the waves of internet humor and establishing a community like no other.",
+      "$POPOY transcends the realm of ordinary memes, transforming into an unstoppable force that rides the waves of internet humor and cultivates a community like no other.",
     animation: "fade-up",
     duration: "1000",
   },
   {
     paragraph:
-      "The launch of the $POPOY token will help sustain the growth of the Popoy Meme Token community and reward loyal members, small taxes, LP locked and contract renounced.",
+      "Prepare yourself for the launch of the $POPOY token, a pivotal moment that sustains the exponential growth of the Popoy Meme Token community. Loyal members shall be rewarded, all while ensuring transparency and security through small taxes, LP lock, and contract renouncement.",
     animation: "fade-up",
     duration: "2000",
   },
   {
     paragraph:
-      "Join us on this exciting adventure as we ride the waves of internet culture and embrace the unstoppable force that is $POPOY.",
+      "Embark on this exhilarating adventure with us as we soar through the ever-changing landscape of internet culture. Embrace the indomitable force that is $POPOY, and join our ranks as we push boundaries and redefine the possibilities of meme-driven phenomena.",
     animation: "fade-up",
     duration: "3000",
   },

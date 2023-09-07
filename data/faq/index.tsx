@@ -2,7 +2,7 @@ export const LISTQUESTION = [
   {
     question: "What is Popoy Meme Token?",
     answer:
-      "$POPOY is an ERC-20 token with a total supply of 108,642,000,000,000 tokens. The token was designed to be community-owned, with 15% of the tokens sold in a presale to ensure a strong and engaged community. The token contract address is 0xG2E45c3Df611dcE236A6DdFsA493d79F9DFadDE Please do not send any funds to this token contract address, as they cannot be recovered. $POPOY can currently only be purchased through the official presale.",
+      "$POPOY is an ERC-20 token with a total supply of 108,642,000,000,000 tokens. The token is designed to be community-owned. The token contract address is 0xG2E45c3Df611dcE236A6DdFsA493d79F9DFadDE. Please do not send any funds to this token contract address as they cannot be recovered. Currently, POPOY can only be purchased through the official presale.",
   },
   {
     question: "Why launch on Ethereum?",
