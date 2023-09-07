@@ -6,7 +6,7 @@ const defaultMeta = {
   title: "Popoy",
   siteName: "Popoy",
   description:
-    "Welcome to Popoy – Where laughter knows no bounds, and the pursuit of joy brings us closer to the stars! Together, let's create a universe filled with love, laughter, and endless entertainment!",
+    "Welcome to Popoy – Where laughter knows no bounds, and the pursuit of joy propels us toward the stars! Together, let us coalesce into a universe brimming with love, laughter, and infinite entertainment!",
   url: `${BASE_LINK}`,
 
   type: "website",
