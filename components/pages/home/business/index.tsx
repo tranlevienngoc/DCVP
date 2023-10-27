@@ -1,11 +1,15 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
-import { TEXT_DESCRIPTIONS } from "data/bussiness";
+import { LIST_IMAGE_TROLL, TEXT_DESCRIPTIONS } from "data/bussiness";
 import React from "react";
 
 export default function Business() {
   return (
-    <Box className="maxW" p={{ base: "0 16px", "2xl": "unset" }}>
+    <Box
+      className="maxW"
+      p={{ base: "0 16px", "2xl": "unset" }}
+      mt={{ base: "-160px", md: "unset" }}
+    >
       <Flex mt="24px" direction="column" alignItems="center">
         <TemplateText
           fontSize={{ base: "24px", md: "35px" }}
@@ -29,12 +33,30 @@ export default function Business() {
           {TEXT_DESCRIPTIONS.map((item) => (
             <TemplateText
               key={item.paragraph}
-              fontSize="16px"
+              fontSize="18px"
               textAlign={{ base: "center", lg: "start" }}
               txt={item.paragraph}
               data-aos={item.animation}
             />
           ))}
+          <SimpleGrid columns={3} gap="16px">
+            {LIST_IMAGE_TROLL.map((item, index) => (
+              <Box key={index}>
+                <Image
+                  src={item}
+                  alt={item}
+                  h="100%"
+                  w="100%"
+                  transition="transform .2s"
+                  border="3px solid #262626"
+                  borderRadius="8px"
+                  _hover={{
+                    transform: "scale(1.2)",
+                  }}
+                />
+              </Box>
+            ))}
+          </SimpleGrid>
         </Flex>
       </Flex>
     </Box>

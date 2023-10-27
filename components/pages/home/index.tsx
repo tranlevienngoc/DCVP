@@ -33,7 +33,7 @@ export default function HomePage() {
         <Business />
       </Box>
       <Information />
-      <Box id="#howtobuy" p="70px 16px 00px 16px">
+      <Box id="#howtobuy" p="100px 16px 00px 16px">
         <HowToBuy />
       </Box>
       <Box pt={{ base: "110px", md: "120px" }} id="#roadmap">
@@ -43,7 +43,9 @@ export default function HomePage() {
         <Tokenomics />
       </Box>
 
-      <FAQ />
+      <Box id="#faq" className="scrollPadding">
+        <FAQ />
+      </Box>
     </Box>
   );
 }

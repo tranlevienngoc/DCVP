@@ -1,4 +1,4 @@
-import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
+import { Box, Flex, Image, SimpleGrid } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
 import { ROADMAP } from "data/roadmap";
 import React from "react";
@@ -26,7 +26,7 @@ export default function Roadmap() {
         textAlign="center"
         fontSize="18px"
         data-aos="zoom-in"
-        txt="Allow us to present the awe-inspiring $POPOY Roadmap, a carefully crafted blueprint that illuminates the exhilarating path that lies ahead. Together, we shall demonstrate to the world that the Popoy Meme Token is not a fleeting phenomenon but a permanent fixture, solidified through our collective efforts and unwavering commitment."
+        txt="Together, we shall demonstrate to the world that the Popoy is not a fleeting phenomenon but a permanent fixture, solidified through our collective efforts and unwavering commitment."
       />
       <SimpleGrid columns={{ base: 1, lg: 3 }} gap="20px" mt="30px">
         {ROADMAP.map((item) => (
@@ -47,20 +47,7 @@ export default function Roadmap() {
               data-aos="zoom-out"
               data-aos-duration="2000"
             />
-            <TemplateText
-              mb="16px"
-              txt={item.lable}
-              fontSize="17px"
-              fontWeight={600}
-              data-aos="zoom-out"
-              data-aos-duration="2000"
-            />
-            <TemplateText
-              txt={item.content}
-              data-aos="zoom-out"
-              fontSize="16px"
-              data-aos-duration="2000"
-            />
+            <Image src={item.image} w="100%" alt={item.title} />
           </Box>
         ))}
       </SimpleGrid>

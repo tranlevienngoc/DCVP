@@ -59,7 +59,7 @@ export default function Footer() {
           color="text.500"
           fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
-          txt="$POPOY coin has no association with Ultra Records. This token is simply paying homage to a meme we all love and recognize."
+          txt="$POPOY coin has no association with Ultra Records and Artnoux. This token is simply paying homage to a meme we all love and recognize."
         />
         <TemplateText
           mt="7px"

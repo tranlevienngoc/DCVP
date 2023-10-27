@@ -39,7 +39,7 @@ export default function Information() {
             <TemplateText
               mb="16px"
               textAlign={{ base: "center", lg: "start" }}
-              fontSize="16px"
+              fontSize="18px"
               key={item.paragraph}
               txt={item.paragraph}
               data-aos={item.animation}
@@ -51,8 +51,9 @@ export default function Information() {
       <Flex
         w={{ base: "100%", lg: "50%" }}
         justifyContent={{ base: "center", lg: "end" }}
+        mt="10px"
       >
-        <Image src="/images/bg/Finger.svg" w="90%" h="100%" alt="finger.svg" />
+        <Image src="/images/bg/troll.gif" w="90%" h="100%" alt="finger.svg" />
       </Flex>
     </Flex>
   );

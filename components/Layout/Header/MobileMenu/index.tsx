@@ -34,7 +34,7 @@ const MobileMenu = ({ navItem, onCloseMenu }: props) => {
       <TemplateText
         w="100%"
         fontWeight={700}
-        fontSize={16}
+        fontSize={18}
         txt={navItem.label}
       />
     </Flex>

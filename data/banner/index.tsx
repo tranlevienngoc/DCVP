@@ -9,9 +9,4 @@ export const LIST_SOCIAL_NETWORK = [
     name: "telegram",
     href: "https://t.me/popoy_eth",
   },
-  {
-    icon: "/images/social/telegram.svg",
-    name: "telegram1",
-    href: "https://t.me/popoy_community",
-  },
 ];

@@ -58,7 +58,7 @@ export default function Questions({ item, index, length }: props) {
         >
           <TemplateText
             p="16px 0"
-            fontSize={{ base: "16px", md: "18px" }}
+            fontSize={{ base: "18px", md: "18px" }}
             txt={item.answer}
           />
         </Collapse>

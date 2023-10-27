@@ -11,10 +11,4 @@ export const INFORMATION_TEXT = [
     animation: "fade-up",
     duration: "2000",
   },
-  {
-    paragraph:
-      "Embark on this exhilarating adventure with us as we soar through the ever-changing landscape of internet culture. Embrace the indomitable force that is $POPOY, and join our ranks as we push boundaries and redefine the possibilities of meme-driven phenomena.",
-    animation: "fade-up",
-    duration: "3000",
-  },
 ];

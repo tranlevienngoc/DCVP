@@ -33,7 +33,7 @@ const Menu = ({ navItem }: props) => {
         <TemplateText
           _hover={{ color: "#64a152" }}
           fontWeight={700}
-          fontSize={16}
+          fontSize={18}
           txt={navItem.label}
         />
       </Box>

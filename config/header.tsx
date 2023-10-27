@@ -18,8 +18,8 @@ const NAV_ITEMS: Array<NavItem> = [
     href: "#roadmap",
   },
   {
-    label: "Stickers",
-    href: "#",
+    label: "FAQ",
+    href: "#faq",
   },
 ];
 export default NAV_ITEMS;

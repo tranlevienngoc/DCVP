@@ -1,6 +1,5 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
 import TemplateText from "components/common/Text/TemplateText";
-import { CONTENT_TOKENOMICS, TOKENOMICS } from "data/tokenomics";
 import React from "react";
 
 export default function Tokenomics() {
@@ -40,12 +39,12 @@ export default function Tokenomics() {
           gap={{ base: "20px", md: "unset" }}
           alignItems="center"
         >
-          <Box w={{ base: "100%", md: "65%" }}>
+          <Box w={{ base: "100%", md: "85%" }}>
             <TemplateText
               textAlign="center"
               fontSize="24px"
               fontWeight={700}
-              txt="Total supply: </br> 108,642,000,000,000"
+              txt="Total supply: </br> 420,690,000,000,000"
               mb="20px"
               data-aos="fade-down"
             />
@@ -58,33 +57,13 @@ export default function Tokenomics() {
               borderRadius="29px"
               data-aos="fade-up"
             >
-              {CONTENT_TOKENOMICS.map((item) => (
-                <TemplateText
-                  fontSize="18px"
-                  key={item.content}
-                  txt={item.content}
-                />
-              ))}
+              <TemplateText
+                fontSize="18px"
+                txt="ZERO TAX, CONTRACT RENOUNCED, LIQUIDITY BURNED FOREVER. 100% BELONGS TO COMMUNITY, FOR THE PEOPLE.
+                  "
+              />
             </Flex>
           </Box>
-          <Flex direction="column" gap="10px">
-            {TOKENOMICS.map((item) => (
-              <Flex gap="10px" alignItems="center" key={item.color}>
-                <Box
-                  bg={item.color}
-                  w="40px"
-                  h="40px"
-                  borderRadius="50px"
-                  data-aos="zoom-in-left"
-                />
-                <TemplateText
-                  txt={item.label}
-                  fontSize="16px"
-                  data-aos="zoom-in-right"
-                />
-              </Flex>
-            ))}
-          </Flex>
         </Flex>
       </Flex>
     </Box>
