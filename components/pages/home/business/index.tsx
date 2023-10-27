@@ -39,25 +39,26 @@ export default function Business() {
               data-aos={item.animation}
             />
           ))}
-          <SimpleGrid columns={3} gap="16px">
-            {LIST_IMAGE_TROLL.map((item, index) => (
-              <Box key={index}>
-                <Image
-                  src={item}
-                  alt={item}
-                  h="100%"
-                  w="100%"
-                  transition="transform .2s"
-                  border="3px solid #262626"
-                  borderRadius="8px"
-                  _hover={{
-                    transform: "scale(1.2)",
-                  }}
-                />
-              </Box>
-            ))}
-          </SimpleGrid>
         </Flex>
+
+        <SimpleGrid columns={3} gap="16px" mt="20px">
+          {LIST_IMAGE_TROLL.map((item, index) => (
+            <Box key={index}>
+              <Image
+                src={item}
+                alt={item}
+                w="100%"
+                h="100%"
+                transition="transform .2s"
+                border="3px solid #262626"
+                borderRadius="8px"
+                _hover={{
+                  transform: "scale(1.2)",
+                }}
+              />
+            </Box>
+          ))}
+        </SimpleGrid>
       </Flex>
     </Box>
   );

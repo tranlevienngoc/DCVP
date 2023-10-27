@@ -28,7 +28,7 @@ export default function Roadmap() {
         data-aos="zoom-in"
         txt="Together, we shall demonstrate to the world that the Popoy is not a fleeting phenomenon but a permanent fixture, solidified through our collective efforts and unwavering commitment."
       />
-      <SimpleGrid columns={{ base: 1, lg: 3 }} gap="20px" mt="30px">
+      <SimpleGrid columns={{ base: 1, lg: 3 }} gap="20px" mt="30px" w="100%">
         {ROADMAP.map((item) => (
           <Box
             key={item.title}
@@ -36,6 +36,7 @@ export default function Roadmap() {
             boxShadow="4px 4px 0 #262626"
             p="16px"
             borderRadius="29px"
+            maxW="370px"
           >
             <TemplateText
               m="16px 0 8px 0"
