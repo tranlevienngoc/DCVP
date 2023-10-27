@@ -26,7 +26,7 @@ export default function HowToBuy() {
       />
       <SimpleGrid gap="50px" columns={{ base: 1, lg: 3 }}>
         {HOWTOBUY.map((item, index) => (
-          <Box position="relative" key={item.ava}>
+          <Box position="relative" key={item.content}>
             <blockquote className="block-quote" data-aos="fade-up">
               <TemplateText
                 as="span"
@@ -40,23 +40,6 @@ export default function HowToBuy() {
               />
               <p>{item.content}</p>
             </blockquote>
-            <Box
-              position="absolute"
-              bottom={{ base: item.bottommb, md: item.bottom }}
-              left={{ base: item.leftmb, md: item.left }}
-              right={{ base: item.rightmb, md: item.right }}
-              data-aos="fade-up"
-              data-aos-duration="2000"
-            >
-              <Image
-                className="image"
-                transform={{ base: item.transformmb, md: item.transform }}
-                src={item.ava}
-                w={item.width}
-                h="100%"
-                alt={item.ava}
-              />
-            </Box>
           </Box>
         ))}
       </SimpleGrid>

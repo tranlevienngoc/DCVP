@@ -48,7 +48,7 @@ export default function Business() {
                 src={item}
                 alt={item}
                 w="100%"
-                h="100%"
+                h="350px"
                 transition="transform .2s"
                 border="3px solid #262626"
                 borderRadius="8px"
