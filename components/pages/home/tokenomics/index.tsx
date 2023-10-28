@@ -3,6 +3,11 @@ import TemplateText from "components/common/Text/TemplateText";
 import React from "react";
 
 export default function Tokenomics() {
+  const LIST_IMAGE = [
+    "images/fire.gif",
+    "images/giphy.webp",
+    "images/fire.gif",
+  ];
   return (
     <Box className="maxW">
       <TemplateText
@@ -64,13 +69,15 @@ export default function Tokenomics() {
               />
             </Flex>
             <Flex
-              mt="20px"
+              mt="30px"
               justifyContent={{ base: "space-around", lg: "space-between" }}
               data-aos="fade-up"
               data-aos-duration="2000"
             >
-              {Array.from({ length: 3 }).map((item, index) => {
-                return <Image key={index} src="images/fire.gif" w="30%" />;
+              {LIST_IMAGE.map((item, index) => {
+                return (
+                  <Image key={index} src={item} borderRadius="50%" w="30%" />
+                );
               })}
             </Flex>
           </Box>
