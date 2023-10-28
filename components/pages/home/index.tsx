@@ -29,6 +29,7 @@ export default function HomePage() {
           "2xl": "50px 0 50px 0",
         }}
         id="#about"
+        className="scrollPadding"
       >
         <Business />
       </Box>
@@ -36,11 +37,12 @@ export default function HomePage() {
       <Box id="#howtobuy" p="100px 16px 00px 16px">
         <HowToBuy />
       </Box>
-      <Box pt={{ base: "110px", md: "70px" }} id="#roadmap">
-        <Roadmap />
-      </Box>
+
       <Box p={{ base: "50px 0 ", md: "100px 0 0 0" }} id="#tokenomics">
         <Tokenomics />
+      </Box>
+      <Box pt={{ base: "110px", md: "70px" }} id="#roadmap">
+        <Roadmap />
       </Box>
     </Box>
   );

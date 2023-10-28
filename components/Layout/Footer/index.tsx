@@ -66,7 +66,7 @@ export default function Footer() {
           color="text.500"
           fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
-          txt="Allow us to introduce our enthusiastic, amiable, peace-loving, and irresistibly funny alien friend, whose sole mission is to bestow upon this universe the epitome of amusement."
+          txt="This website does not constitute an offer to purchase or solicitation to sell, nor is it a recommendation to buy or sell, any token or other product. Purchasing and selling tokens is inherently risky and holders must bear their risk of loss. Neither the authors of this website nor any participants in the Popoy project accept any liability for losses or taxes that holders, purchasers or sellers of Popoy may incur. The value of Popoy may decrease and may be highly volatile. This website is not directed towards any person located in a jurisdiction where purchasing, selling or holding Popoy is prohibited or regulated. Consult your local laws before transacting in any cryptocurrency."
         />
       </Box>
     </Box>

@@ -146,7 +146,10 @@ const Header = () => {
         isOpen={isOpen}
         logo="/Logo.svg"
       >
-        <MobileNav onCloseMenu={onClose} />
+        <Box mt="10px">
+          {" "}
+          <MobileNav onCloseMenu={onClose} />
+        </Box>
       </DrawerItem>
     </Box>
   );
