@@ -41,7 +41,7 @@ export default function Business() {
           ))}
         </Flex>
 
-        <SimpleGrid columns={3} gap="16px" mt="20px">
+        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} gap="16px" mt="20px">
           {LIST_IMAGE_TROLL.map((item, index) => (
             <Box key={index}>
               <Image
@@ -50,8 +50,8 @@ export default function Business() {
                 w="100%"
                 h="350px"
                 transition="transform .2s"
-                border="3px solid #262626"
-                borderRadius="8px"
+                border="2px solid #262626"
+                borderRadius="20px"
                 _hover={{
                   transform: "scale(1.2)",
                 }}

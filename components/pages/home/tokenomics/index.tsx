@@ -24,9 +24,9 @@ export default function Tokenomics() {
         gap="50px"
       >
         <Image
-          src="/images/bg/Money.svg"
-          p={{ base: "0 16px", lg: "unset" }}
-          w={{ base: "70%", lg: "35%" }}
+          src="/images/money.gif"
+          p={{ base: "0 16px", lg: "0px 0px 0px 6%" }}
+          w={{ base: "60%", lg: "35%" }}
           h="100%"
           data-aos="zoom-in-left"
           alt="tokennomics"
@@ -39,12 +39,12 @@ export default function Tokenomics() {
           gap={{ base: "20px", md: "unset" }}
           alignItems="center"
         >
-          <Box w={{ base: "100%", md: "85%" }}>
+          <Box w={{ base: "100%", lg: "85%" }}>
             <TemplateText
               textAlign="center"
-              fontSize="24px"
+              fontSize="125%"
               fontWeight={700}
-              txt="Total supply: </br> 420,690,000,000,000"
+              txt="Total supply: </br> <span class='textNumber'>51,000,000,000</span>"
               mb="20px"
               data-aos="fade-down"
             />
@@ -62,6 +62,16 @@ export default function Tokenomics() {
                 txt="ZERO TAX, CONTRACT RENOUNCED, LIQUIDITY BURNED FOREVER. 100% BELONGS TO COMMUNITY, FOR THE PEOPLE.
                   "
               />
+            </Flex>
+            <Flex
+              mt="20px"
+              justifyContent={{ base: "space-around", lg: "space-between" }}
+              data-aos="fade-up"
+              data-aos-duration="2000"
+            >
+              {Array.from({ length: 3 }).map((item, index) => {
+                return <Image key={index} src="images/fire.gif" w="30%" />;
+              })}
             </Flex>
           </Box>
         </Flex>

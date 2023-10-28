@@ -6,13 +6,13 @@ export const TEXT_DESCRIPTIONS = [
 ];
 
 export const LIST_IMAGE_TROLL = [
-  "/images/bussiness/troll1.gif",
-  "/images/bussiness/troll2.gif",
-  "/images/bussiness/troll3.png",
-  "/images/bussiness/troll4.jpg",
-  "/images/bussiness/troll5.jpg",
-  "/images/bussiness/troll6.jpg",
-  "/images/bussiness/troll7.jpg",
-  "/images/bussiness/troll8.png",
-  "/images/bussiness/troll9.png",
+  "/images/troll1.gif",
+  "/images/troll2.gif",
+  "/images/relax.jpg",
+  "/images/troll4.jpg",
+  "/images/god.gif",
+  "/images/gm.jpg",
+  "/images/spman.jpg",
+  "/images/troll8.png",
+  "/images/troll9.jpg",
 ];

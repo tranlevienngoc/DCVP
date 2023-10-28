@@ -19,7 +19,7 @@ export default function Banner() {
         w={{ base: "50px", md: "100px" }}
         h={{ base: "50px", md: "100px" }}
         position="absolute"
-        top={{ base: "45%", lg: "50%" }}
+        top={{ base: "20%", md: "32%", lg: "50%" }}
         left="50%"
         cursor="pointer"
         transform="translate(-50%,-50%)"
@@ -40,8 +40,8 @@ export default function Banner() {
         onClose={videoModal.hide}
         isOpen={videoModal.visible}
         maxW={{ base: "287px", sm: "700px" }}
-        top="-20px"
-        right="-25px"
+        top="5px"
+        right="5px"
         pBody="0px"
         p="0px"
         closeBtnClass

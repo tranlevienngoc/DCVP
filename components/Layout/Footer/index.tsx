@@ -59,14 +59,14 @@ export default function Footer() {
           color="text.500"
           fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
-          txt="$POPOY coin has no association with Ultra Records and Artnoux. This token is simply paying homage to a meme we all love and recognize."
+          txt="Popoy meme token has no association with Ultra Records and Artnoux. This token is simply paying homage to a meme we all love and recognize. $POPOY is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. the coin is completely useless and for entertainment purposes only."
         />
         <TemplateText
           mt="7px"
           color="text.500"
           fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
-          txt="$POPOY is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. the coin is completely useless and for entertainment purposes only."
+          txt="This website does not constitute an offer to purchase or solicitation to sell, nor is it a recommendation to buy or sell, any token or other product. Purchasing and selling tokens is inherently risky and holders must bear their risk of loss. Neither the authors of this website nor any participants in the Popoy project accept any liability for losses or taxes that holders, purchasers or sellers of Popoy may incur. The value of Popoy may decrease and may be highly volatile. This website is not directed towards any person located in a jurisdiction where purchasing, selling or holding Popoy is prohibited or regulated. Consult your local laws before transacting in any cryptocurrency."
         />
       </Box>
     </Box>

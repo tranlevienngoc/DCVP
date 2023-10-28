@@ -6,7 +6,7 @@ export default function VideoModal() {
     <Box>
       <video
         className="video"
-        src="https://popoy-video.s3.ap-southeast-1.amazonaws.com/popoy_dance+(1080p).mp4"
+        src="https://popoy-video.s3.ap-southeast-1.amazonaws.com/video.mp4"
         autoPlay
         controls
       />
