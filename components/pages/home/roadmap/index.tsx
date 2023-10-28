@@ -28,27 +28,35 @@ export default function Roadmap() {
         data-aos="zoom-in"
         txt="Together, we shall demonstrate to the world that the Popoy is not a fleeting phenomenon but a permanent fixture, solidified through our collective efforts and unwavering commitment."
       />
-      <SimpleGrid columns={{ base: 1, lg: 3 }} gap="20px" mt="30px" w="100%">
+      <SimpleGrid
+        columns={{ base: 1, lg: 3 }}
+        gap="20px"
+        w="100%"
+        justifyContent="center"
+        alignItems="center"
+        display={{ base: "flex", lg: "grid" }}
+        flexDirection={{ base: "column", lg: "unset" }}
+      >
         {ROADMAP.map((item) => (
-          <Box
-            key={item.title}
-            border="1px solid #000"
-            boxShadow="4px 4px 0 #262626"
-            p="16px"
-            borderRadius="29px"
-            maxW="370px"
-          >
+          <Box key={item.title} p="16px" borderRadius="29px" maxW="370px">
             <TemplateText
               m="16px 0 8px 0"
               txt={item.title}
               fontSize="28px"
               fontWeight={700}
+              textAlign="center"
               fontFamily="Bangers"
               letterSpacing="3px"
               data-aos="zoom-out"
               data-aos-duration="2000"
             />
-            <Image src={item.image} w="100%" alt={item.title} />
+            <Image
+              data-aos="zoom-out"
+              data-aos-duration="2000"
+              src={item.image}
+              w="100%"
+              alt={item.title}
+            />
           </Box>
         ))}
       </SimpleGrid>

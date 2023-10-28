@@ -20,7 +20,7 @@ export default function Information() {
         alignItems="center"
       >
         <TemplateText
-          txt="&POPOY TOKEN"
+          txt="$POPOY TOKEN"
           textAlign={{ base: "center", lg: "start" }}
           fontSize={{ base: "24px", md: "35px" }}
           fontWeight={700}
@@ -53,7 +53,7 @@ export default function Information() {
         justifyContent={{ base: "center", lg: "end" }}
         mt="10px"
       >
-        <Image src="/images/bg/troll.gif" w="90%" h="100%" alt="finger.svg" />
+        <Image src="/images/bg/trolls.gif" w="90%" h="100%" alt="finger.svg" />
       </Flex>
     </Flex>
   );

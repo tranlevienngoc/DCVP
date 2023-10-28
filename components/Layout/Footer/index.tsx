@@ -59,14 +59,14 @@ export default function Footer() {
           color="text.500"
           fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
-          txt="$POPOY coin has no association with Ultra Records and Artnoux. This token is simply paying homage to a meme we all love and recognize."
+          txt="Popoy meme token has no association with Ultra Records and Artnoux. This token is simply paying homage to a meme we all love and recognize. $POPOY is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. the coin is completely useless and for entertainment purposes only."
         />
         <TemplateText
           mt="7px"
           color="text.500"
           fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
-          txt="$POPOY is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. the coin is completely useless and for entertainment purposes only."
+          txt="Allow us to introduce our enthusiastic, amiable, peace-loving, and irresistibly funny alien friend, whose sole mission is to bestow upon this universe the epitome of amusement."
         />
       </Box>
     </Box>

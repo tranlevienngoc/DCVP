@@ -66,6 +66,7 @@ export default function ModalItem({
           top={top ?? "16px"}
           left={isFixIcon ? "100%" : "unset"}
           right={right ?? "16px"}
+          zIndex={999}
         >
           <CloseButton
             className={closeBtnClass ? "btnClose" : ""}

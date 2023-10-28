@@ -51,6 +51,9 @@ const Header = () => {
             m="14px 0 0 24px"
             colorText="text.500"
             mtText="3px"
+            _hover={{
+              background: "#64a151",
+            }}
             bg="text.100"
             borderRadius="50px"
           />
@@ -105,6 +108,9 @@ const Header = () => {
               fsText="14px"
               fwText={700}
               content="BUY $POPOY"
+              _hover={{
+                background: "#64a151",
+              }}
               display={{ base: "none", xl: "block" }}
               bg="text.100"
               borderRadius="50px"

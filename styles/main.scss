@@ -79,29 +79,29 @@ body {
 
 
 .background-banner {
-  background: url(../public/images/bg/bg.gif);
+  background: url(../public/images/bg/bg-min.gif);
   height: 90vh;
   background-repeat: no-repeat;
   width: 100%;
   background-size: cover;
 }
 
+
 @media only screen and (max-width: 768px) {
   .background-banner {
-    padding: 16px;
-    height: 40vh;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .background-banner {
-    height: 42vh;
+    height: 34vh;
     background-repeat: no-repeat !important;
     background-size: contain !important;
     width: 100%;
     margin-top: 70px;
-    background: url(../public/images/bg/bg.gif);
+    background: url(../public/images/bg/bg-min.gif);
 
+  }
+}
+@media only screen and (max-width: 400px) {
+  .background-banner {
+    height: 38vh;
+   
   }
 }
 
@@ -239,4 +239,7 @@ body {
   .scrollPadding{
     scroll-margin-top: 100px;
   }
+}
+.textNumber {
+  font-size: 125%;
 }
