@@ -4,9 +4,9 @@ import React from "react";
 
 export default function Tokenomics() {
   const LIST_IMAGE = [
-    "images/fire.gif",
-    "images/giphy.webp",
-    "images/fire.gif",
+    "images/fire.webp",
+    "images/dance.webp",
+    "images/fire.webp",
   ];
   return (
     <Box className="maxW">
@@ -47,7 +47,7 @@ export default function Tokenomics() {
           <Box w={{ base: "100%", lg: "85%" }}>
             <TemplateText
               textAlign="center"
-              fontSize="125%"
+              fontSize="20px"
               fontWeight={700}
               txt="Total supply: </br> <span class='textNumber'>51,000,000,000</span>"
               mb="20px"

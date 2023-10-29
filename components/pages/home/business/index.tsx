@@ -5,11 +5,7 @@ import React from "react";
 
 export default function Business() {
   return (
-    <Box
-      className="maxW"
-      p={{ base: "0 16px", "2xl": "unset" }}
-      mt={{ base: "-160px", md: "unset" }}
-    >
+    <Box className="maxW" p={{ base: "0 16px", "2xl": "unset" }}>
       <Flex mt="24px" direction="column" alignItems="center">
         <TemplateText
           fontSize={{ base: "24px", md: "35px" }}
@@ -53,7 +49,11 @@ export default function Business() {
                 border="2px solid #262626"
                 borderRadius="20px"
                 _hover={{
-                  transform: "scale(1.2)",
+                  transform: {
+                    base: "unset",
+                    md: "scale(1.05)",
+                    lg: "scale(1.2)",
+                  },
                 }}
               />
             </Box>

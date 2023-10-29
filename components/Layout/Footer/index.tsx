@@ -21,6 +21,8 @@ export default function Footer() {
                   key={item.name}
                   src={item.icon}
                   width="25px"
+                  border="1px solid #585858"
+                  borderRadius="50px"
                   height="25px"
                   alt={item.icon}
                 />
@@ -44,6 +46,8 @@ export default function Footer() {
               {LIST_SOCIAL_NETWORK.map((item) => (
                 <Link href={item.href} key={item.name} target="_blank">
                   <Image
+                    border="1px solid #585858"
+                    borderRadius="50px"
                     src={item.icon}
                     width={25}
                     height={25}
@@ -59,7 +63,7 @@ export default function Footer() {
           color="text.500"
           fontSize="12px"
           textAlign={{ base: "center", xl: "start" }}
-          txt="Popoy meme token has no association with Ultra Records and Artnoux. This token is simply paying homage to a meme we all love and recognize. $POPOY is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap. the coin is completely useless and for entertainment purposes only."
+          txt="Popoy meme token has no association with Ultra Records and Artnoux. This token is simply paying homage to a meme we all love and recognize. $POPOY is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap, the coin is completely useless and for entertainment purposes only."
         />
         <TemplateText
           mt="7px"

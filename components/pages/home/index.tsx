@@ -20,7 +20,7 @@ export default function HomePage() {
     });
   }, []);
   return (
-    <Box pb="40px">
+    <Box pb="50px">
       <Banner />
       <Box
         p={{
@@ -41,7 +41,7 @@ export default function HomePage() {
       <Box p={{ base: "50px 0 ", md: "100px 0 0 0" }} id="#tokenomics">
         <Tokenomics />
       </Box>
-      <Box pt={{ base: "110px", md: "70px" }} id="#roadmap">
+      <Box pt={{ base: "40px", md: "70px" }} id="#roadmap">
         <Roadmap />
       </Box>
     </Box>

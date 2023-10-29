@@ -7,7 +7,7 @@ export const INFORMATION_TEXT = [
   },
   {
     paragraph:
-      "Prepare yourself for the launch of the $POPOY token, a pivotal moment that sustains the exponential growth of the Popoy Meme Token community. Loyal members shall be rewarded, all while ensuring transparency and security through zero tax, contract renounced, liquidity burned.",
+      "Loyal members shall be rewarded, all while ensuring transparency and security through zero tax, contract renounced, liquidity burned forever.",
     animation: "fade-up",
     duration: "2000",
   },
