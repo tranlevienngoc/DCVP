@@ -53,7 +53,7 @@ export default function Information() {
         justifyContent={{ base: "center", lg: "end" }}
         mt="10px"
       >
-        <Image src="/images/bg/trolls.gif" w="90%" h="100%" alt="finger.svg" />
+        <Image src="/images/bg/troll.webp" w="90%" h="100%" alt="finger.svg" />
       </Flex>
     </Flex>
   );

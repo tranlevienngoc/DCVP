@@ -29,7 +29,7 @@ export default function Tokenomics() {
         gap="50px"
       >
         <Image
-          src="/images/money.gif"
+          src="/images/money.webp"
           p={{ base: "0 16px", lg: "0px 0px 0px 6%" }}
           w={{ base: "60%", lg: "35%" }}
           h="100%"
