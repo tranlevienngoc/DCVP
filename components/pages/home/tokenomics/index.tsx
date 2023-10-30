@@ -76,7 +76,13 @@ export default function Tokenomics() {
             >
               {LIST_IMAGE.map((item, index) => {
                 return (
-                  <Image key={index} src={item} borderRadius="50%" w="30%" />
+                  <Image
+                    key={index}
+                    src={item}
+                    borderRadius="50%"
+                    w="30%"
+                    h="100%"
+                  />
                 );
               })}
             </Flex>
