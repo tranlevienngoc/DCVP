@@ -55,6 +55,7 @@ export default function Roadmap() {
               data-aos-duration="2000"
               src={item.image}
               w="100%"
+              h="100%"
               alt={item.title}
             />
           </Box>
