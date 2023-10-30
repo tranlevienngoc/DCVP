@@ -41,7 +41,12 @@ export default function HomePage() {
       <Box p={{ base: "50px 0 ", md: "100px 0 0 0" }} id="#tokenomics">
         <Tokenomics />
       </Box>
-      <Box pt={{ base: "40px", md: "70px" }} id="#roadmap">
+      <Box
+        pt={{ base: "40px", md: "70px" }}
+        id="#roadmap"
+        className="scrollPadding"
+        scrollMarginY={{base:"30px", lg:'unset'}}
+      >
         <Roadmap />
       </Box>
     </Box>
