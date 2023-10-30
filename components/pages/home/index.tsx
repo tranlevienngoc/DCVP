@@ -29,7 +29,7 @@ export default function HomePage() {
           "2xl": "50px 0 50px 0",
         }}
         id="#about"
-        className="scrollPadding"
+        scrollMarginTop={{ base: "200px", lg: "unset" }}
       >
         <Business />
       </Box>
@@ -45,7 +45,7 @@ export default function HomePage() {
         pt={{ base: "40px", md: "70px" }}
         id="#roadmap"
         className="scrollPadding"
-        scrollMarginY={{base:"30px", lg:'unset'}}
+        scrollMarginTop={{ base: "30px", lg: "unset" }}
       >
         <Roadmap />
       </Box>
