@@ -4,9 +4,9 @@ import React from "react";
 
 export default function Tokenomics() {
   const LIST_IMAGE = [
-    "images/fire.webp",
-    "images/dance.webp",
-    "images/fire.webp",
+    "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/fire.webp",
+    "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/dance.webp",
+    "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/fire.webp",
   ];
   return (
     <Box className="maxW">
@@ -29,7 +29,7 @@ export default function Tokenomics() {
         gap="50px"
       >
         <Image
-          src="/images/money.webp"
+          src="https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/money.webp"
           p={{ base: "0 16px", lg: "0px 0px 0px 6%" }}
           w={{ base: "60%", lg: "35%" }}
           h="100%"
@@ -76,7 +76,13 @@ export default function Tokenomics() {
             >
               {LIST_IMAGE.map((item, index) => {
                 return (
-                  <Image key={index} src={item} borderRadius="50%" w="30%" />
+                  <Image
+                    key={index}
+                    src={item}
+                    borderRadius="50%"
+                    w="30%"
+                    h="100%"
+                  />
                 );
               })}
             </Flex>

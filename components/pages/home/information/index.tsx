@@ -53,7 +53,12 @@ export default function Information() {
         justifyContent={{ base: "center", lg: "end" }}
         mt="10px"
       >
-        <Image src="/images/bg/troll.webp" w="90%" h="100%" alt="finger.svg" />
+        <Image
+          src="https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/troll.webp"
+          w="90%"
+          h="100%"
+          alt="finger.svg"
+        />
       </Flex>
     </Flex>
   );
