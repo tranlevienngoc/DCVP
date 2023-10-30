@@ -22,6 +22,7 @@ export default function HomePage() {
   return (
     <Box pb="50px">
       <Banner />
+      hellpro
       <Box
         p={{
           base: "10px 0 80px 0",
@@ -37,7 +38,6 @@ export default function HomePage() {
       <Box id="#howtobuy" p="100px 16px 00px 16px">
         <HowToBuy />
       </Box>
-
       <Box p={{ base: "50px 0 ", md: "100px 0 0 0" }} id="#tokenomics">
         <Tokenomics />
       </Box>
