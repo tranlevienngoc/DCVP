@@ -22,7 +22,6 @@ export default function HomePage() {
   return (
     <Box pb="50px">
       <Banner />
-      hellpro
       <Box
         p={{
           base: "10px 0 80px 0",
