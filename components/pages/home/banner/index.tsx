@@ -11,7 +11,7 @@ export default function Banner() {
   return (
     <Box
       className="background-banner"
-      mb={{ base: "10px", "2xl": "-25px" }}
+      // mb={{ base: "10px", "2xl": "-25px" }}
       position="relative"
     >
       <Box
@@ -19,7 +19,7 @@ export default function Banner() {
         w={{ base: "50px", md: "100px" }}
         h={{ base: "50px", md: "100px" }}
         position="absolute"
-        top={{ base: "20%", md: "32%", lg: "50%" }}
+        top={{ base: "25%", md: "32%", lg: "50%" }}
         left="50%"
         cursor="pointer"
         transform="translate(-50%,-50%)"

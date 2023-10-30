@@ -76,7 +76,7 @@ const Header = () => {
         borderStyle="solid"
         justifyContent="space-between"
         alignItems="center"
-        p={{ base: "15px 16px 20px 16px", xl: "15px 25px" }}
+        p={{ base: "10px", xl: "15px 25px" }}
       >
         <Link href="/">
           <Image
@@ -147,7 +147,6 @@ const Header = () => {
         logo="/Logo.svg"
       >
         <Box mt="10px">
-          {" "}
           <MobileNav onCloseMenu={onClose} />
         </Box>
       </DrawerItem>

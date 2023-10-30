@@ -86,8 +86,19 @@ body {
   background-size: cover;
 }
 
+@media screen and (max-width: 1024px){
+  .background-banner {
+    height: 50vh;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    width: 100%;
+    margin-top: 70px;
+    background: url(../public/images/bg/bg.webp);
 
-@media only screen and (max-width: 768px) {
+  }
+}
+
+@media screen and (max-width: 768px){
   .background-banner {
     height: 34vh;
     background-repeat: no-repeat !important;
@@ -99,12 +110,18 @@ body {
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media screen and (max-width: 480px){
   .background-banner {
-    height: 26vh;
+    height: 24vh;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    width: 100%;
+    margin-top: 65px;
+    background: url(../public/images/bg/bg.webp);
 
   }
 }
+
 
 
 .block-quote {

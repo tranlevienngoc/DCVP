@@ -24,7 +24,7 @@ export default function HomePage() {
       <Banner />
       <Box
         p={{
-          base: "20px 0 80px 0",
+          base: "10px 0 80px 0",
           lg: "50px 0 50px 0",
           "2xl": "50px 0 50px 0",
         }}

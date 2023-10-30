@@ -9,6 +9,6 @@ export const HOWTOBUY = [
   },
   {
     content:
-      "Switch ETH for $POPOY. We have small taxes so you don’t need to worry about selling pressure, although you may need to use slippage during times of market volatility.",
+      "Switch ETH for $POPOY. We have zero tax so you don’t need to worry about selling pressure, although you may need to use slippage during times of market volatility.",
   },
 ];
