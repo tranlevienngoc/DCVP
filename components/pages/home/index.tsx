@@ -31,6 +31,7 @@ export default function HomePage() {
         id="#about"
         scrollMarginTop={{ base: "200px", lg: "unset" }}
       >
+        test
         <Business />
       </Box>
       <Information />
