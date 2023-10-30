@@ -31,7 +31,6 @@ export default function HomePage() {
         id="#about"
         scrollMarginTop={{ base: "200px", lg: "unset" }}
       >
-        test hoang dep trai
         <Business />
       </Box>
       <Information />
