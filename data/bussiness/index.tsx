@@ -6,13 +6,13 @@ export const TEXT_DESCRIPTIONS = [
 ];
 
 export const LIST_IMAGE_TROLL = [
-  "/images/troll-doge.webp",
-  "/images/gm.webp",
-  "/images/troll-pepe.webp",
-  "/images/king.webp",
-  "/images/god.webp",
-  "/images/relax.webp",
-  "/images/supper-man.webp",
-  "/images/troll-man.webp",
-  "/images/walking.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/troll-doge.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/gm.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/troll-pepe.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/king.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/god.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/relax.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/supper-man.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/troll-man.webp",
+  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/walking.webp",
 ];
