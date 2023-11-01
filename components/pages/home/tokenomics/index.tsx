@@ -80,7 +80,7 @@ export default function Tokenomics() {
                     key={index}
                     src={item}
                     borderRadius="50%"
-                    w="30%"
+                    w={index == 1 ? "23%" : "30%"}
                     h="100%"
                   />
                 );

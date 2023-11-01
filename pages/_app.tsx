@@ -7,8 +7,18 @@ import "../styles/main.scss";
 
 import theme from "../styles/theme";
 import Script from "next/script";
+import { useEffect, useState } from "react";
+import LoadingGlobal from "components/common/LoadingGlobal";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
+
   return (
     <ChakraProvider theme={theme}>
       <Seo templateTitle="Popoy - The most enthusiastic memecoin in the universe" />
@@ -22,6 +32,8 @@ function MyApp({ Component, pageProps }: AppProps) {
           gtag('config', 'G-Z5YP5L71WM');
         `}
       </Script>
+      {isLoading && <LoadingGlobal />}
+
       <Layout>
         <Component {...pageProps} />
       </Layout>
