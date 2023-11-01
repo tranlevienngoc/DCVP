@@ -17,8 +17,8 @@ export default function LoadingGlobal() {
     >
       <Image
         src="https://popoy-video.s3.ap-southeast-1.amazonaws.com/image/loading-2.webp"
-        h="300px"
-        w="300px"
+        h="200px"
+        w="200px"
         alt="image-loading"
       />
     </Flex>
