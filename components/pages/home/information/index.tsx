@@ -1,7 +1,9 @@
 import { Box, Flex, Image } from "@chakra-ui/react";
+import ButtonBase from "components/common/Buttons/ButtonBase";
 import TemplateText from "components/common/Text/TemplateText";
+import { SoundAudioContext } from "context/useSoundAudio";
 import { INFORMATION_TEXT } from "data/information";
-import React from "react";
+import React, { useContext } from "react";
 
 export default function Information() {
   return (

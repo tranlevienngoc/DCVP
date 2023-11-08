@@ -22,6 +22,7 @@ const Layout = ({ children }: { children: JSX.Element }) => {
           >
             <Header />
           </Box>
+
           <Box>{children}</Box>
           <Footer />
         </>
