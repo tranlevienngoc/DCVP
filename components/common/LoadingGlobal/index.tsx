@@ -1,5 +1,6 @@
 import { Flex, Image } from "@chakra-ui/react";
 import React from "react";
+import TemplateText from "../Text/TemplateText";
 
 export default function LoadingGlobal() {
   return (
@@ -14,12 +15,24 @@ export default function LoadingGlobal() {
       h="100vh"
       justifyContent="center"
       alignItems="center"
+      direction="column"
+      cursor="pointer"
+      id="loading-global"
     >
       <Image
         src="https://popoy-video.s3.ap-southeast-1.amazonaws.com/image/loading-2.webp"
-        h="200px"
-        w="200px"
+        h="250px"
+        w="250px"
         alt="image-loading"
+      />
+
+      <TemplateText
+        fontSize="30px"
+        fontFamily="Bangers"
+        fontWeight={400}
+        letterSpacing={1.2}
+        mt="20px"
+        txt="[ Click Anywhere ]"
       />
     </Flex>
   );
