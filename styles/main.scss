@@ -287,6 +287,8 @@ body {
 
 #switch-container {
   margin: 1rem 0;
+  cursor: pointer;
+
 }
 
 #sound-off-icon,
@@ -298,11 +300,13 @@ body {
 #sound-off-icon {
   top: 9px;
   right: 7px;
+  cursor: pointer;
 }
 
 #sound-on-icon {
   top: 9px;
   left: 7px;
+  cursor: pointer;
 }
 
 .switch {

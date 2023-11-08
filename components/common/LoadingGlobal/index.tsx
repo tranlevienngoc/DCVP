@@ -29,7 +29,7 @@ export default function LoadingGlobal() {
       <TemplateText
         fontSize="30px"
         fontFamily="Bangers"
-        fontWeight={700}
+        fontWeight={400}
         letterSpacing={1.2}
         mt="20px"
         txt="[ Click Anywhere ]"
