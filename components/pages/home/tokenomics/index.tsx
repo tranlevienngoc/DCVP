@@ -11,7 +11,7 @@ export default function Tokenomics() {
   return (
     <Box className="maxW">
       <TemplateText
-        txt="POPOY TOKENOMICS"
+        txt="Tổng kho"
         fontFamily="Bangers"
         letterSpacing="3px"
         fontWeight={700}
@@ -49,7 +49,7 @@ export default function Tokenomics() {
               textAlign="center"
               fontSize="20px"
               fontWeight={700}
-              txt="Total supply: </br> <span class='textNumber'>51,000,000,000</span>"
+              txt="Số lượng sản phẩm: </br> <span class='textNumber'>51,000</span>"
               mb="20px"
               data-aos="fade-down"
             />
@@ -64,7 +64,7 @@ export default function Tokenomics() {
             >
               <TemplateText
                 fontSize="18px"
-                txt="ZERO TAX, CONTRACT RENOUNCED, LIQUIDITY BURNED FOREVER. 100% BELONGS TO COMMUNITY, FOR THE PEOPLE.
+                txt="NỘI THÂT VĂN PHÒNG, PHỤ KIỆN THỜI TRANG , BÀN GHẾ CAFE , VẬT DỤNG GIA ĐÌNH, ĐỒ DÙNG MÁY MÓC... 
                   "
               />
             </Flex>

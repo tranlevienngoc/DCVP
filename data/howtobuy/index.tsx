@@ -1,14 +1,13 @@
 export const HOWTOBUY = [
-  {
-    content:
-      "Have ETH in your wallet to switch to $POPOY. If you don’t have any ETH, you can buy directly on Metamask, transfer from another wallet, or buy on another exchange and send it to your wallet.",
-  },
-  {
-    content:
-      "Go to app.uniswap.org. Connect your wallet. Paste the $POPOY token address into Uniswap, select POPOY, and confirm. When Metamask prompts you for a wallet signature, sign.",
-  },
-  {
-    content:
-      "Switch ETH for $POPOY. We have zero tax so you don’t need to worry about selling pressure, although you may need to use slippage during times of market volatility.",
-  },
+    {
+        content: `Đồ cũ Vũ Phan được Đài truyền hình VTV8 quay phim phóng sự về nghề đồ cũ. Để được "lên tivi" Thế giới đồ cũ Đà nẵng đã trải qua quá trình thẩm tra nghiêm ngặt...`,
+    },
+    {
+        content:
+            'Thu mua đồ cũ thanh lý trọn gói tại Đà nẵng• Dịch vụ mua thanh lý đồ cũ mang đến cho khách hàng nhiều lợi ích và ưu đãi bất ngờ. Đặc biệt đối với các công ty, văn phòng...',
+    },
+    {
+        content:
+            'Mua của người chán, bán cho người cần"Với phương châm “Mua của người chán, bán cho người cần”, các cửa hàng đồ cũ là nơi trung gian nhận đồ đã qua sử dụng, không còn ...',
+    },
 ];

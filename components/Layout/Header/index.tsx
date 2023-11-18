@@ -47,7 +47,7 @@ const Header = () => {
           <ButtonBase
             fsText="14px"
             fwText={700}
-            content="BUY $POPOY"
+            content="Login"
             m="14px 0 0 24px"
             colorText="text.500"
             mtText="3px"
@@ -80,10 +80,11 @@ const Header = () => {
       >
         <Link href="/">
           <Image
-            src="/Logo.svg"
-            w={{ base: "100px", md: "120px" }}
+            src="/Logo1.jpg"
+            w={{ base: "100px", md: "70px" }}
             alt="logo"
-            h="100%"
+            h="70px"
+            // borderRadius="50px"
           />
         </Link>
         <Flex display={{ base: "none", xl: "flex" }} alignItems="center">
@@ -107,7 +108,7 @@ const Header = () => {
               colorText="text.500"
               fsText="14px"
               fwText={700}
-              content="BUY $POPOY"
+              content="Login"
               _hover={{
                 background: "#64a151",
               }}

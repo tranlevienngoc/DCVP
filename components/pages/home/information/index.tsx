@@ -21,7 +21,7 @@ export default function Information() {
         direction="column"
         alignItems="center"
       >
-        <TemplateText
+        {/* <TemplateText
           txt="$POPOY TOKEN"
           textAlign={{ base: "center", lg: "start" }}
           fontSize={{ base: "24px", md: "35px" }}
@@ -30,7 +30,7 @@ export default function Information() {
           fontFamily="Bangers"
           letterSpacing="3px"
           data-aos="fade-left"
-        />
+        /> */}
         <Box
           border="1px solid #000"
           boxShadow="4px 4px 0 #262626"

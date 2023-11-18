@@ -11,19 +11,20 @@ export default function HowToBuy() {
         fontSize={{ base: "24px", md: "35px" }}
         textAlign="center"
         fontWeight={700}
-        txt="HOW TO BUY THE MAGNIFICENT $POPOY MEME TOKEN"
+        txt="Đồ Cũ Vũ Phan có những gì ?"
         fontFamily="Bangers"
         letterSpacing="3px"
         data-aos="fade-up"
+        mb="30px"
       />
-      <TemplateText
+      {/* <TemplateText
         mt="10px"
         mb="48px"
         textAlign="center"
         fontSize="18px"
-        txt="Take a decisive step forward and acquire $POPOY tokens using ETH on the renowned Uniswap Exchange."
+        txt="Những thành tựu và tiêu chí của đồ cũ Vũ Phan"
         data-aos="zoom-in"
-      />
+      /> */}
       <SimpleGrid gap="50px" columns={{ base: 1, lg: 3 }}>
         {HOWTOBUY.map((item, index) => (
           <Box position="relative" key={item.content}>

@@ -6,7 +6,7 @@ import React from "react";
 export default function Business() {
   return (
     <Box className="maxW" p={{ base: "0 16px", "2xl": "unset" }}>
-      <Flex mt="24px" direction="column" alignItems="center">
+      <Flex mt="124px" direction="column" alignItems="center">
         <TemplateText
           fontSize={{ base: "24px", md: "35px" }}
           fontWeight={700}
@@ -14,7 +14,7 @@ export default function Business() {
           p="16px 0"
           fontFamily="Bangers"
           letterSpacing="3px"
-          txt="THE MOST ENTHUSIASTIC MEMECOIN IN THE UNIVERSE"
+          txt="ĐỒ CŨ VŨ PHAN - CHUYÊN MUA BÁN ĐỒ CŨ ĐÀ NẴNG"
           data-aos="fade-up"
         />
         <Flex
@@ -22,9 +22,10 @@ export default function Business() {
           direction="column"
           gap="15px"
           border="1px solid #000"
-          boxShadow="4px 4px 0 #262626"
+          // boxShadow="4px 4px 0 #262626"
           p="16px"
           borderRadius="29px"
+          mb="20px"
         >
           {TEXT_DESCRIPTIONS.map((item) => (
             <TemplateText
@@ -46,7 +47,7 @@ export default function Business() {
                 w="100%"
                 h="350px"
                 transition="transform .2s"
-                border="2px solid #262626"
+                // border="2px solid #262626"
                 borderRadius="20px"
                 _hover={{
                   transform: {

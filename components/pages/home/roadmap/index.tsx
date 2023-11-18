@@ -13,7 +13,7 @@ export default function Roadmap() {
       p={{ base: "0 16px", "2xl": "unset" }}
     >
       <TemplateText
-        txt="POPOY ROADMAP"
+        txt="PHƯƠNG CHÂM"
         fontFamily="Bangers"
         letterSpacing="3px"
         fontSize={{ base: "24px", md: "35px" }}
@@ -26,7 +26,7 @@ export default function Roadmap() {
         textAlign="center"
         fontSize="18px"
         data-aos="zoom-in"
-        txt="Together, we shall demonstrate to the world that the Popoy is not a fleeting phenomenon but a permanent fixture, solidified through our collective efforts and unwavering commitment."
+        txt="Mua sự uy tín , bán sự chất lượng, luôn đặt khách hàng lên hàng đầu, luôn cũng cấp những sản phẩm tốt nhất đến tay người tiêu dùng"
       />
       <SimpleGrid
         columns={{ base: 1, lg: 3 }}

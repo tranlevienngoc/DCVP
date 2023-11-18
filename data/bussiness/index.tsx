@@ -1,18 +1,18 @@
 export const TEXT_DESCRIPTIONS = [
-  {
-    paragraph: `	Behold, as an adorable and quirky extraterrestrial being descends upon Earth, radiating love, joy and comedic wonders to every nook of the galaxy. Allow us to introduce our enthusiastic, amiable, peace-loving, and irresistibly funny alien friend, whose sole mission is to bestow upon this universe the epitome of amusement.`,
-    animation: "fade-left",
-  },
+    {
+        paragraph: `Chúng tôi chuyên thu mua và bán đồ cũ khu vực Đà Nẵng. Chúng tôi là đơn vị tiên phong về đồ cũ Đà Nẵng, dịch vụ thu mua đồ cũ các ngành nghề, cửa hàng, shop, thiết bị…Nhiều năm gần đây nhu cầu mua đồ cũ của quý khách hàng tăng cao, các hội chợ đồ cũ online, được giao dịch và trao đổi đồ cũ ở Đà Nẵng nhiều, chúng tôi mở dịch vụ mua bán đồ cũ nhằm cung cấp theo nhu cầu cho tất cả quý khách hàng có thể lựa chọn đa dạng sản phẩm`,
+        animation: 'fade-left',
+    },
 ];
 
 export const LIST_IMAGE_TROLL = [
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/troll-doge.webp",
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/gm.webp",
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/troll-pepe.webp",
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/king.webp",
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/god.webp",
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/relax.webp",
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/supper-man.webp",
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/troll-man.webp",
-  "https://i0.wp.com/popoy-video.s3.ap-southeast-1.amazonaws.com/image/walking.webp",
+    '	https://docuthientien.com/wp-content/uploads/2023/11/sofa-2-2.jpg',
+    '	https://docuthientien.com/wp-content/uploads/2023/11/nuoc-soi-1.jpg',
+    'https://docuthientien.com/wp-content/uploads/2023/11/daikin-4-1.jpg',
+    'https://docuthientien.com/wp-content/uploads/2023/11/Tu-dong-mat-Sanaky-VH-4099W3-3.jpg',
+    'https://docuthientien.com/wp-content/uploads/2023/11/VT081123-Xe-tra-sua-2.jpg',
+    'https://docuthientien.com/wp-content/uploads/2023/11/Ke-tivi-2.jpg',
+    'https://docuthientien.com/wp-content/uploads/2023/11/Tu-ho-so-kem-ket-sat-2.jpg',
+    'https://docuthientien.com/wp-content/uploads/2023/11/Ghe-sofa-bang-2-2.jpg',
+    'https://docuthientien.com/wp-content/uploads/2023/11/Lo-quay-3-xien-4.jpg',
 ];

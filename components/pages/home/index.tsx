@@ -21,7 +21,7 @@ export default function HomePage() {
   }, []);
   return (
     <Box pb="50px">
-      <Banner />
+      {/* <Banner /> */}
       <Box
         p={{
           base: "10px 0 80px 0",
