@@ -28,7 +28,7 @@ export default function Menu() {
         },
     ];
     return (
-        <Box bg='#ff9800' p='8px 0px'>
+        <Box bg='bg.800' p='8px 0px'>
             <Flex className='maxW' gap="20px">
                 {menu.map((item) => (
                     <Box key={item.name} color='white'>

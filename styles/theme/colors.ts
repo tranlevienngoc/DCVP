@@ -40,6 +40,7 @@ const extendedColors: DeepPartial<
     500: "#0B132E",
     600: "#F6F7F9",
     700: "#EFF0F2",
+    800: "black",
   },
   blue: {
     100: "#106CFF",

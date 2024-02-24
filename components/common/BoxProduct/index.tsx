@@ -10,10 +10,10 @@ export const BoxProduct = ({ products, title, ...props }: Props) => {
     return (
         <Box {...props}>
             <BoxTitle title={title} />
-            <Flex gap='20px' mt='20px'>
+            <Flex justifyContent='space-between' mt='20px'>
                 {products.map((item) => (
-                    <Box textAlign='center'>
-                        <Image src={item.url} />
+                    <Box textAlign='center' w={{ base: '100%', md: '200px' }} className='box-product'>
+                        <Image w='100%' src={item.url} />
                         <TemplateText txt={item.label} mt='10px' />
                         <Flex justifyContent='center'>
                             <TemplateText txt='Giá bán: ' mr='5px' />
