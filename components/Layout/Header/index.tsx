@@ -9,6 +9,7 @@ import Menu from './Menu';
 import MobileMenu from './MobileMenu';
 import SearchInput from 'components/common/input/SearchInput';
 import TemplateText from 'components/common/Text/TemplateText';
+import { FcPhoneAndroid } from 'react-icons/fc';
 
 interface props {
     onCloseMenu: () => void;
@@ -97,12 +98,13 @@ const Header = () => {
 
                         <Flex alignItems='center' gap='10px' ml='30px'>
                             <Box>
-                                <Image src='https://docuacb.com/wp-content/uploads/2019/04/icon-hotline-2.jpg' w='40px' alt='logo' h='40px' />
+                                <FcPhoneAndroid size={35} />
+                                {/* <Image src='https://docuacb.com/wp-content/uploads/2019/04/icon-hotline-2.jpg' w='40px' alt='logo' h='40px' /> */}
                             </Box>
                             <Box>
                                 <TemplateText txt='Hotline đặt hàng' />
                                 <Box>
-                                    <TemplateText color='#b00000' txt='0943.683.789 - 0987.914.489' />
+                                    <TemplateText color='#b00000' txt='0976.696.779 - 0935.156.884' />
                                 </Box>
                             </Box>
                         </Flex>
@@ -111,7 +113,7 @@ const Header = () => {
                             <Box>
                                 <TemplateText txt='Hotline mua hàng' />
                                 <Box>
-                                    <TemplateText color='#b00000' txt='0943.683.789' />
+                                    <TemplateText color='#b00000' txt='0976.696.779' />
                                 </Box>
                             </Box>
                         </Flex>

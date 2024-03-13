@@ -29,9 +29,9 @@ export default function Menu() {
     ];
     return (
         <Box bg='bg.800' p='8px 0px'>
-            <Flex className='maxW' gap="20px">
+            <Flex className='maxW' gap='20px'>
                 {menu.map((item) => (
-                    <Box key={item.name} color='white'>
+                    <Box key={item.name} color='white' cursor='pointer'>
                         {item.label}
                     </Box>
                 ))}
