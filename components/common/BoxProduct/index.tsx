@@ -6,12 +6,13 @@ import { useRouter } from 'next/router';
 interface Props extends BoxProps {
     products: any[];
     title: string;
+    isMore?: boolean;
 }
-export const BoxProduct = ({ products, title, ...props }: Props) => {
+export const BoxProduct = ({ products, title, isMore, ...props }: Props) => {
     const router = useRouter();
     return (
         <Box {...props}>
-            <BoxTitle title={title} />
+            <BoxTitle title={title} isMore={isMore} />
             <Flex justifyContent='space-between' mt='20px'>
                 {products.map((item) => (
                     <Box borderRadius='5px' textAlign='center' w={{ base: '100%', md: '200px' }} className='box-product' onClick={() => router.push('/product/vchvds')}>
